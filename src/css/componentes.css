@@ -242,3 +242,64 @@ body {
     padding: 0.5rem;
   }
 }
+
+
+/* RODAPÉ DO CARD */
+.component-footer {
+  border-top: 1px solid #f1f1f1;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.creator-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+.creator-link:hover {
+  color: #0077b5; /* azul LinkedIn */
+}
+
+.linkedin-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(0.2);
+  transition: 0.3s;
+}
+.creator-link:hover + .linkedin-icon,
+.linkedin-icon:hover {
+  filter: brightness(1) invert(0);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .component-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .creator-link {
+    font-size: 0.85rem;
+  }
+  .linkedin-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Notificação ao Copiar */
+.notyf__toast {
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: "Inter", sans-serif;
+}
+
+.notyf__toast--success {
+  background: linear-gradient(135deg, #5d52ba, #6e63d6);
+  color: #fff;
+}
+
+.notyf__toast--error {
+  background: #ef4444;
+}
