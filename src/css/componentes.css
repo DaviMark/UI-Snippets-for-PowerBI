@@ -1,0 +1,150 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #fcfbf8;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* BLOCO DO COMPONENTE */
+.component-block {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  padding: 2.2rem;
+  margin: 0 auto 3rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.component-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* CABEÇALHO */
+.component-header {
+  margin-bottom: 1.8rem;
+}
+.component-header h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.component-header p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+/* CONTEÚDO LADO A LADO */
+.component-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* CARD VISUAL */
+.card-fixed {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.card-preview {
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f3f3ff, #e7e7ff);
+  box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-preview:hover {
+  transform: scale(1.03);
+  box-shadow: 10px 10px 25px #c8cbe3, -10px -10px 25px #fff;
+}
+
+/* PAINEL DE CÓDIGO */
+.code-panel {
+  flex: 1 1 500px;
+  min-width: 300px;
+  background: #1e1e1e;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25);
+  overflow-x: auto;
+  overflow-y: hidden;
+  word-wrap: break-word;
+}
+
+/* CORREÇÃO — QUEBRA AUTOMÁTICA DE LINHA NO CÓDIGO */
+.code-panel pre,
+.code-panel code {
+  font-size: 0.88em !important;
+  white-space: pre-wrap !important;  /* ✅ força quebra de linha */
+  word-break: break-word !important; /* ✅ quebra palavras longas */
+  overflow-x: hidden !important;     /* ✅ remove scroll lateral */
+  display: block;
+  max-width: 100%;
+  line-height: 1.4;
+}
+
+/* ROLAGEM */
+.code-panel::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.code-panel::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+.code-panel::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* BOTÕES */
+.copy-btn {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.copy-btn svg {
+  transition: transform 0.2s ease;
+}
+.copy-btn:active svg {
+  transform: scale(0.9);
+}
+
+.toggle-view.active {
+  background: #5d52ba !important;
+  color: #fff !important;
+  border-color: #5d52ba !important;
+  box-shadow: 0 0 10px rgba(93, 82, 186, 0.4);
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+  .component-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .code-panel {
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 1rem;
+  }
+}

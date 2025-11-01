@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML para Power BI</title>
+  <link href="/src/imgs/logo_davi.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top shadow-sm bg-white px-4 py-2 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      <img src="/src/imgs/logo_davi.png" alt="Logo" class="navbar-logo">
+    </div>
+  </nav>
+
+  <div class="wrapper d-flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="p-4 shadow-sm open">
+      <ul class="nav flex-column" id="sidebarMenu">
+        <li class="nav-item mb-2">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsMenu" aria-expanded="false">
+            Componentes
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsMenu">
+            <li><a href="/src/pages/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="#" class="nav-link">Tabelas</a></li>
+            <li><a href="#" class="nav-link">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link">Documentação</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link">Contribuir</a>
+        </li>
+      </ul>
+
+      <footer class="small text-muted pt-4 mt-auto border-top">
+        Feito por <strong>Davi Marques</strong>
+      </footer>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="content" class="flex-grow-1 p-5 shifted">
+
+      <section class="intro mt-5 ">
+        <p class="text-uppercase small text-muted mb-2">Apresentação</p>
+        <h1 class="fw-bold mb-3 display-6">Transforme dashboards em experiências visuais premium</h1>
+        <p class="lead text-secondary mb-4" style="max-width:800px;">
+          O <strong>HTML Power BI</strong> é uma coleção de componentes prontos em HTML e CSS desenvolvidos para elevar o padrão visual dos seus painéis.  
+          Ele permite aplicar design moderno, tipografia elegante e interatividade! Tudo dentro do Power BI.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <button id="btnComponentes" class="btn btn-dark px-4 py-2">Ver Componentes</button>
+          <button id="btnDocumentacao" class="btn btn-outline-dark px-4 py-2">Documentação</button>
+          <a href="https://github.com/seu-repo" class="btn btn-outline-secondary px-4 py-2">Colaborar</a>
+        </div>
+      </section>
+
+      <section class="impacto mt-5 ">
+        <p class="text-uppercase small text-muted mb-2">Por que usar</p>
+        <h3 class="fw-bold mb-4">Por que usar elementos HTML no Power BI?</h3>
+        <p class="text-secondary fs-5" style="max-width:850px;">
+          Painéis tradicionais entregam dados, mas raramente entregam <strong>experiência</strong>.  
+          Ao adicionar elementos HTML e CSS, você cria dashboards mais agradáveis,  
+          que despertam curiosidade e mantêm o usuário envolvido.  
+        </p>
+
+        <ul class="text-secondary lh-lg fs-5">
+          <li><strong>Melhor compreensão visual:</strong> interfaces atraentes ajudam o cérebro a interpretar informações mais rápido.</li>
+          <li><strong>Maior engajamento:</strong> cores, ícones e animações convidam o usuário a explorar.</li>
+          <li><strong>Valor percebido:</strong> um layout moderno comunica qualidade, cuidado e inovação.</li>
+        </ul>
+
+        <div class="mt-5">
+            <div class="p-4 rounded-4 bg-light border-start border-4 border-warning shadow-sm" style="max-width:850px;">
+                <p class="mb-3 fs-5">
+                <em>
+                    “Pesquisas da <strong>HubSpot</strong> e <strong>Nielsen Norman Group</strong> mostram que o design visual acelera a compreensão,
+                    aumenta o engajamento e melhora a percepção de usabilidade. 
+                    Um dashboard visualmente atraente não só comunica melhor — ele inspira mais confiança e facilita a tomada de decisão.”
+                </em>
+                </p>
+
+                <footer class="text-muted small">
+                <ul class="list-unstyled mb-0">
+                    <li><a href="https://blog.hubspot.com/marketing/visual-content-marketing-strategy" target="_blank" class="text-decoration-none text-muted">HubSpot — Visual Content Marketing Strategy</a></li>
+                    <li><a href="https://www.nngroup.com/articles/aesthetic-usability-effect/" target="_blank" class="text-decoration-none text-muted">Nielsen Norman Group — Aesthetic-Usability Effect</a></li>
+                </ul>
+                </footer>
+            </div>
+        </div>
+
+      </section>
+
+      <section class="comparativo mt-5">
+        <p class="text-uppercase small text-muted mb-2 tracking-wide">Veja na prática</p>
+        <h3 class="fw-bold mb-3" style="font-size: 1.8rem;">
+          Veja como um simples HTML eleva o visual no Power BI
+        </h3>
+        <p class="text-secondary mb-5" style="max-width: 720px;">
+          Compare o card padrão do Power BI com o mesmo modelo recriado em HTML.  
+          O segundo transmite mais clareza, contraste e um toque profissional.
+        </p>
+
+        <!-- CARD COMPARATIVO UNIFICADO -->
+        <div class="comparativo-wrapper mx-auto shadow-lg rounded-4 overflow-hidden" 
+            style="max-width: 1000px; background: linear-gradient(135deg, #f8f9fa, #ffffff);">
+          <div class="position-relative">
+            <img src="/src/imgs/Comparacao_cards.png" alt="Comparativo Power BI vs HTML" 
+                class="img-fluid w-100 d-block">
+            <div class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm" 
+                style="font-size: 0.85rem;">Comparativo real</div>
+          </div>
+        </div>
+
+        <p class="mt-4 text-muted small">
+          À esquerda: card nativo do Power BI. &nbsp;•&nbsp; À direita: versão aprimorada com HTML e CSS.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="/src/js/script.js"></script>
+</body>
+</html>
