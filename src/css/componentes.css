@@ -9,7 +9,7 @@ body {
 .main-content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
 }
 
 /* BLOCO DO COMPONENTE */
@@ -30,6 +30,7 @@ body {
 /* CABEÇALHO */
 .component-header {
   margin-bottom: 1.8rem;
+  text-align: left;
 }
 .component-header h4 {
   font-size: 1.4rem;
@@ -40,13 +41,14 @@ body {
   font-size: 0.95rem;
   color: #666;
   margin: 0;
+  max-width: 700px;
 }
 
 /* CONTEÚDO LADO A LADO */
 .component-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -85,22 +87,22 @@ body {
   word-wrap: break-word;
 }
 
-/* CORREÇÃO — QUEBRA AUTOMÁTICA DE LINHA NO CÓDIGO */
+/* QUEBRA AUTOMÁTICA DE LINHA */
 .code-panel pre,
 .code-panel code {
-  font-size: 0.88em !important;
-  white-space: pre-wrap !important;  /* ✅ força quebra de linha */
-  word-break: break-word !important; /* ✅ quebra palavras longas */
-  overflow-x: hidden !important;     /* ✅ remove scroll lateral */
+  font-size: 0.82em !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-x: hidden !important;
   display: block;
   max-width: 100%;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
-/* ROLAGEM */
+/* SCROLL */
 .code-panel::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
 }
 .code-panel::-webkit-scrollbar-thumb {
   background: #555;
@@ -136,15 +138,56 @@ body {
   box-shadow: 0 0 10px rgba(93, 82, 186, 0.4);
 }
 
-/* RESPONSIVO */
+/* 🔥 RESPONSIVO MELHORADO */
 @media (max-width: 992px) {
+  .component-block {
+    padding: 1.5rem;
+  }
+
   .component-row {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
   }
+
+  .card-fixed {
+    width: 100%;
+    max-width: 360px;
+  }
+
   .code-panel {
     width: 100%;
-    overflow-x: hidden;
+    min-width: unset;
+    overflow-x: auto;
     margin-top: 1rem;
+  }
+
+  .code-panel pre,
+  .code-panel code {
+    font-size: 0.75em !important;
+  }
+}
+
+/* 🔹 EXTRA: Melhor visual em telas muito pequenas */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 1.2rem;
+  }
+
+  .component-block {
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+
+  .component-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .component-header p {
+    font-size: 0.85rem;
+  }
+
+  .card-fixed {
+    max-width: 100%;
   }
 }
