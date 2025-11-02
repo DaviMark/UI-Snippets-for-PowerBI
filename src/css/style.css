@@ -122,7 +122,7 @@ body {
 
 /* ===== SEÇÕES ===== */
 .intro, .impacto, .comparativo {
-  max-width: 1000px;
+  max-width: 1020px;
   margin: 0 auto;
   animation: slideUp 0.8s ease-out;
   animation-delay: 0.2s;
