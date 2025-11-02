@@ -26,13 +26,14 @@
         <div class="bar"></div>
       </button>
       <img src="/src/imgs/logo_davi.png" alt="Logo" class="navbar-logo">
+      <h1>UI Power Pack para Power BI</h1>
     </div>
   </nav>
 
   <div class="wrapper d-flex">
 
     <!-- SIDEBAR -->
-    <aside id="sidebar" class="p-4 shadow-sm open">
+    <aside id="sidebar" class="p-4 shadow-sm">
       <ul class="nav flex-column" id="sidebarMenu">
         <li class="nav-item mb-2">
           <a href="/index.html" class="nav-link">Home</a>
@@ -64,219 +65,225 @@
     </aside>
 
   <main id="content" class="flex-grow-1 p-5 shifted">
-
     <section class="intro mt-5 ">
-       
-    </section>
+        <p class="text-uppercase small text-muted mb-2">Componentes</p>
+        <h1 class="fw-bold mb-3 display-6">Visuais HTML para Power BI</h1>
+        <p class="lead text-secondary mb-4" style="max-width:100%;">
+          Crie dashboards mais elegantes e profissionais com componentes HTML prontos. 
+          Copie, personalize e use no Power BI para transformar seus relatórios em experiências visuais modernas e interativas.
+        </p>
 
- <header>
-  <h1 class="fw-bold mb-2">Visuais HTML para Power BI</h1>
-  <p class="text-muted" style="max-width: 100%">
-    Crie dashboards mais elegantes e profissionais com componentes HTML prontos. 
-    Copie, personalize e use no Power BI para transformar seus relatórios em experiências visuais modernas e interativas.
-  </p>
-</header>
+        <div class="d-flex flex-wrap gap-3">
+          <button id="btnComponentes" class="btn btn-dark px-4 py-2">Ver Componentes</button>
+          <button id="btnDocumentacao" class="btn btn-outline-dark px-4 py-2">Documentação</button>
+          <a href="https://github.com/seu-repo" class="btn btn-outline-secondary px-4 py-2">Colaborar</a>
+        </div>
+      </section>
+      
+    <section class="impacto mt-5 "> <!-- Section PRINCIPAL -->
+                <!-- BLOCO DO CARD -->
+            <section class="component-block mb-5">
 
-    <!-- BLOCO DO CARD -->
-    <section class="component-block mb-5">
-
-      <!-- PREVIEW E CÓDIGO -->
-      <div class="component-row">
-        <!-- CARD VISUAL -->
-         <div style="background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;">
-            <div style="font-size: 15px; font-weight: 600; margin-bottom: 20px; color: #e2e8f0;">Comparativo Mensal</div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-                <div>
-                <div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Outubro</div>
-                <div style="font-size: 24px; font-weight: 700;">R$ 145K</div>
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;">
+                    <div style="font-size: 15px; font-weight: 600; margin-bottom: 20px; color: #e2e8f0;">Comparativo Mensal</div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+                        <div>
+                        <div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Outubro</div>
+                        <div style="font-size: 24px; font-weight: 700;">R$ 145K</div>
+                        </div>
+                        <div style="text-align: right;">
+                        <div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Novembro</div>
+                        <div style="font-size: 24px; font-weight: 700; color: #10b981;">R$ 178K</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                        <span style="font-size: 20px;">📈</span>
+                        <span style="font-size: 14px; color: #10b981; font-weight: 600;">+22.8% de crescimento</span>
+                    </div>
                 </div>
-                <div style="text-align: right;">
-                <div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Novembro</div>
-                <div style="font-size: 24px; font-weight: 700; color: #10b981;">R$ 178K</div>
+
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+        &lt;div style="background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;"&gt;
+          &lt;div style="font-size: 15px; font-weight: 600; margin-bottom: 20px; color: #e2e8f0;"&gt;Comparativo Mensal&lt;/div&gt;
+          &lt;div style="display: flex; justify-content: space-between; margin-bottom: 16px;"&gt;
+            &lt;div&gt;
+              &lt;div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;"&gt;Outubro&lt;/div&gt;
+              &lt;div style="font-size: 24px; font-weight: 700;"&gt;R$ 145K&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style="text-align: right;"&gt;
+              &lt;div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;"&gt;Novembro&lt;/div&gt;
+              &lt;div style="font-size: 24px; font-weight: 700; color: #10b981;"&gt;R$ 178K&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div style="display: flex; align-items: center; gap: 8px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2);"&gt;
+            &lt;span style="font-size: 20px;"&gt;📈&lt;/span&gt;
+            &lt;span style="font-size: 14px; color: #10b981; font-weight: 600;"&gt;+22.8% de crescimento&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_Receita_HTML = 
+        VAR Crescimento = [Medida %]
+        VAR Cor =
+            IF(Crescimento >= 0, "#10b981", "#ef4444") // verde ou vermelho
+        VAR Emoji =
+            IF(Crescimento >= 0, "📈", "📉")
+        RETURN
+        "
+        &lt;div style='background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: Segoe UI, sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;'&gt;
+          &lt;div style='font-size: 15px; font-weight: 600; margin-bottom: 20px; color: #e2e8f0;'&gt;Comparativo Mensal&lt;/div&gt;
+
+          &lt;div style='display: flex; justify-content: space-between; margin-bottom: 16px;'&gt;
+            &lt;div&gt;
+              &lt;div style='font-size: 12px; color: #94a3b8; margin-bottom: 4px;'&gt;" &amp; [Medida] &amp; "&lt;/div&gt;
+              &lt;div style='font-size: 24px; font-weight: 700;'&gt;" &amp; FORMAT([Medida], "R$ #,##0") &amp; "&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style='text-align: right;'&gt;
+              &lt;div style='font-size: 12px; color: #94a3b8; margin-bottom: 4px;'&gt;" &amp; [Medida] &amp; "&lt;/div&gt;
+              &lt;div style='font-size: 24px; font-weight: 700; color:" &amp; Cor &amp; ";'&gt;" &amp; FORMAT([Medida], "R$ #,##0") &amp; "&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div style='display: flex; align-items: center; gap: 8px; padding: 12px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);'&gt;
+            &lt;span style='font-size: 20px;'&gt;" &amp; Emoji &amp; "&lt;/span&gt;
+            &lt;span style='font-size: 14px; color:" &amp; Cor &amp; "; font-weight: 600;'&gt;" &amp;
+                FORMAT(Crescimento, "+0.0%;-0.0%") &amp; " de variação&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        "
+                  </code></pre>
                 </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
             </div>
-            <div style="display: flex; align-items: center; gap: 8px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2);">
-                <span style="font-size: 20px;">📈</span>
-                <span style="font-size: 14px; color: #10b981; font-weight: 600;">+22.8% de crescimento</span>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(245, 158, 11, 0.3);">
+                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+                    <div>
+                      <div style="font-size: 13px; color: #94a3b8; margin-bottom: 4px;">Pedidos Pendentes</div>
+                      <div style="font-size: 32px; font-weight: 700;">156</div>
+                    </div>
+                    <div style="background: rgba(245, 158, 11, 0.2); padding: 12px; border-radius: 12px;">
+                      <div style="font-size: 24px;">📦</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 8px; font-size: 12px;">
+                    <span style="background: rgba(245, 158, 11, 0.2); padding: 4px 10px; border-radius: 6px; color: #fbbf24;">89 urgentes</span>
+                    <span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 6px; color: #94a3b8;">67 normais</span>
+                  </div>
+                </div>
+
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+        &lt;div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(245, 158, 11, 0.3);"&gt;
+          &lt;div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;"&gt;
+            &lt;div&gt;
+              &lt;div style="font-size: 13px; color: #94a3b8; margin-bottom: 4px;"&gt;Pedidos Pendentes&lt;/div&gt;
+              &lt;div style="font-size: 32px; font-weight: 700;"&gt;156&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style="background: rgba(245, 158, 11, 0.2); padding: 12px; border-radius: 12px;"&gt;
+              &lt;div style="font-size: 24px;"&gt;📦&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div style="display: flex; gap: 8px; font-size: 12px;"&gt;
+            &lt;span style="background: rgba(245, 158, 11, 0.2); padding: 4px 10px; border-radius: 6px; color: #fbbf24;"&gt;89 urgentes&lt;/span&gt;
+            &lt;span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 6px; color: #94a3b8;"&gt;67 normais&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_PedidosPendentes_HTML =
+        "
+        &lt;div style='background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: Segoe UI, sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(245, 158, 11, 0.3);'&gt;
+          &lt;div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;'&gt;
+            &lt;div&gt;
+              &lt;div style='font-size: 13px; color: #94a3b8; margin-bottom: 4px;'&gt;Pedidos Pendentes&lt;/div&gt;
+              &lt;div style='font-size: 32px; font-weight: 700;'&gt;" &amp; [Medida] &amp; "&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style='background: rgba(245, 158, 11, 0.2); padding: 12px; border-radius: 12px;'&gt;
+              &lt;div style='font-size: 24px;'&gt;📦&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div style='display: flex; gap: 8px; font-size: 12px;'&gt;
+            &lt;span style='background: rgba(245, 158, 11, 0.2); padding: 4px 10px; border-radius: 6px; color: #fbbf24;'&gt;" &amp; [Medida] &amp; "&lt;/span&gt;
+            &lt;span style='background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 6px; color: #94a3b8;'&gt;" &amp; [Medida] &amp; "&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
             </div>
-        </div>
 
-        <!-- CÓDIGO (INICIALMENTE OCULTO) -->
-        <div class="code-panel bg-dark rounded-4 p-3 d-none">
-            
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="btn-group">
-              <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
-              <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
-            </div>
-            <button class="copy-btn" title="Copiar código">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
-                <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
-                <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
-              </svg>
-            </button>
-          </div>
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
 
-          <pre class="m-0"><code class="language-html html-code">
-&lt;div style="background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;"&gt;
-  &lt;div style="font-size: 15px; font-weight: 600; margin-bottom: 20px; color: #e2e8f0;"&gt;Comparativo Mensal&lt;/div&gt;
-  &lt;div style="display: flex; justify-content: space-between; margin-bottom: 16px;"&gt;
-    &lt;div&gt;
-      &lt;div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;"&gt;Outubro&lt;/div&gt;
-      &lt;div style="font-size: 24px; font-weight: 700;"&gt;R$ 145K&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div style="text-align: right;"&gt;
-      &lt;div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;"&gt;Novembro&lt;/div&gt;
-      &lt;div style="font-size: 24px; font-weight: 700; color: #10b981;"&gt;R$ 178K&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div style="display: flex; align-items: center; gap: 8px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2);"&gt;
-    &lt;span style="font-size: 20px;"&gt;📈&lt;/span&gt;
-    &lt;span style="font-size: 14px; color: #10b981; font-weight: 600;"&gt;+22.8% de crescimento&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-          </code></pre>
-
-          <pre class="m-0 d-none"><code class="language-html powerbi-code">
-Card_Receita_HTML = 
-VAR Crescimento = [Medida %]
-VAR Cor =
-    IF(Crescimento >= 0, "#10b981", "#ef4444") // verde ou vermelho
-VAR Emoji =
-    IF(Crescimento >= 0, "📈", "📉")
-RETURN
-"
-&lt;div style='background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: Segoe UI, sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;'&gt;
-  &lt;div style='font-size: 15px; font-weight: 600; margin-bottom: 20px; color: #e2e8f0;'&gt;Comparativo Mensal&lt;/div&gt;
-
-  &lt;div style='display: flex; justify-content: space-between; margin-bottom: 16px;'&gt;
-    &lt;div&gt;
-      &lt;div style='font-size: 12px; color: #94a3b8; margin-bottom: 4px;'&gt;" &amp; [Medida] &amp; "&lt;/div&gt;
-      &lt;div style='font-size: 24px; font-weight: 700;'&gt;" &amp; FORMAT([Medida], "R$ #,##0") &amp; "&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div style='text-align: right;'&gt;
-      &lt;div style='font-size: 12px; color: #94a3b8; margin-bottom: 4px;'&gt;" &amp; [Medida] &amp; "&lt;/div&gt;
-      &lt;div style='font-size: 24px; font-weight: 700; color:" &amp; Cor &amp; ";'&gt;" &amp; FORMAT([Medida], "R$ #,##0") &amp; "&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div style='display: flex; align-items: center; gap: 8px; padding: 12px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);'&gt;
-    &lt;span style='font-size: 20px;'&gt;" &amp; Emoji &amp; "&lt;/span&gt;
-    &lt;span style='font-size: 14px; color:" &amp; Cor &amp; "; font-weight: 600;'&gt;" &amp;
-        FORMAT(Crescimento, "+0.0%;-0.0%") &amp; " de variação&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-"
-          </code></pre>
-        </div>
-      </div>
-
-      <!-- RODAPÉ DO CARD -->
-  <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
-    <div class="creator d-flex align-items-center gap-2">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
-      <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
-    </div>
-
-      <!-- BOTÃO ABRIR/FECHAR -->
-      <div class="text-end mt-3">
-        <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
-      </div>
     </section>
-
-
-    <!-- Proximo Card -->
-
-    <section class="component-block mb-5">
-
-      <!-- PREVIEW E CÓDIGO -->
-      <div class="component-row">
-        <!-- CARD VISUAL -->
-        <div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(245, 158, 11, 0.3);">
-          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
-            <div>
-              <div style="font-size: 13px; color: #94a3b8; margin-bottom: 4px;">Pedidos Pendentes</div>
-              <div style="font-size: 32px; font-weight: 700;">156</div>
-            </div>
-            <div style="background: rgba(245, 158, 11, 0.2); padding: 12px; border-radius: 12px;">
-              <div style="font-size: 24px;">📦</div>
-            </div>
-          </div>
-          <div style="display: flex; gap: 8px; font-size: 12px;">
-            <span style="background: rgba(245, 158, 11, 0.2); padding: 4px 10px; border-radius: 6px; color: #fbbf24;">89 urgentes</span>
-            <span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 6px; color: #94a3b8;">67 normais</span>
-          </div>
-        </div>
-
-        <!-- CÓDIGO (INICIALMENTE OCULTO) -->
-        <div class="code-panel bg-dark rounded-4 p-3 d-none">
-            
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="btn-group">
-              <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
-              <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
-            </div>
-            <button class="copy-btn" title="Copiar código">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
-                <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
-                <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
-              </svg>
-            </button>
-          </div>
-
-          <pre class="m-0"><code class="language-html html-code">
-&lt;div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(245, 158, 11, 0.3);"&gt;
-  &lt;div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;"&gt;
-    &lt;div&gt;
-      &lt;div style="font-size: 13px; color: #94a3b8; margin-bottom: 4px;"&gt;Pedidos Pendentes&lt;/div&gt;
-      &lt;div style="font-size: 32px; font-weight: 700;"&gt;156&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div style="background: rgba(245, 158, 11, 0.2); padding: 12px; border-radius: 12px;"&gt;
-      &lt;div style="font-size: 24px;"&gt;📦&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div style="display: flex; gap: 8px; font-size: 12px;"&gt;
-    &lt;span style="background: rgba(245, 158, 11, 0.2); padding: 4px 10px; border-radius: 6px; color: #fbbf24;"&gt;89 urgentes&lt;/span&gt;
-    &lt;span style="background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 6px; color: #94a3b8;"&gt;67 normais&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-          </code></pre>
-
-          <pre class="m-0 d-none"><code class="language-html powerbi-code">
-Card_PedidosPendentes_HTML =
-"
-&lt;div style='background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: Segoe UI, sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(245, 158, 11, 0.3);'&gt;
-  &lt;div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;'&gt;
-    &lt;div&gt;
-      &lt;div style='font-size: 13px; color: #94a3b8; margin-bottom: 4px;'&gt;Pedidos Pendentes&lt;/div&gt;
-      &lt;div style='font-size: 32px; font-weight: 700;'&gt;" &amp; [Medida] &amp; "&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div style='background: rgba(245, 158, 11, 0.2); padding: 12px; border-radius: 12px;'&gt;
-      &lt;div style='font-size: 24px;'&gt;📦&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div style='display: flex; gap: 8px; font-size: 12px;'&gt;
-    &lt;span style='background: rgba(245, 158, 11, 0.2); padding: 4px 10px; border-radius: 6px; color: #fbbf24;'&gt;" &amp; [Medida] &amp; "&lt;/span&gt;
-    &lt;span style='background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 6px; color: #94a3b8;'&gt;" &amp; [Medida] &amp; "&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-"
-          </code></pre>
-        </div>
-      </div>
-
-       <!-- RODAPÉ DO CARD -->
-  <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
-    <div class="creator d-flex align-items-center gap-2">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
-      <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
-    </div>
-
-      <!-- BOTÃO ABRIR/FECHAR -->
-      <div class="text-end mt-3">
-        <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
-      </div>
-    </section>
+    
 
   </main>
 

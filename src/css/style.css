@@ -5,18 +5,76 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== ANIMAÇÕES ===== */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes movePattern {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
-  height: 64px;
+  height: 75px;
   z-index: 3000;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0,0,0,0.05);
+
 }
 
 .navbar-logo {
     width: 5%;
+
 }
+
+.navbar h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0px;
+  background: linear-gradient(90deg, #111, #222, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* efeito hover sutil */
+.navbar h1:hover {
+  background: linear-gradient(90deg, #111, #facc15, #111);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.02);
+}
+
+/* versão responsiva */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+  }
+  .navbar-logo {
+    width: 12% !important;
+}
+}
+
 
 /* ===== BOTÃO HAMBURGUER MODERNO ===== */
 .menu-btn {
@@ -43,19 +101,36 @@ body {
 .menu-btn.active .bar:nth-child(1) {
   transform: rotate(45deg) translateY(10px);
 }
-
 .menu-btn.active .bar:nth-child(2) {
   opacity: 0;
 }
-
 .menu-btn.active .bar:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
 }
 
+.menu-btn .bar:nth-child(1) {
+  transform: rotate(0deg) translateY(0px);
+}
+
+.menu-btn .bar:nth-child(2) {
+  opacity: 1;
+}
+
+.menu-btn .bar:nth-child(3) {
+  transform: rotate(0deg) translateY(0px);
+}
+
 /* ===== SEÇÕES ===== */
 .intro, .impacto, .comparativo {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
+  animation: slideUp 0.8s ease-out;
+  animation-delay: 0.2s;
+}
+
+.intro, .comparativo, .component-block {
+  animation: slideUp 0.8s ease-out;
+  animation-delay: 0.2s;
 }
 
 blockquote {
@@ -185,10 +260,6 @@ blockquote {
     height: 96vh;
     top: 50px;
     transform: translateX(-100%);
-  }
-
-  .navbar-logo {
-    width: 10%;
   }
 
   #sidebar.open {
