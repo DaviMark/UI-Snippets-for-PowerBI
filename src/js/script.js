@@ -34,8 +34,10 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Abre o menu de componentes
-btnComp.addEventListener("click", openSidebarAndComponents);
+// 👉 Redirecionamentos dos botões principais
+btnComp.addEventListener("click", () => {
+  window.location.href = "/src/pages/cards.html";
+});
 
 // 👉 Novo: redireciona para a página de documentação
 btnDoc.addEventListener("click", () => {

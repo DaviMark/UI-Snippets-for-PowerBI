@@ -353,3 +353,36 @@ footer {
 :root {
   scroll-behavior: smooth;
 }
+
+
+.navegacao-dica {
+  margin-top: 60px;
+}
+
+.navegacao-card {
+  background: linear-gradient(135deg, #fafafa, #ffffff);
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #efff00;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.navegacao-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(93, 82, 186, 0.15);
+}
+
+.navegacao-card strong {
+  color: #000;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navegacao-card {
+    padding: 18px;
+  }
+
+  .navegacao-dica p {
+    font-size: 14.5px;
+  }
+}
