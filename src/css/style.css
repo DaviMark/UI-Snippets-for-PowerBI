@@ -386,3 +386,55 @@ footer {
     font-size: 14.5px;
   }
 }
+
+.creditos {
+  border-radius: 16px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03);
+}
+
+.creditos h4 {
+  color: #111827;
+  font-size: 1.4rem;
+}
+
+.creditos p {
+  color: #475569;
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+
+.creditos-img {
+  max-width: 700px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(93, 82, 186, 0.05);
+  transition: all 0.3s ease;
+}
+
+.creditos-img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(93, 82, 186, 0.12);
+}
+
+.caption {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .creditos {
+    padding: 30px 16px;
+  }
+
+  .creditos h4 {
+    font-size: 1.2rem;
+  }
+
+  .creditos p {
+    font-size: 14.5px;
+  }
+}
+
