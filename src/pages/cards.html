@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
 </head>
 <body>
 
@@ -282,10 +285,695 @@
               </div>
             </section>
 
+             <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+                    <div>
+                      <div style="font-size: 13px; color: #94a3b8; margin-bottom: 4px;">Vendas Hoje</div>
+                      <div style="font-size: 32px; font-weight: 700;">R$ 87.340</div>
+                    </div>
+                    <div style="background: rgba(59, 130, 246, 0.2); padding: 12px; border-radius: 12px;">
+                      <div style="font-size: 24px;">💰</div>
+                    </div>
+                  </div>
+                  <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+                    <div style="height: 100%; width: 73%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 2px;animation:grow 2s ease-out;"></div>
+                  </div>
+                  <div style="font-size: 12px; color: #94a3b8; margin-top: 8px;">73% da meta diária</div>
+                  <style>@keyframes grow{from{width:0}to{width:80%}}</style>
+                </div>
+
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+       &lt;div style=&quot;background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(59, 130, 246, 0.3);&quot;&gt;
+  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;&quot;&gt;
+    &lt;div&gt;
+      &lt;div style=&quot;font-size: 13px; color: #94a3b8; margin-bottom: 4px;&quot;&gt;Vendas Hoje&lt;/div&gt;
+      &lt;div style=&quot;font-size: 32px; font-weight: 700;&quot;&gt;R$ 87.340&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background: rgba(59, 130, 246, 0.2); padding: 12px; border-radius: 12px;&quot;&gt;
+      &lt;div style=&quot;font-size: 24px;&quot;&gt;💰&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;&quot;&gt;
+    &lt;div style=&quot;height: 100%; width: 73%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 2px;animation:grow 2s ease-out;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;font-size: 12px; color: #94a3b8; margin-top: 8px;&quot;&gt;73% da meta di&aacute;ria&lt;/div&gt;
+  &lt;style&gt;@keyframes grow{from{width:0}to{width:80%}}&lt;/style&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_Vendas_HTML =
+        "
+        &lt;div style='background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; border: 1px solid rgba(59, 130, 246, 0.3);'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;'&gt;
+    &lt;div&gt;
+      &lt;div style='font-size: 13px; color: #94a3b8; margin-bottom: 4px;'&gt;Vendas Hoje&lt;/div&gt;
+      &lt;div style='font-size: 32px; font-weight: 700;'&gt;&quot; &amp; FORMAT(SUM(Projetos[Valor Negociado]), &quot;R$ #,#&quot;) &amp; &quot;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(59, 130, 246, 0.2); padding: 12px; border-radius: 12px;'&gt;
+      &lt;div style='font-size: 24px;'&gt;💰&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;'&gt;
+    &lt;div style='height: 100%; width: 73%; background: linear-gradient(90deg, #3b82f6, #60a5fa); border-radius: 2px;animation:grow 2s ease-out;'&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='font-size: 12px; color: #94a3b8; margin-top: 8px;'&gt;&quot; &amp; FORMAT([Crescimento %],&quot;0.0%&quot;) &amp; &quot;&lt;/div&gt;
+  &lt;style&gt;@keyframes grow{from{width:0}to{width:&quot; &amp; [Crescimento %] &amp; &quot;%}}&lt;/style&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div style="font-size: 16px; font-weight: 600;">Fluxo de Caixa</div>
+                    <div style="font-size: 24px;">💵</div>
+                  </div>
+                  <div style="margin-bottom: 16px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                      <span style="font-size: 13px; color: #94a3b8;">Entradas</span>
+                      <span style="font-size: 16px; font-weight: 700; color: #10b981;">+ R$ 284.500</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(16, 185, 129, 0.2); border-radius: 3px; overflow: hidden;">
+                      <div style="height: 100%; width: 75%; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 3px;"></div>
+                    </div>
+                  </div>
+                  <div style="margin-bottom: 16px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                      <span style="font-size: 13px; color: #94a3b8;">Saídas</span>
+                      <span style="font-size: 16px; font-weight: 700; color: #ef4444;">- R$ 187.200</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(239, 68, 68, 0.2); border-radius: 3px; overflow: hidden;">
+                      <div style="height: 100%; width: 52%; background: linear-gradient(90deg, #ef4444, #f87171); border-radius: 3px;"></div>
+                    </div>
+                  </div>
+                  <div style="padding: 16px; background: rgba(16, 185, 129, 0.1); border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Saldo do Período</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #10b981;">+ R$ 97.300</div>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+       &lt;div style=&quot;background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px; border: 1px solid rgba(16, 185, 129, 0.3);&quot;&gt;
+  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;&quot;&gt;
+    &lt;div style=&quot;font-size: 16px; font-weight: 600;&quot;&gt;Fluxo de Caixa&lt;/div&gt;
+    &lt;div style=&quot;font-size: 24px;&quot;&gt;💵&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-bottom: 16px;&quot;&gt;
+    &lt;div style=&quot;display: flex; justify-content: space-between; margin-bottom: 8px;&quot;&gt;
+      &lt;span style=&quot;font-size: 13px; color: #94a3b8;&quot;&gt;Entradas&lt;/span&gt;
+      &lt;span style=&quot;font-size: 16px; font-weight: 700; color: #10b981;&quot;&gt;+ R$ 284.500&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;height: 6px; background: rgba(16, 185, 129, 0.2); border-radius: 3px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;height: 100%; width: 75%; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 3px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-bottom: 16px;&quot;&gt;
+    &lt;div style=&quot;display: flex; justify-content: space-between; margin-bottom: 8px;&quot;&gt;
+      &lt;span style=&quot;font-size: 13px; color: #94a3b8;&quot;&gt;Sa&iacute;das&lt;/span&gt;
+      &lt;span style=&quot;font-size: 16px; font-weight: 700; color: #ef4444;&quot;&gt;- R$ 187.200&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;height: 6px; background: rgba(239, 68, 68, 0.2); border-radius: 3px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;height: 100%; width: 52%; background: linear-gradient(90deg, #ef4444, #f87171); border-radius: 3px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;padding: 16px; background: rgba(16, 185, 129, 0.1); border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.2);&quot;&gt;
+    &lt;div style=&quot;font-size: 12px; color: #94a3b8; margin-bottom: 4px;&quot;&gt;Saldo do Per&iacute;odo&lt;/div&gt;
+    &lt;div style=&quot;font-size: 28px; font-weight: 700; color: #10b981;&quot;&gt;+ R$ 97.300&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_Financeiro_HTML =
+        "
+        &lt;div style='background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px; border: 1px solid rgba(16, 185, 129, 0.3);'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;'&gt;
+    &lt;div style='font-size: 16px; font-weight: 600;'&gt;Fluxo de Caixa&lt;/div&gt;
+    &lt;div style='font-size: 24px;'&gt;💵&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-bottom: 16px;'&gt;
+    &lt;div style='display: flex; justify-content: space-between; margin-bottom: 8px;'&gt;
+      &lt;span style='font-size: 13px; color: #94a3b8;'&gt;Entradas&lt;/span&gt;
+      &lt;span style='font-size: 16px; font-weight: 700; color: #10b981;'&gt;"& [Medida] &"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='height: 6px; background: rgba(16, 185, 129, 0.2); border-radius: 3px; overflow: hidden;'&gt;
+      &lt;div style='height: 100%; width: 75%; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 3px;'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-bottom: 16px;'&gt;
+    &lt;div style='display: flex; justify-content: space-between; margin-bottom: 8px;'&gt;
+      &lt;span style='font-size: 13px; color: #94a3b8;'&gt;Sa&iacute;das&lt;/span&gt;
+      &lt;span style='font-size: 16px; font-weight: 700; color: #ef4444;'&gt;"& [Medida] &"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='height: 6px; background: rgba(239, 68, 68, 0.2); border-radius: 3px; overflow: hidden;'&gt;
+      &lt;div style='height: 100%; width: 52%; background: linear-gradient(90deg, #ef4444, #f87171); border-radius: 3px;'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='padding: 16px; background: rgba(16, 185, 129, 0.1); border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.2);'&gt;
+    &lt;div style='font-size: 12px; color: #94a3b8; margin-bottom: 4px;'&gt;Saldo do Per&iacute;odo&lt;/div&gt;
+    &lt;div style='font-size: 28px; font-weight: 700; color: #10b981;'&gt;"& [Medida] &"&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;">
+                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+                    <div>
+                      <div style="font-size: 14px; color: #94a3b8; margin-bottom: 4px;">ITENS EM ESTOQUE</div>
+                      <div style="font-size: 36px; font-weight: 700;">12.847</div>
+                    </div>
+                    <div style="background: rgba(59, 130, 246, 0.2); padding: 12px; border-radius: 12px; font-size: 24px;">📦</div>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: rgba(16, 185, 129, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                      <div style="font-size: 22px; font-weight: 700; color: #10b981;">8.234</div>
+                      <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Em estoque</div>
+                    </div>
+                    <div style="background: rgba(245, 158, 11, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.2);">
+                      <div style="font-size: 22px; font-weight: 700; color: #f59e0b;">3.421</div>
+                      <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Estoque baixo</div>
+                    </div>
+                    <div style="background: rgba(239, 68, 68, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(239, 68, 68, 0.2);">
+                      <div style="font-size: 22px; font-weight: 700; color: #ef4444;">892</div>
+                      <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Sem estoque</div>
+                    </div>
+                    <div style="background: rgba(59, 130, 246, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(59, 130, 246, 0.2);">
+                      <div style="font-size: 22px; font-weight: 700; color: #3b82f6;">300</div>
+                      <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Em trânsito</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+       &lt;div style=&quot;background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;&quot;&gt;
+  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;&quot;&gt;
+    &lt;div&gt;
+      &lt;div style=&quot;font-size: 14px; color: #94a3b8; margin-bottom: 4px;&quot;&gt;ITENS EM ESTOQUE&lt;/div&gt;
+      &lt;div style=&quot;font-size: 36px; font-weight: 700;&quot;&gt;12.847&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background: rgba(59, 130, 246, 0.2); padding: 12px; border-radius: 12px; font-size: 24px;&quot;&gt;📦&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: 12px;&quot;&gt;
+    &lt;div style=&quot;background: rgba(16, 185, 129, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.2);&quot;&gt;
+      &lt;div style=&quot;font-size: 22px; font-weight: 700; color: #10b981;&quot;&gt;8.234&lt;/div&gt;
+      &lt;div style=&quot;font-size: 12px; color: #94a3b8; margin-top: 4px;&quot;&gt;Em estoque&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background: rgba(245, 158, 11, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.2);&quot;&gt;
+      &lt;div style=&quot;font-size: 22px; font-weight: 700; color: #f59e0b;&quot;&gt;3.421&lt;/div&gt;
+      &lt;div style=&quot;font-size: 12px; color: #94a3b8; margin-top: 4px;&quot;&gt;Estoque baixo&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background: rgba(239, 68, 68, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(239, 68, 68, 0.2);&quot;&gt;
+      &lt;div style=&quot;font-size: 22px; font-weight: 700; color: #ef4444;&quot;&gt;892&lt;/div&gt;
+      &lt;div style=&quot;font-size: 12px; color: #94a3b8; margin-top: 4px;&quot;&gt;Sem estoque&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background: rgba(59, 130, 246, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(59, 130, 246, 0.2);&quot;&gt;
+      &lt;div style=&quot;font-size: 22px; font-weight: 700; color: #3b82f6;&quot;&gt;300&lt;/div&gt;
+      &lt;div style=&quot;font-size: 12px; color: #94a3b8; margin-top: 4px;&quot;&gt;Em tr&acirc;nsito&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_Estoque_HTML =
+"
+        &lt;div style='background: linear-gradient(135deg, #1e293b, #334155); border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); width: 320px;'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;'&gt;
+    &lt;div&gt;
+      &lt;div style='font-size: 14px; color: #94a3b8; margin-bottom: 4px;'&gt;ITENS EM ESTOQUE&lt;/div&gt;
+      &lt;div style='font-size: 36px; font-weight: 700;'&gt;"& [Medida] &"&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(59, 130, 246, 0.2); padding: 12px; border-radius: 12px; font-size: 24px;'&gt;📦&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='display: grid; grid-template-columns: 1fr 1fr; gap: 12px;'&gt;
+    &lt;div style='background: rgba(16, 185, 129, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.2);'&gt;
+      &lt;div style='font-size: 22px; font-weight: 700; color: #10b981;'&gt;"& [Medida] &"&lt;/div&gt;
+      &lt;div style='font-size: 12px; color: #94a3b8; margin-top: 4px;'&gt;Em estoque&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(245, 158, 11, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.2);'&gt;
+      &lt;div style='font-size: 22px; font-weight: 700; color: #f59e0b;'&gt;"& [Medida] &"&lt;/div&gt;
+      &lt;div style='font-size: 12px; color: #94a3b8; margin-top: 4px;'&gt;Estoque baixo&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(239, 68, 68, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(239, 68, 68, 0.2);'&gt;
+      &lt;div style='font-size: 22px; font-weight: 700; color: #ef4444;'&gt;'"& [Medida] &"&lt;/div&gt;
+      &lt;div style='font-size: 12px; color: #94a3b8; margin-top: 4px;'&gt;Sem estoque&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(59, 130, 246, 0.1); padding: 12px; border-radius: 10px; border: 1px solid rgba(59, 130, 246, 0.2);'&gt;
+      &lt;div style='font-size: 22px; font-weight: 700; color: #3b82f6;'&gt;"& [Medida] &"&lt;/div&gt;
+      &lt;div style='font-size: 12px; color: #94a3b8; margin-top: 4px;'&gt;Em tr&acirc;nsito&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 320px; border: 1px solid rgba(139, 92, 246, 0.3);">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div>
+                      <div style="font-size: 14px; color: #94a3b8; margin-bottom: 4px;">TICKETS ABERTOS</div>
+                      <div style="font-size: 36px; font-weight: 700;">247</div>
+                    </div>
+                    <div style="background: rgba(139, 92, 246, 0.2); padding: 12px; border-radius: 12px; font-size: 24px;">🎫</div>
+                  </div>
+                  <div style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;">
+                      <span style="color: #94a3b8;">Críticos</span>
+                      <span style="font-weight: 600; color: #ef4444;">18</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                      <div style="height: 100%; width: 15%; background: #ef4444; border-radius: 3px;"></div>
+                    </div>
+                  </div>
+                  <div style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;">
+                      <span style="color: #94a3b8;">Alta prioridade</span>
+                      <span style="font-weight: 600; color: #f59e0b;">67</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                      <div style="height: 100%; width: 45%; background: #f59e0b; border-radius: 3px;"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;">
+                      <span style="color: #94a3b8;">Normal</span>
+                      <span style="font-weight: 600; color: #3b82f6;">162</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                      <div style="height: 100%; width: 68%; background: #3b82f6; border-radius: 3px;"></div>
+                    </div>
+                  </div>
+                  <div style="margin-top: 16px; padding: 10px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; font-size: 13px; color: #10b981; text-align: center;">Tempo médio de resposta: 2h 15m</div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+       &lt;div style=&quot;background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 320px; border: 1px solid rgba(139, 92, 246, 0.3);&quot;&gt;
+  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;&quot;&gt;
+    &lt;div&gt;
+      &lt;div style=&quot;font-size: 14px; color: #94a3b8; margin-bottom: 4px;&quot;&gt;TICKETS ABERTOS&lt;/div&gt;
+      &lt;div style=&quot;font-size: 36px; font-weight: 700;&quot;&gt;247&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background: rgba(139, 92, 246, 0.2); padding: 12px; border-radius: 12px; font-size: 24px;&quot;&gt;🎫&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-bottom: 12px;&quot;&gt;
+    &lt;div style=&quot;display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;&quot;&gt;
+      &lt;span style=&quot;color: #94a3b8;&quot;&gt;Cr&iacute;ticos&lt;/span&gt;
+      &lt;span style=&quot;font-weight: 600; color: #ef4444;&quot;&gt;18&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;height: 100%; width: 15%; background: #ef4444; border-radius: 3px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-bottom: 12px;&quot;&gt;
+    &lt;div style=&quot;display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;&quot;&gt;
+      &lt;span style=&quot;color: #94a3b8;&quot;&gt;Alta prioridade&lt;/span&gt;
+      &lt;span style=&quot;font-weight: 600; color: #f59e0b;&quot;&gt;67&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;height: 100%; width: 45%; background: #f59e0b; border-radius: 3px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div style=&quot;display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;&quot;&gt;
+      &lt;span style=&quot;color: #94a3b8;&quot;&gt;Normal&lt;/span&gt;
+      &lt;span style=&quot;font-weight: 600; color: #3b82f6;&quot;&gt;162&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;height: 100%; width: 68%; background: #3b82f6; border-radius: 3px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-top: 16px; padding: 10px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; font-size: 13px; color: #10b981; text-align: center;&quot;&gt;Tempo m&eacute;dio de resposta: 2h 15m&lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_Ticket_HTML =
+        "
+        &lt;div style='background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 320px; border: 1px solid rgba(139, 92, 246, 0.3);'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;'&gt;
+    &lt;div&gt;
+      &lt;div style='font-size: 14px; color: #94a3b8; margin-bottom: 4px;'&gt;TICKETS ABERTOS&lt;/div&gt;
+      &lt;div style='font-size: 36px; font-weight: 700;'&gt;"& [Medida] &"&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(139, 92, 246, 0.2); padding: 12px; border-radius: 12px; font-size: 24px;'&gt;🎫&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-bottom: 12px;'&gt;
+    &lt;div style='display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;'&gt;
+      &lt;span style='color: #94a3b8;'&gt;Cr&iacute;ticos&lt;/span&gt;
+      &lt;span style='font-weight: 600; color: #ef4444;'&gt;"& [Medida] &"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;'&gt;
+      &lt;div style='height: 100%; width: 15%; background: #ef4444; border-radius: 3px;'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-bottom: 12px;'&gt;
+    &lt;div style='display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;'&gt;
+      &lt;span style='color: #94a3b8;'&gt;Alta prioridade&lt;/span&gt;
+      &lt;span style='font-weight: 600; color: #f59e0b;'&gt;"& [Medida] &"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;'&gt;
+      &lt;div style='height: 100%; width: 45%; background: #f59e0b; border-radius: 3px;'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div style='display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px;'&gt;
+      &lt;span style='color: #94a3b8;'&gt;Normal&lt;/span&gt;
+      &lt;span style='font-weight: 600; color: #3b82f6;'&gt;"& [Medida] &"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;'&gt;
+      &lt;div style='height: 100%; width: 68%; background: #3b82f6; border-radius: 3px;'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-top: 16px; padding: 10px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; font-size: 13px; color: #10b981; text-align: center;'&gt;Tempo m&eacute;dio de resposta: "& [Medida] &"&lt;/div&gt;
+&lt;/div&gt;
+"
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px; border: 1px solid rgba(34, 197, 94, 0.3);">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div style="font-size: 16px; font-weight: 600;">Status de Entregas</div>
+                    <div style="font-size: 24px;">🚚</div>
+                  </div>
+                  <div style="position: relative; padding-left: 24px;">
+                    <div style="position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.1);"></div>
+                    <div style="position: relative; margin-bottom: 20px;">
+                      <div style="position: absolute; left: -20px; width: 16px; height: 16px; background: #10b981; border-radius: 50%; border: 3px solid #1e293b; box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);"></div>
+                      <div style="padding-left: 8px;">
+                        <div style="font-size: 14px; font-weight: 600; color: #10b981;">Em Trânsito</div>
+                        <div style="font-size: 13px; color: #94a3b8; margin-top: 2px;">2.847 entregas</div>
+                      </div>
+                    </div>
+                    <div style="position: relative; margin-bottom: 20px;">
+                      <div style="position: absolute; left: -20px; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 3px solid #1e293b;"></div>
+                      <div style="padding-left: 8px;">
+                        <div style="font-size: 14px; font-weight: 600; color: #3b82f6;">Saiu para Entrega</div>
+                        <div style="font-size: 13px; color: #94a3b8; margin-top: 2px;">1.234 entregas</div>
+                      </div>
+                    </div>
+                    <div style="position: relative; margin-bottom: 20px;">
+                      <div style="position: absolute; left: -20px; width: 16px; height: 16px; background: #f59e0b; border-radius: 50%; border: 3px solid #1e293b;"></div>
+                      <div style="padding-left: 8px;">
+                        <div style="font-size: 14px; font-weight: 600; color: #f59e0b;">Aguardando Coleta</div>
+                        <div style="font-size: 13px; color: #94a3b8; margin-top: 2px;">567 entregas</div>
+                      </div>
+                    </div>
+                    <div style="position: relative;">
+                      <div style="position: absolute; left: -20px; width: 16px; height: 16px; background: #ef4444; border-radius: 50%; border: 3px solid #1e293b;"></div>
+                      <div style="padding-left: 8px;">
+                        <div style="font-size: 14px; font-weight: 600; color: #ef4444;">Atrasadas</div>
+                        <div style="font-size: 13px; color: #94a3b8; margin-top: 2px;">89 entregas</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top: 20px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2); font-size: 13px; color: #10b981; text-align: center;">Taxa de entrega no prazo: 94.2%</div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+       &lt;div style=&quot;background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px; border: 1px solid rgba(34, 197, 94, 0.3);&quot;&gt;
+  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;&quot;&gt;
+    &lt;div style=&quot;font-size: 16px; font-weight: 600;&quot;&gt;Status de Entregas&lt;/div&gt;
+    &lt;div style=&quot;font-size: 24px;&quot;&gt;🚚&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;position: relative; padding-left: 24px;&quot;&gt;
+    &lt;div style=&quot;position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.1);&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;position: relative; margin-bottom: 20px;&quot;&gt;
+      &lt;div style=&quot;position: absolute; left: -20px; width: 16px; height: 16px; background: #10b981; border-radius: 50%; border: 3px solid #1e293b; box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);&quot;&gt;&lt;/div&gt;
+      &lt;div style=&quot;padding-left: 8px;&quot;&gt;
+        &lt;div style=&quot;font-size: 14px; font-weight: 600; color: #10b981;&quot;&gt;Em Tr&acirc;nsito&lt;/div&gt;
+        &lt;div style=&quot;font-size: 13px; color: #94a3b8; margin-top: 2px;&quot;&gt;2.847 entregas&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;position: relative; margin-bottom: 20px;&quot;&gt;
+      &lt;div style=&quot;position: absolute; left: -20px; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 3px solid #1e293b;&quot;&gt;&lt;/div&gt;
+      &lt;div style=&quot;padding-left: 8px;&quot;&gt;
+        &lt;div style=&quot;font-size: 14px; font-weight: 600; color: #3b82f6;&quot;&gt;Saiu para Entrega&lt;/div&gt;
+        &lt;div style=&quot;font-size: 13px; color: #94a3b8; margin-top: 2px;&quot;&gt;1.234 entregas&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;position: relative; margin-bottom: 20px;&quot;&gt;
+      &lt;div style=&quot;position: absolute; left: -20px; width: 16px; height: 16px; background: #f59e0b; border-radius: 50%; border: 3px solid #1e293b;&quot;&gt;&lt;/div&gt;
+      &lt;div style=&quot;padding-left: 8px;&quot;&gt;
+        &lt;div style=&quot;font-size: 14px; font-weight: 600; color: #f59e0b;&quot;&gt;Aguardando Coleta&lt;/div&gt;
+        &lt;div style=&quot;font-size: 13px; color: #94a3b8; margin-top: 2px;&quot;&gt;567 entregas&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;position: relative;&quot;&gt;
+      &lt;div style=&quot;position: absolute; left: -20px; width: 16px; height: 16px; background: #ef4444; border-radius: 50%; border: 3px solid #1e293b;&quot;&gt;&lt;/div&gt;
+      &lt;div style=&quot;padding-left: 8px;&quot;&gt;
+        &lt;div style=&quot;font-size: 14px; font-weight: 600; color: #ef4444;&quot;&gt;Atrasadas&lt;/div&gt;
+        &lt;div style=&quot;font-size: 13px; color: #94a3b8; margin-top: 2px;&quot;&gt;89 entregas&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-top: 20px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2); font-size: 13px; color: #10b981; text-align: center;&quot;&gt;Taxa de entrega no prazo: 94.2%&lt;/div&gt;
+&lt;/div&gt;
+
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_Transito_HTML =
+        "
+       &lt;div style='background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px; border: 1px solid rgba(34, 197, 94, 0.3);'&gt;
+                  &lt;div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;'&gt;
+                    &lt;div style='font-size: 16px; font-weight: 600;'&gt;Status de Entregas&lt;/div&gt;
+                    &lt;div style='font-size: 24px;'&gt;🚚&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div style='position: relative; padding-left: 24px;'&gt;
+                    &lt;div style='position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.1);'&gt;&lt;/div&gt;
+                    &lt;div style='position: relative; margin-bottom: 20px;'&gt;
+                      &lt;div style='position: absolute; left: -20px; width: 16px; height: 16px; background: #10b981; border-radius: 50%; border: 3px solid #1e293b; box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);'&gt;&lt;/div&gt;
+                      &lt;div style='padding-left: 8px;'&gt;
+                        &lt;div style='font-size: 14px; font-weight: 600; color: #10b981;'&gt;Em Tr&acirc;nsito&lt;/div&gt;
+                        &lt;div style='font-size: 13px; color: #94a3b8; margin-top: 2px;'&gt;"& [Medida] &" entregas&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style='position: relative; margin-bottom: 20px;'&gt;
+                      &lt;div style='position: absolute; left: -20px; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 3px solid #1e293b;'&gt;&lt;/div&gt;
+                      &lt;div style='padding-left: 8px;'&gt;
+                        &lt;div style='font-size: 14px; font-weight: 600; color: #3b82f6;'&gt;Saiu para Entrega&lt;/div&gt;
+                        &lt;div style='font-size: 13px; color: #94a3b8; margin-top: 2px;'&gt;"& [Medida] &" entregas&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style='position: relative; margin-bottom: 20px;'&gt;
+                      &lt;div style='position: absolute; left: -20px; width: 16px; height: 16px; background: #f59e0b; border-radius: 50%; border: 3px solid #1e293b;'&gt;&lt;/div&gt;
+                      &lt;div style='padding-left: 8px;'&gt;
+                        &lt;div style='font-size: 14px; font-weight: 600; color: #f59e0b;'&gt;Aguardando Coleta&lt;/div&gt;
+                        &lt;div style='font-size: 13px; color: #94a3b8; margin-top: 2px;'&gt;"& [Medida] &" entregas&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style='position: relative;'&gt;
+                      &lt;div style='position: absolute; left: -20px; width: 16px; height: 16px; background: #ef4444; border-radius: 50%; border: 3px solid #1e293b;'&gt;&lt;/div&gt;
+                      &lt;div style='padding-left: 8px;'&gt;
+                        &lt;div style='font-size: 14px; font-weight: 600; color: #ef4444;'&gt;Atrasadas&lt;/div&gt;
+                        &lt;div style='font-size: 13px; color: #94a3b8; margin-top: 2px;'&gt;"& [Medida] &" entregas&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div style='margin-top: 20px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2); font-size: 13px; color: #10b981; text-align: center;'&gt;Taxa de entrega no prazo: "& [Medida] &"%&lt;/div&gt;
+                &lt;/div&gt;
+"
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            
+    
+
+
+
+          <!-- Fim dos Cards -->
     </section>
     
 
   </main>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

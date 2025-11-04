@@ -40,3 +40,29 @@
         content.classList.add("shifted");
       }
     });
+
+// Botão para subir
+// Seleciona o botão
+let scrollTop = document.querySelector('.scroll-top');
+
+// Mostra ou esconde o botão
+function toggleScrollTop() {
+  if (scrollTop) {
+    window.scrollY > 100
+      ? scrollTop.classList.add('active')
+      : scrollTop.classList.remove('active');
+  }
+}
+
+// Voltar ao topo ao clicar
+scrollTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Eventos
+window.addEventListener('load', toggleScrollTop);
+document.addEventListener('scroll', toggleScrollTop);
