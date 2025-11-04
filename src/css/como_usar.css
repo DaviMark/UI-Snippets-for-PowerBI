@@ -1,0 +1,233 @@
+/* Baixar exemplo */
+
+.download-example {
+  background: linear-gradient(135deg, #f9fafb, #ffffff);
+  padding: 60px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.download-example h3 {
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.download-example p {
+  font-size: 15.5px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #5d52ba, #3b82f6);
+  color: white;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(93, 82, 186, 0.25);
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(93, 82, 186, 0.35);
+  color: white;
+}
+
+.btn-download i {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .download-example {
+    padding: 40px 16px;
+  }
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ---------------------- */
+/* TIPOGRAFIA E ESTILO GERAL */
+/* ---------------------- */
+.doc-steps {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: #1e293b;
+  line-height: 1.75;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga" 1, "calt" 1;
+  animation: slideUp 0.8s ease-out;
+  animation-delay: 0.2s;
+}
+
+/* TÍTULOS */
+.doc-steps h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doc-steps h3::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(93,82,186,0.1), transparent);
+}
+
+/* TEXTOS */
+.doc-steps p,
+.doc-steps li {
+  font-size: 16px;
+  color: #374151;
+  font-weight: 400;
+}
+
+/* LISTAS */
+.doc-steps ol {
+  padding-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.doc-steps li {
+  margin-bottom: 0.4rem;
+}
+
+/* DESTAQUES */
+.alert-box, .tip-box, .result-box {
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+  background: #ffffff;
+  border-left: 4px solid;
+  margin-top: 28px;
+}
+
+.alert-box {
+  border-color: #facc15;
+}
+.tip-box {
+  border-color: #5d52ba;
+}
+.result-box {
+  border-color: #22c55e;
+}
+
+.alert-box h5,
+.tip-box h5,
+.result-box h5 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #111827;
+  margin-bottom: 0.6rem;
+}
+
+/* CÓDIGOS */
+pre {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 14px;
+  color: #334155;
+  overflow-x: auto;
+}
+
+code {
+  color: #5d52ba;
+  font-weight: 500;
+}
+
+/* IMAGENS DA DOCUMENTAÇÃO */
+.doc-image {
+  margin: 32px 0;
+}
+
+.doc-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.doc-image img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(93, 82, 186, 0.15);
+}
+
+.caption {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .doc-image img {
+    border-radius: 10px;
+  }
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .doc-steps {
+    font-size: 15px;
+  }
+
+  .doc-steps h3 {
+    font-size: 1.1rem;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+.doc-steps {
+  animation: fadeIn 0.6s ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes movePattern {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}

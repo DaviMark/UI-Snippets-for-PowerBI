@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Power Pack - Colaboração</title>
+  <link href="/src/imgs/logo_davi.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="/src/css/como_usar.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top shadow-sm bg-white px-4 py-2 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      <img src="/src/imgs/logo_davi.png" alt="Logo" class="navbar-logo">
+      <h1>UI Power Pack</h1>
+    </div>
+  </nav>
+
+  <div class="wrapper d-flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="p-4 shadow-sm">
+      <ul class="nav flex-column" id="sidebarMenu">
+        <li class="nav-item mb-2">
+          <a href="/index.html" class="nav-link ">Home</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsMenu" aria-expanded="false">
+            Componentes
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsMenu">
+            <li><a href="/src/pages/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="/src/pages/doc.html" class="nav-link">Documentação</a></li>
+            <li><a href="/src/pages/label.html" class="nav-link">Labels/Tags</a></li>
+            <li><a href="/src/pages/tooltips.html" class="nav-link">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a href="/src/pages/como_usar.html" class="nav-link active">Como usar</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a href="/src/pages/colaborar.html" class="nav-link">Colaborar</a>
+        </li>
+      </ul>
+
+      <footer class="small text-muted pt-4 mt-auto border-top">
+        Feito por <strong>Davi Marques</strong>
+      </footer>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="content" class="flex-grow-1 p-5 shifted">
+
+      <section class="intro mt-5 ">
+        <p class="text-uppercase small text-muted mb-2">Documentação</p>
+        <h1 class="fw-bold mb-3 display-6">Como usar o UI Power Pack no Power BI</h1>
+        <p class="lead text-secondary mb-4" style="max-width:800px;">
+         O <strong>UI Power Pack</strong> foi criado para ajudar <strong>analistas, desenvolvedores e entusiastas de dados</strong> a transformarem dashboards em experiências visuais marcantes.  
+    Aqui você aprende a implementar visuais HTML diretamente no Power BI de forma simples, leve e eficiente.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <button id="btnComponentes" class="btn btn-dark px-4 py-2">Ver Componentes</button>
+          <button id="btnDocumentacao" class="btn btn-outline-dark px-4 py-2">Como usar</button>
+          <a href="/src/pages/colaborar.html" class="btn btn-outline-secondary px-4 py-2">Colaborar</a>
+        </div>
+      </section>
+
+       <section class="impacto mt-5 ">
+        <section class="download-example mt-5 text-center">
+          <div class="container">
+            <h3 class="fw-semibold mb-3">📁 Baixe o exemplo completo</h3>
+            <p class="text-secondary mb-4" style="max-width:700px;margin:0 auto;">
+              Experimente o UI Power Pack na prática!  
+              Baixe o arquivo <strong>.PBIX</strong> de exemplo (compactado em .ZIP) e explore os visuais HTML aplicados dentro do Power BI.
+            </p>
+
+            <a href="/src/files/UI_PowerPack_Exemplo.zip" download class="btn-download">
+              <i class="bi bi-download me-2"></i> Baixar arquivo .ZIP
+            </a>
+
+            <p class="small text-muted mt-3">
+              💡 O arquivo inclui um modelo com componentes prontos, exemplos de medidas e estrutura básica de visual HTML.
+            </p>
+          </div>
+        </section>
+       </section>
+
+
+
+       <section class="doc-steps mt-5">
+          <div class="step">
+            <h3>Passo 1 — Prepare seu Power BI</h3>
+            <p>Abra o <strong>Power BI Desktop</strong> e realize normalmente a carga da sua fonte de dados.  
+            Esse será o ambiente onde aplicaremos os componentes HTML.</p>
+            <div class="doc-image my-4">
+              <img src="/src/imgs/Powerbi_desktop.png" alt="Power BI Desktop interface" class="img-fluid shadow-doc">
+              <p class="caption text-muted small mt-2">
+                Interface do <strong>Power BI Desktop</strong> — onde os visuais HTML serão implementados.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>Passo 2 — Adicione o visual HTML</h3>
+            <ol>
+              <li>No painel de <strong>Visualizações</strong>, clique nos três pontos (<code>...</code>) para abrir a opção <em>“Obter mais visuais”</em>.</li>
+              <li>Pesquise por <strong>“HTML Content”</strong> — recomendamos o uso do <strong>HTML Content Lite</strong> por ser leve e compatível.</li>
+              <li>Clique em <strong>“Adicionar”</strong> para instalar o visual.</li>
+                <div class="doc-image my-4">
+                  <img src="/src/imgs/add_visualHTML.png" alt="Power BI Desktop interface" class="img-fluid shadow-doc">
+                  <p class="caption text-muted small mt-2">
+                    Interface para adicionar um novo visual.
+                  </p>
+              </div>
+            </ol>
+          </div>
+
+          <div class="step">
+            <h3>Passo 3 — Insira o componente</h3>
+            <ol>
+              <li>Com o visual HTML adicionado, selecione-o para abrir o espaço de edição.</li>
+                <div class="doc-image my-4">
+                    <img src="/src/imgs/add_componente.png" alt="Power BI Desktop interface" class="img-fluid shadow-doc">
+                </div>
+              <li>No site do <strong>UI Power Pack</strong>, copie o código do componente desejado (botão <em>“Power BI”</em>).</li>
+                  <div class="doc-image my-4">
+                    <img src="/src/imgs/copiar_biblioteca_visuais.png" alt="Power BI Desktop interface" class="img-fluid shadow-doc">
+                    <p class="caption text-muted small mt-2">
+                      Acessando a biblioteca de visuais para escolher um e copiar o codigo HTML.
+                    </p>
+                </div>
+              <li>No Power BI, crie uma <strong>nova medida</strong> e cole o código copiado nela.</li>
+            </ol>
+          </div>
+
+          <div class="alert-box mt-4">
+            <h5 class="fw-semibold mb-2">⚠️ Atenção — pontos importantes</h5>
+            <ul>
+              <li>✅ O código deve estar entre <strong>aspas duplas apenas no início e no fim</strong>. Nenhuma outra parte do código deve conter aspas duplas internas.</li>
+              <li>✅ Para incluir valores dinâmicos (como uma métrica), use:
+                <pre><code>& [NomeDaSuaMedida] &</code></pre>
+              </li>
+              <li>Exemplo de uso:
+                <pre><code>HTML = "&lt;div&gt;" & [Total Vendas] & "&lt;/div&gt;"</code></pre>
+              </li>
+            </ul>
+            <div class="doc-image my-4">
+                    <img src="/src/imgs/validacao_visualHTML.png" alt="Power BI Desktop interface" class="img-fluid shadow-doc">
+                    <p class="caption text-muted small mt-2">
+                      Valide o código com atenção antes de finalizar a medida no Power BI.
+                    </p>
+                </div>
+          </div>
+
+          <p class="mt-4 text-secondary">
+            Então, em resumo: onde há valores fixos no código HTML, você pode inserir suas <strong>métricas dinâmicas</strong> conforme mostrado acima — assim o visual passa a exibir dados reais diretamente do Power BI.  
+          </p>
+
+          <p class="text-secondary">
+            <strong>Aqui é onde a criatividade brilha!</strong>  
+            Você pode personalizar completamente seus componentes — adicionar novas linhas, combinar elementos visuais, alterar cores com base em regras e até incluir lógicas condicionais com DAX.  
+            Experimente, teste variações e transforme seus dashboards em algo realmente único.
+          </p>
+
+          <div class="tip-box mt-4">
+            <h5 class="fw-semibold mb-2">Dica avançada</h5>
+            <p>
+              Use funções DAX como <code>IF()</code>, <code>SWITCH()</code> ou expressões condicionais para alterar textos, cores e ícones dinamicamente —
+              criando <strong>visuais inteligentes e interativos</strong> que se adaptam em tempo real conforme seus dados mudam.
+            </p>
+          </div>
+
+          <div class="result-box mt-4">
+            <h5 class="fw-semibold mb-2">Resultado final</h5>
+            <p>Agora o seu visual HTML está totalmente implementado no Power BI.  
+            Ajuste estilos, adicione animações e crie experiências visuais exclusivas que comunicam mais e impressionam o público.</p>
+                <div class="doc-image my-4">
+                    <img src="/src/imgs/resultado_final.png" alt="Power BI Desktop interface" class="img-fluid shadow-doc">
+                    <p class="caption text-muted small mt-2">
+                      E assim como fica após implementar sem nenhum erro.
+                    </p>
+                </div>
+          </div>
+
+          <p class="text-muted small mt-4 text-center">
+            Não se esqueça de validar todos os pontos para evitar erros e aproveitar 100% de todos os visuais.<br>
+            <em>Aproveite com moderação.</em>
+          </p>
+        </section>
+
+
+      <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </main>
+    
+  
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="/src/js/script.js"></script>
+</body>
+</html>
