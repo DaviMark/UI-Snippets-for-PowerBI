@@ -63,3 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// Atualiza o número automaticamente
+  const totalVisuais = document.querySelectorAll('.component-row').length;
+  if (totalVisuais > 0) {
+    document.getElementById('visualCount').textContent = totalVisuais;
+  }

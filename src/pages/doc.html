@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML para Power BI — Cards</title>
+  <link href="/src/imgs/logo_davi.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="/src/css/componentes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="navbar fixed-top shadow-sm bg-white px-4 py-2 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      <img src="/src/imgs/logo_davi.png" alt="Logo" class="navbar-logo">
+      <h1>UI Power Pack para Power BI</h1>
+    </div>
+  </nav>
+
+  <div class="wrapper d-flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="p-4 shadow-sm">
+      <ul class="nav flex-column" id="sidebarMenu">
+        <li class="nav-item mb-2">
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsMenu" aria-expanded="false">
+            Componentes
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsMenu">
+            <li><a href="/src/pages/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="/src/pages/doc.html" class="nav-link active">Documentação</a></li>
+            <li><a href="#" class="nav-link">Tabelas</a></li>
+            <li><a href="#" class="nav-link">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link">Documentação</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link">Contribuir</a>
+        </li>
+      </ul>
+
+      <footer class="small text-muted pt-4 mt-auto border-top">
+        Feito por <strong>Davi Marques</strong>
+      </footer>
+    </aside>
+
+  <main id="content" class="flex-grow-1 p-5 shifted">
+    <section class="intro mt-5 ">
+        <p class="text-uppercase small text-muted mb-2">Componentes</p>
+        <h1 class="fw-bold mb-3 display-6">Visuais HTML para Power BI</h1>
+        <p class="lead text-secondary mb-4" style="max-width:100%;">
+          Crie dashboards mais elegantes e profissionais com componentes HTML prontos. 
+          Copie, personalize e use no Power BI para transformar seus relatórios em experiências visuais modernas e interativas.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <button id="btnComponentes" class="btn btn-dark px-4 py-2">Ver Componentes</button>
+          <button id="btnDocumentacao" class="btn btn-outline-dark px-4 py-2">Documentação</button>
+          <a href="https://github.com/seu-repo" class="btn btn-outline-secondary px-4 py-2">Colaborar</a>
+        </div>
+
+        <div class="visual-info">
+          <span id="visualCount" class="visual-number">0</span>
+          <span class="visual-label">visuais disponíveis nesta página</span>
+        </div>
+
+      </section>
+      
+    <section class="impacto mt-5 "> <!-- Section PRINCIPAL -->
+                <!-- BLOCO DO CARD -->
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;">
+                  <div style="border-left: 5px solid #0078D4; padding-left: 15px; margin-bottom: 25px;">
+                    <h1 style="font-size: 28px; font-weight: 700; color: #1F2937; margin: 0 0 5px 0;">🧭 Guia de Navegação</h1>
+                    <p style="font-size: 15px; color: #6B7280; margin: 0;">Aprenda a navegar pelo dashboard em 3 minutos</p>
+                  </div>
+                  
+                  <div style="display: grid; gap: 15px;">
+                    <div style="background: #F0F9FF; padding: 18px; border-radius: 8px; border-left: 4px solid #0078D4;">
+                      <h3 style="font-size: 18px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;">1️⃣ Filtros</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0 0 8px 0;">Use os filtros no topo da página para refinar seus dados:</p>
+                      <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #6B7280;">
+                        <li>Data: Selecione o período de análise</li>
+                        <li>Categoria: Filtre por tipo de produto</li>
+                        <li>Região: Escolha a localização geográfica</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="background: #FEF3C7; padding: 18px; border-radius: 8px; border-left: 4px solid #FDB813;">
+                      <h3 style="font-size: 18px; font-weight: 600; color: #D97706; margin: 0 0 10px 0;">2️⃣ Gráficos Interativos</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0;">Clique em qualquer elemento dos gráficos para aplicar filtros cruzados automaticamente</p>
+                    </div>
+                    
+                    <div style="background: #ECFDF5; padding: 18px; border-radius: 8px; border-left: 4px solid #10B981;">
+                      <h3 style="font-size: 18px; font-weight: 600; color: #059669; margin: 0 0 10px 0;">3️⃣ Exportação</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0;">Use o menu "..." em cada visual para exportar dados em Excel ou PDF</p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #EEF2FF; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;">
+                    <p style="font-size: 13px; color: #6366F1; margin: 0; font-weight: 500;">💡 Pressione F11 para modo tela cheia</p>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+        &lt;div style=&quot;max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;border-left: 5px solid #0078D4; padding-left: 15px; margin-bottom: 25px;&quot;&gt;
+    &lt;h1 style=&quot;font-size: 28px; font-weight: 700; color: #1F2937; margin: 0 0 5px 0;&quot;&gt;🧭 Guia de Navega&ccedil;&atilde;o&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 15px; color: #6B7280; margin: 0;&quot;&gt;Aprenda a navegar pelo dashboard em 3 minutos&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;display: grid; gap: 15px;&quot;&gt;
+    &lt;div style=&quot;background: #F0F9FF; padding: 18px; border-radius: 8px; border-left: 4px solid #0078D4;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;&quot;&gt;1️⃣ Filtros&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 8px 0;&quot;&gt;Use os filtros no topo da p&aacute;gina para refinar seus dados:&lt;/p&gt;
+      &lt;ul style=&quot;margin: 0; padding-left: 20px; font-size: 14px; color: #6B7280;&quot;&gt;
+        &lt;li&gt;Data: Selecione o per&iacute;odo de an&aacute;lise&lt;/li&gt;
+        &lt;li&gt;Categoria: Filtre por tipo de produto&lt;/li&gt;
+        &lt;li&gt;Regi&atilde;o: Escolha a localiza&ccedil;&atilde;o geogr&aacute;fica&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: #FEF3C7; padding: 18px; border-radius: 8px; border-left: 4px solid #FDB813;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #D97706; margin: 0 0 10px 0;&quot;&gt;2️⃣ Gr&aacute;ficos Interativos&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0;&quot;&gt;Clique em qualquer elemento dos gr&aacute;ficos para aplicar filtros cruzados automaticamente&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: #ECFDF5; padding: 18px; border-radius: 8px; border-left: 4px solid #10B981;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #059669; margin: 0 0 10px 0;&quot;&gt;3️⃣ Exporta&ccedil;&atilde;o&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0;&quot;&gt;Use o menu &quot;...&quot; em cada visual para exportar dados em Excel ou PDF&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;background: #EEF2FF; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;&quot;&gt;
+    &lt;p style=&quot;font-size: 13px; color: #6366F1; margin: 0; font-weight: 500;&quot;&gt;💡 Pressione F11 para modo tela cheia&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML = 
+        "
+        &lt;div style='max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;'&gt;
+  &lt;div style='border-left: 5px solid #0078D4; padding-left: 15px; margin-bottom: 25px;'&gt;
+    &lt;h1 style='font-size: 28px; font-weight: 700; color: #1F2937; margin: 0 0 5px 0;'&gt;🧭 Guia de Navega&ccedil;&atilde;o&lt;/h1&gt;
+    &lt;p style='font-size: 15px; color: #6B7280; margin: 0;'&gt;Aprenda a navegar pelo dashboard em 3 minutos&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='display: grid; gap: 15px;'&gt;
+    &lt;div style='background: #F0F9FF; padding: 18px; border-radius: 8px; border-left: 4px solid #0078D4;'&gt;
+      &lt;h3 style='font-size: 18px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;'&gt;1️⃣ Filtros&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 8px 0;'&gt;Use os filtros no topo da p&aacute;gina para refinar seus dados:&lt;/p&gt;
+      &lt;ul style='margin: 0; padding-left: 20px; font-size: 14px; color: #6B7280;'&gt;
+        &lt;li&gt;Data: Selecione o per&iacute;odo de an&aacute;lise&lt;/li&gt;
+        &lt;li&gt;Categoria: Filtre por tipo de produto&lt;/li&gt;
+        &lt;li&gt;Regi&atilde;o: Escolha a localiza&ccedil;&atilde;o geogr&aacute;fica&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: #FEF3C7; padding: 18px; border-radius: 8px; border-left: 4px solid #FDB813;'&gt;
+      &lt;h3 style='font-size: 18px; font-weight: 600; color: #D97706; margin: 0 0 10px 0;'&gt;2️⃣ Gr&aacute;ficos Interativos&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0;'&gt;Clique em qualquer elemento dos gr&aacute;ficos para aplicar filtros cruzados automaticamente&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: #ECFDF5; padding: 18px; border-radius: 8px; border-left: 4px solid #10B981;'&gt;
+      &lt;h3 style='font-size: 18px; font-weight: 600; color: #059669; margin: 0 0 10px 0;'&gt;3️⃣ Exporta&ccedil;&atilde;o&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0;'&gt;Use o menu '...' em cada visual para exportar dados em Excel ou PDF&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='background: #EEF2FF; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;'&gt;
+    &lt;p style='font-size: 13px; color: #6366F1; margin: 0; font-weight: 500;'&gt;💡 Pressione F11 para modo tela cheia&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 750px; margin: 0 auto; padding: 25px; background: #F9FAFB; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;">
+                  <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="font-size: 48px; margin-bottom: 10px;">🎯</div>
+                    <h1 style="font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;">Como Usar Filtros</h1>
+                    <p style="font-size: 16px; color: #6B7280; margin: 0;">Filtre seus dados para análises precisas</p>
+                  </div>
+                  
+                  <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                      <span style="background: #0078D4; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">1</span>
+                      <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Filtros de Data</h3>
+                    </div>
+                    <p style="font-size: 14px; color: #4B5563; margin: 0 0 10px 0; padding-left: 44px;">Selecione períodos específicos para sua análise:</p>
+                    <div style="background: #F3F4F6; padding: 12px; border-radius: 6px; margin-left: 44px; font-size: 13px; color: #6B7280;">
+                      • Clique no calendário<br>
+                      • Escolha data inicial e final<br>
+                      • Ou use opções rápidas: Hoje, Esta Semana, Este Mês
+                    </div>
+                  </div>
+                  
+                  <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                      <span style="background: #FDB813; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">2</span>
+                      <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Filtros de Categoria</h3>
+                    </div>
+                    <p style="font-size: 14px; color: #4B5563; margin: 0; padding-left: 44px;">Use checkboxes para selecionar múltiplas categorias ou use a busca para encontrar itens específicos.</p>
+                  </div>
+                  
+                  <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                      <span style="background: #10B981; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">3</span>
+                      <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Limpar Filtros</h3>
+                    </div>
+                    <p style="font-size: 14px; color: #4B5563; margin: 0; padding-left: 44px;">Clique no botão "Limpar Filtros" no canto superior direito para resetar todas as seleções.</p>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+        &lt;div style=&quot;max-width: 750px; margin: 0 auto; padding: 25px; background: #F9FAFB; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;text-align: center; margin-bottom: 25px;&quot;&gt;
+    &lt;div style=&quot;font-size: 48px; margin-bottom: 10px;&quot;&gt;🎯&lt;/div&gt;
+    &lt;h1 style=&quot;font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;Como Usar Filtros&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 16px; color: #6B7280; margin: 0;&quot;&gt;Filtre seus dados para an&aacute;lises precisas&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);&quot;&gt;
+    &lt;div style=&quot;display: flex; align-items: center; gap: 12px; margin-bottom: 15px;&quot;&gt;
+      &lt;span style=&quot;background: #0078D4; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;&quot;&gt;1&lt;/span&gt;
+      &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Filtros de Data&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 10px 0; padding-left: 44px;&quot;&gt;Selecione per&iacute;odos espec&iacute;ficos para sua an&aacute;lise:&lt;/p&gt;
+    &lt;div style=&quot;background: #F3F4F6; padding: 12px; border-radius: 6px; margin-left: 44px; font-size: 13px; color: #6B7280;&quot;&gt;
+      &bull; Clique no calend&aacute;rio&lt;br&gt;
+      &bull; Escolha data inicial e final&lt;br&gt;
+      &bull; Ou use op&ccedil;&otilde;es r&aacute;pidas: Hoje, Esta Semana, Este M&ecirc;s
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);&quot;&gt;
+    &lt;div style=&quot;display: flex; align-items: center; gap: 12px; margin-bottom: 15px;&quot;&gt;
+      &lt;span style=&quot;background: #FDB813; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;&quot;&gt;2&lt;/span&gt;
+      &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Filtros de Categoria&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; padding-left: 44px;&quot;&gt;Use checkboxes para selecionar m&uacute;ltiplas categorias ou use a busca para encontrar itens espec&iacute;ficos.&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);&quot;&gt;
+    &lt;div style=&quot;display: flex; align-items: center; gap: 12px; margin-bottom: 15px;&quot;&gt;
+      &lt;span style=&quot;background: #10B981; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;&quot;&gt;3&lt;/span&gt;
+      &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Limpar Filtros&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; padding-left: 44px;&quot;&gt;Clique no bot&atilde;o &quot;Limpar Filtros&quot; no canto superior direito para resetar todas as sele&ccedil;&otilde;es.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML =
+        "
+        &lt;div style='max-width: 750px; margin: 0 auto; padding: 25px; background: #F9FAFB; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;'&gt;
+  &lt;div style='text-align: center; margin-bottom: 25px;'&gt;
+    &lt;div style='font-size: 48px; margin-bottom: 10px;'&gt;🎯&lt;/div&gt;
+    &lt;h1 style='font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;'&gt;Como Usar Filtros&lt;/h1&gt;
+    &lt;p style='font-size: 16px; color: #6B7280; margin: 0;'&gt;Filtre seus dados para an&aacute;lises precisas&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);'&gt;
+    &lt;div style='display: flex; align-items: center; gap: 12px; margin-bottom: 15px;'&gt;
+      &lt;span style='background: #0078D4; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;'&gt;1&lt;/span&gt;
+      &lt;h3 style='font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;'&gt;Filtros de Data&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 10px 0; padding-left: 44px;'&gt;Selecione per&iacute;odos espec&iacute;ficos para sua an&aacute;lise:&lt;/p&gt;
+    &lt;div style='background: #F3F4F6; padding: 12px; border-radius: 6px; margin-left: 44px; font-size: 13px; color: #6B7280;'&gt;
+      &bull; Clique no calend&aacute;rio&lt;br&gt;
+      &bull; Escolha data inicial e final&lt;br&gt;
+      &bull; Ou use op&ccedil;&otilde;es r&aacute;pidas: Hoje, Esta Semana, Este M&ecirc;s
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);'&gt;
+    &lt;div style='display: flex; align-items: center; gap: 12px; margin-bottom: 15px;'&gt;
+      &lt;span style='background: #FDB813; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;'&gt;2&lt;/span&gt;
+      &lt;h3 style='font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;'&gt;Filtros de Categoria&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p style='font-size: 14px; color: #4B5563; margin: 0; padding-left: 44px;'&gt;Use checkboxes para selecionar m&uacute;ltiplas categorias ou use a busca para encontrar itens espec&iacute;ficos.&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);'&gt;
+    &lt;div style='display: flex; align-items: center; gap: 12px; margin-bottom: 15px;'&gt;
+      &lt;span style='background: #10B981; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;'&gt;3&lt;/span&gt;
+      &lt;h3 style='font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;'&gt;Limpar Filtros&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p style='font-size: 14px; color: #4B5563; margin: 0; padding-left: 44px;'&gt;Clique no bot&atilde;o 'Limpar Filtros' no canto superior direito para resetar todas as sele&ccedil;&otilde;es.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;">
+                  <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 44px; margin-bottom: 10px;">❓</div>
+                    <h1 style="font-size: 32px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;">Perguntas Frequentes</h1>
+                    <p style="font-size: 15px; color: #6B7280; margin: 0;">Respostas rápidas para suas dúvidas</p>
+                  </div>
+                  
+                  <div style="border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden;">
+                    <div style="background: #F9FAFB; padding: 18px; border-bottom: 1px solid #E5E7EB;">
+                      <h3 style="font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;">🔄 Com que frequência os dados são atualizados?</h3>
+                      <p style="font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;">Os dados são atualizados automaticamente a cada 15 minutos. A última atualização é exibida no canto superior direito.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 18px; border-bottom: 1px solid #E5E7EB;">
+                      <h3 style="font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;">📊 Por que alguns gráficos estão vazios?</h3>
+                      <p style="font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;">Verifique se há filtros ativos que possam estar ocultando os dados. Clique em "Limpar Filtros" para ver todos os dados disponíveis.</p>
+                    </div>
+                    
+                    <div style="background: #F9FAFB; padding: 18px; border-bottom: 1px solid #E5E7EB;">
+                      <h3 style="font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;">💾 Como exporto os dados?</h3>
+                      <p style="font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;">Clique no ícone "..." no canto de cada visual e selecione "Exportar dados" para baixar em Excel ou CSV.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 18px; border-bottom: 1px solid #E5E7EB;">
+                      <h3 style="font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;">🔍 Como faço buscas avançadas?</h3>
+                      <p style="font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;">Use a barra de pesquisa no topo. Você pode buscar por nomes, códigos ou usar filtros combinados.</p>
+                    </div>
+                    
+                    <div style="background: #F9FAFB; padding: 18px;">
+                      <h3 style="font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;">📱 O dashboard funciona em mobile?</h3>
+                      <p style="font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;">Sim! O dashboard é totalmente responsivo e pode ser acessado de qualquer dispositivo.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+        &lt;div style=&quot;max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;text-align: center; margin-bottom: 30px;&quot;&gt;
+    &lt;div style=&quot;font-size: 44px; margin-bottom: 10px;&quot;&gt;❓&lt;/div&gt;
+    &lt;h1 style=&quot;font-size: 32px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;Perguntas Frequentes&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 15px; color: #6B7280; margin: 0;&quot;&gt;Respostas r&aacute;pidas para suas d&uacute;vidas&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden;&quot;&gt;
+    &lt;div style=&quot;background: #F9FAFB; padding: 18px; border-bottom: 1px solid #E5E7EB;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;🔄 Com que frequ&ecirc;ncia os dados s&atilde;o atualizados?&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;&quot;&gt;Os dados s&atilde;o atualizados automaticamente a cada 15 minutos. A &uacute;ltima atualiza&ccedil;&atilde;o &eacute; exibida no canto superior direito.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 18px; border-bottom: 1px solid #E5E7EB;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;📊 Por que alguns gr&aacute;ficos est&atilde;o vazios?&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;&quot;&gt;Verifique se h&aacute; filtros ativos que possam estar ocultando os dados. Clique em &quot;Limpar Filtros&quot; para ver todos os dados dispon&iacute;veis.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: #F9FAFB; padding: 18px; border-bottom: 1px solid #E5E7EB;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;💾 Como exporto os dados?&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;&quot;&gt;Clique no &iacute;cone &quot;...&quot; no canto de cada visual e selecione &quot;Exportar dados&quot; para baixar em Excel ou CSV.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 18px; border-bottom: 1px solid #E5E7EB;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;🔍 Como fa&ccedil;o buscas avan&ccedil;adas?&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;&quot;&gt;Use a barra de pesquisa no topo. Voc&ecirc; pode buscar por nomes, c&oacute;digos ou usar filtros combinados.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: #F9FAFB; padding: 18px;&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;📱 O dashboard funciona em mobile?&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;&quot;&gt;Sim! O dashboard &eacute; totalmente responsivo e pode ser acessado de qualquer dispositivo.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML =
+        "
+        &lt;div style='max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;'&gt;
+  &lt;div style='text-align: center; margin-bottom: 30px;'&gt;
+    &lt;div style='font-size: 44px; margin-bottom: 10px;'&gt;❓&lt;/div&gt;
+    &lt;h1 style='font-size: 32px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;'&gt;Perguntas Frequentes&lt;/h1&gt;
+    &lt;p style='font-size: 15px; color: #6B7280; margin: 0;'&gt;Respostas r&aacute;pidas para suas d&uacute;vidas&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden;'&gt;
+    &lt;div style='background: #F9FAFB; padding: 18px; border-bottom: 1px solid #E5E7EB;'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;'&gt;🔄 Com que frequ&ecirc;ncia os dados s&atilde;o atualizados?&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;'&gt;Os dados s&atilde;o atualizados automaticamente a cada 15 minutos. A &uacute;ltima atualiza&ccedil;&atilde;o &eacute; exibida no canto superior direito.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: white; padding: 18px; border-bottom: 1px solid #E5E7EB;'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;'&gt;📊 Por que alguns gr&aacute;ficos est&atilde;o vazios?&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;'&gt;Verifique se h&aacute; filtros ativos que possam estar ocultando os dados. Clique em 'Limpar Filtros' para ver todos os dados dispon&iacute;veis.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: #F9FAFB; padding: 18px; border-bottom: 1px solid #E5E7EB;'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;'&gt;💾 Como exporto os dados?&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;'&gt;Clique no &iacute;cone '...' no canto de cada visual e selecione 'Exportar dados' para baixar em Excel ou CSV.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: white; padding: 18px; border-bottom: 1px solid #E5E7EB;'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;'&gt;🔍 Como fa&ccedil;o buscas avan&ccedil;adas?&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;'&gt;Use a barra de pesquisa no topo. Voc&ecirc; pode buscar por nomes, c&oacute;digos ou usar filtros combinados.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: #F9FAFB; padding: 18px;'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 600; color: #1F2937; margin: 0 0 8px 0;'&gt;📱 O dashboard funciona em mobile?&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #6B7280; margin: 0; line-height: 1.6;'&gt;Sim! O dashboard &eacute; totalmente responsivo e pode ser acessado de qualquer dispositivo.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 750px; margin: 0 auto; padding: 25px; background: linear-gradient(to bottom, #F9FAFB, white); border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;">
+                  <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="font-size: 42px; margin-bottom: 10px;">📚</div>
+                    <h1 style="font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;">Glossário de Termos</h1>
+                    <p style="font-size: 15px; color: #6B7280; margin: 0;">Entenda os principais conceitos do dashboard</p>
+                  </div>
+                  
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #0078D4; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                      <h3 style="font-size: 16px; font-weight: 700; color: #0078D4; margin: 0 0 8px 0;">KPI (Key Performance Indicator)</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;">Indicador-chave de desempenho. Métrica utilizada para avaliar o sucesso de uma atividade ou objetivo específico.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #FDB813; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                      <h3 style="font-size: 16px; font-weight: 700; color: #D97706; margin: 0 0 8px 0;">ROI (Return on Investment)</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;">Retorno sobre investimento. Mede a rentabilidade de um investimento, calculado como (Ganho - Custo) / Custo × 100%.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                      <h3 style="font-size: 16px; font-weight: 700; color: #059669; margin: 0 0 8px 0;">Churn Rate</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;">Taxa de cancelamento. Percentual de clientes que deixaram de usar o serviço em um determinado período.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #6366F1; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                      <h3 style="font-size: 16px; font-weight: 700; color: #6366F1; margin: 0 0 8px 0;">CAC (Customer Acquisition Cost)</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;">Custo de aquisição de cliente. Valor total gasto em marketing e vendas dividido pelo número de novos clientes.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #EC4899; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                      <h3 style="font-size: 16px; font-weight: 700; color: #EC4899; margin: 0 0 8px 0;">LTV (Lifetime Value)</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;">Valor do tempo de vida do cliente. Receita total prevista gerada por um cliente durante todo relacionamento com a empresa.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #8B5CF6; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                      <h3 style="font-size: 16px; font-weight: 700; color: #8B5CF6; margin: 0 0 8px 0;">Conversão</h3>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;">Percentual de visitantes ou leads que completaram uma ação desejada (compra, cadastro, etc.).</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+       &lt;div style=&quot;max-width: 750px; margin: 0 auto; padding: 25px; background: linear-gradient(to bottom, #F9FAFB, white); border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;text-align: center; margin-bottom: 25px;&quot;&gt;
+    &lt;div style=&quot;font-size: 42px; margin-bottom: 10px;&quot;&gt;📚&lt;/div&gt;
+    &lt;h1 style=&quot;font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;Gloss&aacute;rio de Termos&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 15px; color: #6B7280; margin: 0;&quot;&gt;Entenda os principais conceitos do dashboard&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;display: grid; gap: 12px;&quot;&gt;
+    &lt;div style=&quot;background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #0078D4; box-shadow: 0 2px 6px rgba(0,0,0,0.06);&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 700; color: #0078D4; margin: 0 0 8px 0;&quot;&gt;KPI (Key Performance Indicator)&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;&quot;&gt;Indicador-chave de desempenho. M&eacute;trica utilizada para avaliar o sucesso de uma atividade ou objetivo espec&iacute;fico.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #FDB813; box-shadow: 0 2px 6px rgba(0,0,0,0.06);&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 700; color: #D97706; margin: 0 0 8px 0;&quot;&gt;ROI (Return on Investment)&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;&quot;&gt;Retorno sobre investimento. Mede a rentabilidade de um investimento, calculado como (Ganho - Custo) / Custo &times; 100%.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.06);&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 700; color: #059669; margin: 0 0 8px 0;&quot;&gt;Churn Rate&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;&quot;&gt;Taxa de cancelamento. Percentual de clientes que deixaram de usar o servi&ccedil;o em um determinado per&iacute;odo.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #6366F1; box-shadow: 0 2px 6px rgba(0,0,0,0.06);&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 700; color: #6366F1; margin: 0 0 8px 0;&quot;&gt;CAC (Customer Acquisition Cost)&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;&quot;&gt;Custo de aquisi&ccedil;&atilde;o de cliente. Valor total gasto em marketing e vendas dividido pelo n&uacute;mero de novos clientes.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #EC4899; box-shadow: 0 2px 6px rgba(0,0,0,0.06);&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 700; color: #EC4899; margin: 0 0 8px 0;&quot;&gt;LTV (Lifetime Value)&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;&quot;&gt;Valor do tempo de vida do cliente. Receita total prevista gerada por um cliente durante todo relacionamento com a empresa.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #8B5CF6; box-shadow: 0 2px 6px rgba(0,0,0,0.06);&quot;&gt;
+      &lt;h3 style=&quot;font-size: 16px; font-weight: 700; color: #8B5CF6; margin: 0 0 8px 0;&quot;&gt;Convers&atilde;o&lt;/h3&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;&quot;&gt;Percentual de visitantes ou leads que completaram uma a&ccedil;&atilde;o desejada (compra, cadastro, etc.).&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML =
+        "
+        &lt;div style='max-width: 750px; margin: 0 auto; padding: 25px; background: linear-gradient(to bottom, #F9FAFB, white); border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;'&gt;
+  &lt;div style='text-align: center; margin-bottom: 25px;'&gt;
+    &lt;div style='font-size: 42px; margin-bottom: 10px;'&gt;📚&lt;/div&gt;
+    &lt;h1 style='font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;'&gt;Gloss&aacute;rio de Termos&lt;/h1&gt;
+    &lt;p style='font-size: 15px; color: #6B7280; margin: 0;'&gt;Entenda os principais conceitos do dashboard&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='display: grid; gap: 12px;'&gt;
+    &lt;div style='background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #0078D4; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 700; color: #0078D4; margin: 0 0 8px 0;'&gt;KPI (Key Performance Indicator)&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;'&gt;Indicador-chave de desempenho. M&eacute;trica utilizada para avaliar o sucesso de uma atividade ou objetivo espec&iacute;fico.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #FDB813; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 700; color: #D97706; margin: 0 0 8px 0;'&gt;ROI (Return on Investment)&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;'&gt;Retorno sobre investimento. Mede a rentabilidade de um investimento, calculado como (Ganho - Custo) / Custo &times; 100%.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 700; color: #059669; margin: 0 0 8px 0;'&gt;Churn Rate&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;'&gt;Taxa de cancelamento. Percentual de clientes que deixaram de usar o servi&ccedil;o em um determinado per&iacute;odo.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #6366F1; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 700; color: #6366F1; margin: 0 0 8px 0;'&gt;CAC (Customer Acquisition Cost)&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;'&gt;Custo de aquisi&ccedil;&atilde;o de cliente. Valor total gasto em marketing e vendas dividido pelo n&uacute;mero de novos clientes.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #EC4899; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 700; color: #EC4899; margin: 0 0 8px 0;'&gt;LTV (Lifetime Value)&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;'&gt;Valor do tempo de vida do cliente. Receita total prevista gerada por um cliente durante todo relacionamento com a empresa.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #8B5CF6; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'&gt;
+      &lt;h3 style='font-size: 16px; font-weight: 700; color: #8B5CF6; margin: 0 0 8px 0;'&gt;Convers&atilde;o&lt;/h3&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.5;'&gt;Percentual de visitantes ou leads que completaram uma a&ccedil;&atilde;o desejada (compra, cadastro, etc.).&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); font-family: 'Segoe UI', Arial, sans-serif;">
+                  <div style="border-bottom: 3px solid #0078D4; padding-bottom: 20px; margin-bottom: 25px;">
+                    <h1 style="font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;">📈 Entendendo os Gráficos</h1>
+                    <p style="font-size: 16px; color: #6B7280; margin: 0;">Guia completo para interpretar visualizações</p>
+                  </div>
+                  
+                  <div style="margin-bottom: 25px;">
+                    <div style="background: #F0F9FF; padding: 20px; border-radius: 10px; border: 2px solid #0078D4;">
+                      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                        <span style="font-size: 32px;">📊</span>
+                        <h2 style="font-size: 22px; font-weight: 600; color: #0078D4; margin: 0;">Gráfico de Barras</h2>
+                      </div>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;"><strong>Quando usar:</strong> Comparar valores entre diferentes categorias.</p>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;"><strong>Como ler:</strong> Quanto maior a barra, maior o valor. Compare alturas para ver diferenças.</p>
+                      <div style="background: white; padding: 12px; border-radius: 6px; margin-top: 10px;">
+                        <p style="font-size: 13px; color: #6B7280; margin: 0;">💡 <strong>Dica:</strong> Clique em uma barra para filtrar todos os outros gráficos por essa categoria.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="margin-bottom: 25px;">
+                    <div style="background: #FEF3C7; padding: 20px; border-radius: 10px; border: 2px solid #FDB813;">
+                      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                        <span style="font-size: 32px;">📈</span>
+                        <h2 style="font-size: 22px; font-weight: 600; color: #D97706; margin: 0;">Gráfico de Linhas</h2>
+                      </div>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;"><strong>Quando usar:</strong> Mostrar tendências ao longo do tempo.</p>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;"><strong>Como ler:</strong> Linha subindo = crescimento. Linha descendo = queda. Picos indicam valores máximos.</p>
+                      <div style="background: white; padding: 12px; border-radius: 6px; margin-top: 10px;">
+                        <p style="font-size: 13px; color: #6B7280; margin: 0;">💡 <strong>Dica:</strong> Passe o mouse sobre pontos específicos para ver valores exatos.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div style="background: #ECFDF5; padding: 20px; border-radius: 10px; border: 2px solid #10B981;">
+                      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                        <span style="font-size: 32px;">🥧</span>
+                        <h2 style="font-size: 22px; font-weight: 600; color: #059669; margin: 0;">Gráfico de Pizza</h2>
+                      </div>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;"><strong>Quando usar:</strong> Mostrar proporções de um todo (100%).</p>
+                      <p style="font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;"><strong>Como ler:</strong> Fatias maiores = maior participação. Todas as fatias somam 100%.</p>
+                      <div style="background: white; padding: 12px; border-radius: 6px; margin-top: 10px;">
+                        <p style="font-size: 13px; color: #6B7280; margin: 0;">💡 <strong>Dica:</strong> Ideal para visualizar 5-7 categorias no máximo.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+       &lt;div style=&quot;max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;border-bottom: 3px solid #0078D4; padding-bottom: 20px; margin-bottom: 25px;&quot;&gt;
+    &lt;h1 style=&quot;font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;📈 Entendendo os Gr&aacute;ficos&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 16px; color: #6B7280; margin: 0;&quot;&gt;Guia completo para interpretar visualiza&ccedil;&otilde;es&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;margin-bottom: 25px;&quot;&gt;
+    &lt;div style=&quot;background: #F0F9FF; padding: 20px; border-radius: 10px; border: 2px solid #0078D4;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 12px; margin-bottom: 15px;&quot;&gt;
+        &lt;span style=&quot;font-size: 32px;&quot;&gt;📊&lt;/span&gt;
+        &lt;h2 style=&quot;font-size: 22px; font-weight: 600; color: #0078D4; margin: 0;&quot;&gt;Gr&aacute;fico de Barras&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Quando usar:&lt;/strong&gt; Comparar valores entre diferentes categorias.&lt;/p&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Como ler:&lt;/strong&gt; Quanto maior a barra, maior o valor. Compare alturas para ver diferen&ccedil;as.&lt;/p&gt;
+      &lt;div style=&quot;background: white; padding: 12px; border-radius: 6px; margin-top: 10px;&quot;&gt;
+        &lt;p style=&quot;font-size: 13px; color: #6B7280; margin: 0;&quot;&gt;💡 &lt;strong&gt;Dica:&lt;/strong&gt; Clique em uma barra para filtrar todos os outros gr&aacute;ficos por essa categoria.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;margin-bottom: 25px;&quot;&gt;
+    &lt;div style=&quot;background: #FEF3C7; padding: 20px; border-radius: 10px; border: 2px solid #FDB813;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 12px; margin-bottom: 15px;&quot;&gt;
+        &lt;span style=&quot;font-size: 32px;&quot;&gt;📈&lt;/span&gt;
+        &lt;h2 style=&quot;font-size: 22px; font-weight: 600; color: #D97706; margin: 0;&quot;&gt;Gr&aacute;fico de Linhas&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Quando usar:&lt;/strong&gt; Mostrar tend&ecirc;ncias ao longo do tempo.&lt;/p&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Como ler:&lt;/strong&gt; Linha subindo = crescimento. Linha descendo = queda. Picos indicam valores m&aacute;ximos.&lt;/p&gt;
+      &lt;div style=&quot;background: white; padding: 12px; border-radius: 6px; margin-top: 10px;&quot;&gt;
+        &lt;p style=&quot;font-size: 13px; color: #6B7280; margin: 0;&quot;&gt;💡 &lt;strong&gt;Dica:&lt;/strong&gt; Passe o mouse sobre pontos espec&iacute;ficos para ver valores exatos.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;div style=&quot;background: #ECFDF5; padding: 20px; border-radius: 10px; border: 2px solid #10B981;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 12px; margin-bottom: 15px;&quot;&gt;
+        &lt;span style=&quot;font-size: 32px;&quot;&gt;🥧&lt;/span&gt;
+        &lt;h2 style=&quot;font-size: 22px; font-weight: 600; color: #059669; margin: 0;&quot;&gt;Gr&aacute;fico de Pizza&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Quando usar:&lt;/strong&gt; Mostrar propor&ccedil;&otilde;es de um todo (100%).&lt;/p&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Como ler:&lt;/strong&gt; Fatias maiores = maior participa&ccedil;&atilde;o. Todas as fatias somam 100%.&lt;/p&gt;
+      &lt;div style=&quot;background: white; padding: 12px; border-radius: 6px; margin-top: 10px;&quot;&gt;
+        &lt;p style=&quot;font-size: 13px; color: #6B7280; margin: 0;&quot;&gt;💡 &lt;strong&gt;Dica:&lt;/strong&gt; Ideal para visualizar 5-7 categorias no m&aacute;ximo.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML =
+        "
+        &lt;div style='max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); font-family: 'Segoe UI', Arial, sans-serif;'&gt;
+  &lt;div style='border-bottom: 3px solid #0078D4; padding-bottom: 20px; margin-bottom: 25px;'&gt;
+    &lt;h1 style='font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;'&gt;📈 Entendendo os Gr&aacute;ficos&lt;/h1&gt;
+    &lt;p style='font-size: 16px; color: #6B7280; margin: 0;'&gt;Guia completo para interpretar visualiza&ccedil;&otilde;es&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='margin-bottom: 25px;'&gt;
+    &lt;div style='background: #F0F9FF; padding: 20px; border-radius: 10px; border: 2px solid #0078D4;'&gt;
+      &lt;div style='display: flex; align-items: center; gap: 12px; margin-bottom: 15px;'&gt;
+        &lt;span style='font-size: 32px;'&gt;📊&lt;/span&gt;
+        &lt;h2 style='font-size: 22px; font-weight: 600; color: #0078D4; margin: 0;'&gt;Gr&aacute;fico de Barras&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;'&gt;&lt;strong&gt;Quando usar:&lt;/strong&gt; Comparar valores entre diferentes categorias.&lt;/p&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;'&gt;&lt;strong&gt;Como ler:&lt;/strong&gt; Quanto maior a barra, maior o valor. Compare alturas para ver diferen&ccedil;as.&lt;/p&gt;
+      &lt;div style='background: white; padding: 12px; border-radius: 6px; margin-top: 10px;'&gt;
+        &lt;p style='font-size: 13px; color: #6B7280; margin: 0;'&gt;💡 &lt;strong&gt;Dica:&lt;/strong&gt; Clique em uma barra para filtrar todos os outros gr&aacute;ficos por essa categoria.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='margin-bottom: 25px;'&gt;
+    &lt;div style='background: #FEF3C7; padding: 20px; border-radius: 10px; border: 2px solid #FDB813;'&gt;
+      &lt;div style='display: flex; align-items: center; gap: 12px; margin-bottom: 15px;'&gt;
+        &lt;span style='font-size: 32px;'&gt;📈&lt;/span&gt;
+        &lt;h2 style='font-size: 22px; font-weight: 600; color: #D97706; margin: 0;'&gt;Gr&aacute;fico de Linhas&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;'&gt;&lt;strong&gt;Quando usar:&lt;/strong&gt; Mostrar tend&ecirc;ncias ao longo do tempo.&lt;/p&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;'&gt;&lt;strong&gt;Como ler:&lt;/strong&gt; Linha subindo = crescimento. Linha descendo = queda. Picos indicam valores m&aacute;ximos.&lt;/p&gt;
+      &lt;div style='background: white; padding: 12px; border-radius: 6px; margin-top: 10px;'&gt;
+        &lt;p style='font-size: 13px; color: #6B7280; margin: 0;'&gt;💡 &lt;strong&gt;Dica:&lt;/strong&gt; Passe o mouse sobre pontos espec&iacute;ficos para ver valores exatos.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;div style='background: #ECFDF5; padding: 20px; border-radius: 10px; border: 2px solid #10B981;'&gt;
+      &lt;div style='display: flex; align-items: center; gap: 12px; margin-bottom: 15px;'&gt;
+        &lt;span style='font-size: 32px;'&gt;🥧&lt;/span&gt;
+        &lt;h2 style='font-size: 22px; font-weight: 600; color: #059669; margin: 0;'&gt;Gr&aacute;fico de Pizza&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;'&gt;&lt;strong&gt;Quando usar:&lt;/strong&gt; Mostrar propor&ccedil;&otilde;es de um todo (100%).&lt;/p&gt;
+      &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 10px 0; line-height: 1.6;'&gt;&lt;strong&gt;Como ler:&lt;/strong&gt; Fatias maiores = maior participa&ccedil;&atilde;o. Todas as fatias somam 100%.&lt;/p&gt;
+      &lt;div style='background: white; padding: 12px; border-radius: 6px; margin-top: 10px;'&gt;
+        &lt;p style='font-size: 13px; color: #6B7280; margin: 0;'&gt;💡 &lt;strong&gt;Dica:&lt;/strong&gt; Ideal para visualizar 5-7 categorias no m&aacute;ximo.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;">
+                  <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 44px; margin-bottom: 10px;">📊</div>
+                    <h1 style="font-size: 32px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;">Entendendo os KPIs</h1>
+                    <p style="font-size: 15px; color: #6B7280; margin: 0;">Guia completo dos indicadores de performance</p>
+                  </div>
+                  
+                  <div style="display: grid; gap: 18px;">
+                    <div style="border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;">
+                      <div style="background: linear-gradient(135deg, #0078D4, #005A9E); padding: 15px;">
+                        <h3 style="font-size: 20px; font-weight: 700; color: white; margin: 0;">💰 Receita Total</h3>
+                      </div>
+                      <div style="padding: 18px;">
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>O que é:</strong> Soma de todas as vendas realizadas no período selecionado.</p>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>Como interpretar:</strong> Quanto maior, melhor. Acompanhe a tendência mensal.</p>
+                        <div style="background: #F0F9FF; padding: 10px; border-radius: 6px; border-left: 3px solid #0078D4;">
+                          <p style="font-size: 13px; color: #1E40AF; margin: 0; font-weight: 500;">✓ Meta: Crescimento de 15% ao mês</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;">
+                      <div style="background: linear-gradient(135deg, #10B981, #059669); padding: 15px;">
+                        <h3 style="font-size: 20px; font-weight: 700; color: white; margin: 0;">📦 Número de Vendas</h3>
+                      </div>
+                      <div style="padding: 18px;">
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>O que é:</strong> Quantidade total de transações realizadas.</p>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>Como interpretar:</strong> Indica o volume de atividade. Compare com ticket médio.</p>
+                        <div style="background: #ECFDF5; padding: 10px; border-radius: 6px; border-left: 3px solid #10B981;">
+                          <p style="font-size: 13px; color: #065F46; margin: 0; font-weight: 500;">✓ Meta: 500 vendas/mês</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;">
+                      <div style="background: linear-gradient(135deg, #FDB813, #F7931E); padding: 15px;">
+                        <h3 style="font-size: 20px; font-weight: 700; color: white; margin: 0;">👥 Novos Clientes</h3>
+                      </div>
+                      <div style="padding: 18px;">
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>O que é:</strong> Clientes que fizeram sua primeira compra no período.</p>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>Como interpretar:</strong> Mede a aquisição. Compare com o CAC (custo de aquisição).</p>
+                        <div style="background: #FEF3C7; padding: 10px; border-radius: 6px; border-left: 3px solid #FDB813;">
+                          <p style="font-size: 13px; color: #92400E; margin: 0; font-weight: 500;">✓ Meta: 150 novos clientes/mês</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;">
+                      <div style="background: linear-gradient(135deg, #6366F1, #4F46E5); padding: 15px;">
+                        <h3 style="font-size: 20px; font-weight: 700; color: white; margin: 0;">📈 Taxa de Crescimento</h3>
+                      </div>
+                      <div style="padding: 18px;">
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>O que é:</strong> Percentual de crescimento comparado ao período anterior.</p>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;"><strong>Como interpretar:</strong> Positivo = crescimento. Negativo = retração. Objetivo: sempre positivo.</p>
+                        <div style="background: #EEF2FF; padding: 10px; border-radius: 6px; border-left: 3px solid #6366F1;">
+                          <p style="font-size: 13px; color: #3730A3; margin: 0; font-weight: 500;">✓ Meta: +10% vs mês anterior</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+      &lt;div style=&quot;max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;text-align: center; margin-bottom: 30px;&quot;&gt;
+    &lt;div style=&quot;font-size: 44px; margin-bottom: 10px;&quot;&gt;📊&lt;/div&gt;
+    &lt;h1 style=&quot;font-size: 32px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;Entendendo os KPIs&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 15px; color: #6B7280; margin: 0;&quot;&gt;Guia completo dos indicadores de performance&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;display: grid; gap: 18px;&quot;&gt;
+    &lt;div style=&quot;border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;background: linear-gradient(135deg, #0078D4, #005A9E); padding: 15px;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 20px; font-weight: 700; color: white; margin: 0;&quot;&gt;💰 Receita Total&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;padding: 18px;&quot;&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Soma de todas as vendas realizadas no per&iacute;odo selecionado.&lt;/p&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Quanto maior, melhor. Acompanhe a tend&ecirc;ncia mensal.&lt;/p&gt;
+        &lt;div style=&quot;background: #F0F9FF; padding: 10px; border-radius: 6px; border-left: 3px solid #0078D4;&quot;&gt;
+          &lt;p style=&quot;font-size: 13px; color: #1E40AF; margin: 0; font-weight: 500;&quot;&gt;✓ Meta: Crescimento de 15% ao m&ecirc;s&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;background: linear-gradient(135deg, #10B981, #059669); padding: 15px;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 20px; font-weight: 700; color: white; margin: 0;&quot;&gt;📦 N&uacute;mero de Vendas&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;padding: 18px;&quot;&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Quantidade total de transa&ccedil;&otilde;es realizadas.&lt;/p&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Indica o volume de atividade. Compare com ticket m&eacute;dio.&lt;/p&gt;
+        &lt;div style=&quot;background: #ECFDF5; padding: 10px; border-radius: 6px; border-left: 3px solid #10B981;&quot;&gt;
+          &lt;p style=&quot;font-size: 13px; color: #065F46; margin: 0; font-weight: 500;&quot;&gt;✓ Meta: 500 vendas/m&ecirc;s&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;background: linear-gradient(135deg, #FDB813, #F7931E); padding: 15px;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 20px; font-weight: 700; color: white; margin: 0;&quot;&gt;👥 Novos Clientes&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;padding: 18px;&quot;&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Clientes que fizeram sua primeira compra no per&iacute;odo.&lt;/p&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Mede a aquisi&ccedil;&atilde;o. Compare com o CAC (custo de aquisi&ccedil;&atilde;o).&lt;/p&gt;
+        &lt;div style=&quot;background: #FEF3C7; padding: 10px; border-radius: 6px; border-left: 3px solid #FDB813;&quot;&gt;
+          &lt;p style=&quot;font-size: 13px; color: #92400E; margin: 0; font-weight: 500;&quot;&gt;✓ Meta: 150 novos clientes/m&ecirc;s&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;&quot;&gt;
+      &lt;div style=&quot;background: linear-gradient(135deg, #6366F1, #4F46E5); padding: 15px;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 20px; font-weight: 700; color: white; margin: 0;&quot;&gt;📈 Taxa de Crescimento&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;padding: 18px;&quot;&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Percentual de crescimento comparado ao per&iacute;odo anterior.&lt;/p&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;&quot;&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Positivo = crescimento. Negativo = retra&ccedil;&atilde;o. Objetivo: sempre positivo.&lt;/p&gt;
+        &lt;div style=&quot;background: #EEF2FF; padding: 10px; border-radius: 6px; border-left: 3px solid #6366F1;&quot;&gt;
+          &lt;p style=&quot;font-size: 13px; color: #3730A3; margin: 0; font-weight: 500;&quot;&gt;✓ Meta: +10% vs m&ecirc;s anterior&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML =
+        "
+        &lt;div style='max-width: 800px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;'&gt;
+  &lt;div style='text-align: center; margin-bottom: 30px;'&gt;
+    &lt;div style='font-size: 44px; margin-bottom: 10px;'&gt;📊&lt;/div&gt;
+    &lt;h1 style='font-size: 32px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;'&gt;Entendendo os KPIs&lt;/h1&gt;
+    &lt;p style='font-size: 15px; color: #6B7280; margin: 0;'&gt;Guia completo dos indicadores de performance&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='display: grid; gap: 18px;'&gt;
+    &lt;div style='border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;'&gt;
+      &lt;div style='background: linear-gradient(135deg, #0078D4, #005A9E); padding: 15px;'&gt;
+        &lt;h3 style='font-size: 20px; font-weight: 700; color: white; margin: 0;'&gt;💰 Receita Total&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style='padding: 18px;'&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Soma de todas as vendas realizadas no per&iacute;odo selecionado.&lt;/p&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Quanto maior, melhor. Acompanhe a tend&ecirc;ncia mensal.&lt;/p&gt;
+        &lt;div style='background: #F0F9FF; padding: 10px; border-radius: 6px; border-left: 3px solid #0078D4;'&gt;
+          &lt;p style='font-size: 13px; color: #1E40AF; margin: 0; font-weight: 500;'&gt;✓ Meta: Crescimento de 15% ao m&ecirc;s&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;'&gt;
+      &lt;div style='background: linear-gradient(135deg, #10B981, #059669); padding: 15px;'&gt;
+        &lt;h3 style='font-size: 20px; font-weight: 700; color: white; margin: 0;'&gt;📦 N&uacute;mero de Vendas&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style='padding: 18px;'&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Quantidade total de transa&ccedil;&otilde;es realizadas.&lt;/p&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Indica o volume de atividade. Compare com ticket m&eacute;dio.&lt;/p&gt;
+        &lt;div style='background: #ECFDF5; padding: 10px; border-radius: 6px; border-left: 3px solid #10B981;'&gt;
+          &lt;p style='font-size: 13px; color: #065F46; margin: 0; font-weight: 500;'&gt;✓ Meta: 500 vendas/m&ecirc;s&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;'&gt;
+      &lt;div style='background: linear-gradient(135deg, #FDB813, #F7931E); padding: 15px;'&gt;
+        &lt;h3 style='font-size: 20px; font-weight: 700; color: white; margin: 0;'&gt;👥 Novos Clientes&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style='padding: 18px;'&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Clientes que fizeram sua primeira compra no per&iacute;odo.&lt;/p&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Mede a aquisi&ccedil;&atilde;o. Compare com o CAC (custo de aquisi&ccedil;&atilde;o).&lt;/p&gt;
+        &lt;div style='background: #FEF3C7; padding: 10px; border-radius: 6px; border-left: 3px solid #FDB813;'&gt;
+          &lt;p style='font-size: 13px; color: #92400E; margin: 0; font-weight: 500;'&gt;✓ Meta: 150 novos clientes/m&ecirc;s&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div style='border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;'&gt;
+      &lt;div style='background: linear-gradient(135deg, #6366F1, #4F46E5); padding: 15px;'&gt;
+        &lt;h3 style='font-size: 20px; font-weight: 700; color: white; margin: 0;'&gt;📈 Taxa de Crescimento&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div style='padding: 18px;'&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;O que &eacute;:&lt;/strong&gt; Percentual de crescimento comparado ao per&iacute;odo anterior.&lt;/p&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0 0 12px 0; line-height: 1.6;'&gt;&lt;strong&gt;Como interpretar:&lt;/strong&gt; Positivo = crescimento. Negativo = retra&ccedil;&atilde;o. Objetivo: sempre positivo.&lt;/p&gt;
+        &lt;div style='background: #EEF2FF; padding: 10px; border-radius: 6px; border-left: 3px solid #6366F1;'&gt;
+          &lt;p style='font-size: 13px; color: #3730A3; margin: 0; font-weight: 500;'&gt;✓ Meta: +10% vs m&ecirc;s anterior&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 750px; margin: 0 auto; padding: 25px; background: #F9FAFB; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;">
+                    <div style="text-align: center; margin-bottom: 25px;">
+                      <div style="font-size: 46px; margin-bottom: 10px;">💡</div>
+                      <h1 style="font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;">Dicas de Análise</h1>
+                      <p style="font-size: 16px; color: #6B7280; margin: 0;">Extraia o máximo de insights dos seus dados</p>
+                    </div>
+                    
+                    <div style="display: grid; gap: 15px;">
+                      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #0078D4;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                          <span style="font-size: 24px;">🎯</span>
+                          <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Compare Períodos</h3>
+                        </div>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Sempre compare o período atual com o anterior (mês, trimestre, ano). Tendências são mais importantes que valores absolutos.</p>
+                      </div>
+                      
+                      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #10B981;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                          <span style="font-size: 24px;">🔍</span>
+                          <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Procure Padrões</h3>
+                        </div>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Identifique sazonalidades, picos e quedas. Use gráficos de linha para visualizar comportamentos ao longo do tempo.</p>
+                      </div>
+                      
+                      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #FDB813;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                          <span style="font-size: 24px;">🎲</span>
+                          <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Segmente Seus Dados</h3>
+                        </div>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Analise por região, produto, cliente. Segmentos diferentes podem ter comportamentos muito distintos.</p>
+                      </div>
+                      
+                      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #6366F1;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                          <span style="font-size: 24px;">⚠️</span>
+                          <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Questione Anomalias</h3>
+                        </div>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Valores muito altos ou baixos merecem investigação. Podem ser oportunidades ou problemas escondidos.</p>
+                      </div>
+                      
+                      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #EC4899;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                          <span style="font-size: 24px;">🔗</span>
+                          <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Relacione Métricas</h3>
+                        </div>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Analise KPIs em conjunto. Por exemplo: muitas vendas + baixo ticket médio pode indicar necessidade de upsell.</p>
+                      </div>
+                      
+                      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #8B5CF6;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                          <span style="font-size: 24px;">📅</span>
+                          <h3 style="font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;">Análise Regular</h3>
+                        </div>
+                        <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Estabeleça uma rotina de análise (diária, semanal, mensal). Consistência gera insights mais profundos.</p>
+                      </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #0078D4, #005A9E); color: white; padding: 18px; border-radius: 8px; margin-top: 20px; text-align: center;">
+                      <p style="font-size: 15px; margin: 0; font-weight: 500;">🚀 Lembre-se: dados só geram valor quando transformados em ações!</p>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+     &lt;div style=&quot;max-width: 750px; margin: 0 auto; padding: 25px; background: #F9FAFB; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;text-align: center; margin-bottom: 25px;&quot;&gt;
+    &lt;div style=&quot;font-size: 46px; margin-bottom: 10px;&quot;&gt;💡&lt;/div&gt;
+    &lt;h1 style=&quot;font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;Dicas de An&aacute;lise&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 16px; color: #6B7280; margin: 0;&quot;&gt;Extraia o m&aacute;ximo de insights dos seus dados&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;display: grid; gap: 15px;&quot;&gt;
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #0078D4;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🎯&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Compare Per&iacute;odos&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Sempre compare o per&iacute;odo atual com o anterior (m&ecirc;s, trimestre, ano). Tend&ecirc;ncias s&atilde;o mais importantes que valores absolutos.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #10B981;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🔍&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Procure Padr&otilde;es&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Identifique sazonalidades, picos e quedas. Use gr&aacute;ficos de linha para visualizar comportamentos ao longo do tempo.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #FDB813;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🎲&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Segmente Seus Dados&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Analise por regi&atilde;o, produto, cliente. Segmentos diferentes podem ter comportamentos muito distintos.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #6366F1;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;⚠️&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Questione Anomalias&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Valores muito altos ou baixos merecem investiga&ccedil;&atilde;o. Podem ser oportunidades ou problemas escondidos.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #EC4899;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🔗&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Relacione M&eacute;tricas&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Analise KPIs em conjunto. Por exemplo: muitas vendas + baixo ticket m&eacute;dio pode indicar necessidade de upsell.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #8B5CF6;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;📅&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;An&aacute;lise Regular&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Estabele&ccedil;a uma rotina de an&aacute;lise (di&aacute;ria, semanal, mensal). Consist&ecirc;ncia gera insights mais profundos.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;background: linear-gradient(135deg, #0078D4, #005A9E); color: white; padding: 18px; border-radius: 8px; margin-top: 20px; text-align: center;&quot;&gt;
+    &lt;p style=&quot;font-size: 15px; margin: 0; font-weight: 500;&quot;&gt;🚀 Lembre-se: dados s&oacute; geram valor quando transformados em a&ccedil;&otilde;es!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML =
+        "
+        &lt;div style=&quot;max-width: 750px; margin: 0 auto; padding: 25px; background: #F9FAFB; border-radius: 10px; font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;text-align: center; margin-bottom: 25px;&quot;&gt;
+    &lt;div style=&quot;font-size: 46px; margin-bottom: 10px;&quot;&gt;💡&lt;/div&gt;
+    &lt;h1 style=&quot;font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;Dicas de An&aacute;lise&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 16px; color: #6B7280; margin: 0;&quot;&gt;Extraia o m&aacute;ximo de insights dos seus dados&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;display: grid; gap: 15px;&quot;&gt;
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #0078D4;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🎯&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Compare Per&iacute;odos&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Sempre compare o per&iacute;odo atual com o anterior (m&ecirc;s, trimestre, ano). Tend&ecirc;ncias s&atilde;o mais importantes que valores absolutos.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #10B981;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🔍&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Procure Padr&otilde;es&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Identifique sazonalidades, picos e quedas. Use gr&aacute;ficos de linha para visualizar comportamentos ao longo do tempo.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #FDB813;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🎲&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Segmente Seus Dados&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Analise por regi&atilde;o, produto, cliente. Segmentos diferentes podem ter comportamentos muito distintos.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #6366F1;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;⚠️&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Questione Anomalias&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Valores muito altos ou baixos merecem investiga&ccedil;&atilde;o. Podem ser oportunidades ou problemas escondidos.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #EC4899;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;🔗&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;Relacione M&eacute;tricas&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Analise KPIs em conjunto. Por exemplo: muitas vendas + baixo ticket m&eacute;dio pode indicar necessidade de upsell.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div style=&quot;background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #8B5CF6;&quot;&gt;
+      &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+        &lt;span style=&quot;font-size: 24px;&quot;&gt;📅&lt;/span&gt;
+        &lt;h3 style=&quot;font-size: 18px; font-weight: 600; color: #1F2937; margin: 0;&quot;&gt;An&aacute;lise Regular&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Estabele&ccedil;a uma rotina de an&aacute;lise (di&aacute;ria, semanal, mensal). Consist&ecirc;ncia gera insights mais profundos.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;background: linear-gradient(135deg, #0078D4, #005A9E); color: white; padding: 18px; border-radius: 8px; margin-top: 20px; text-align: center;&quot;&gt;
+    &lt;p style=&quot;font-size: 15px; margin: 0; font-weight: 500;&quot;&gt;🚀 Lembre-se: dados s&oacute; geram valor quando transformados em a&ccedil;&otilde;es!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                <div style="max-width: 850px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                      <div style="font-size: 44px; margin-bottom: 10px;">⚖️</div>
+                      <h1 style="font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;">Comparativo de Métricas</h1>
+                      <p style="font-size: 15px; color: #6B7280; margin: 0;">Diferenças entre métricas que se parecem</p>
+                    </div>
+                    
+                    <div style="border: 2px solid #E5E7EB; border-radius: 10px; margin-bottom: 20px; overflow: hidden;">
+                      <div style="background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;">Receita vs Lucro</h2>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+                        <div style="padding: 18px; border-right: 1px solid #E5E7EB;">
+                          <h3 style="font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;">💰 Receita</h3>
+                          <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Total de vendas ANTES de descontar custos. Inclui impostos e despesas.</p>
+                        </div>
+                        <div style="padding: 18px;">
+                          <h3 style="font-size: 16px; font-weight: 600; color: #10B981; margin: 0 0 10px 0;">💵 Lucro</h3>
+                          <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">O que sobra DEPOIS de pagar todos os custos. É o ganho real.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="border: 2px solid #E5E7EB; border-radius: 10px; margin-bottom: 20px; overflow: hidden;">
+                      <div style="background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;">Clientes vs Leads</h2>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+                        <div style="padding: 18px; border-right: 1px solid #E5E7EB;">
+                          <h3 style="font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;">👥 Clientes</h3>
+                          <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Pessoas que JÁ compraram. Têm histórico de transações.</p>
+                        </div>
+                        <div style="padding: 18px;">
+                          <h3 style="font-size: 16px; font-weight: 600; color: #FDB813; margin: 0 0 10px 0;">🎯 Leads</h3>
+                          <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">Potenciais clientes. Demonstraram interesse mas AINDA NÃO compraram.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;">
+                      <div style="background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;">Taxa de Conversão vs Taxa de Retenção</h2>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+                        <div style="padding: 18px; border-right: 1px solid #E5E7EB;">
+                          <h3 style="font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;">🎯 Conversão</h3>
+                          <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">% de NOVOS visitantes/leads que se tornaram clientes.</p>
+                        </div>
+                        <div style="padding: 18px;">
+                          <h3 style="font-size: 16px; font-weight: 600; color: #6366F1; margin: 0 0 10px 0;">🔄 Retenção</h3>
+                          <p style="font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;">% de clientes EXISTENTES que continuaram comprando.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="background: #EEF2FF; padding: 16px; border-radius: 8px; margin-top: 20px; text-align: center;">
+                      <p style="font-size: 13px; color: #4F46E5; margin: 0; font-weight: 500;">📚 Consulte sempre o Glossário para esclarecer dúvidas sobre métricas</p>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+     &lt;div style=&quot;max-width: 850px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;&quot;&gt;
+  &lt;div style=&quot;text-align: center; margin-bottom: 30px;&quot;&gt;
+    &lt;div style=&quot;font-size: 44px; margin-bottom: 10px;&quot;&gt;⚖️&lt;/div&gt;
+    &lt;h1 style=&quot;font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;&quot;&gt;Comparativo de M&eacute;tricas&lt;/h1&gt;
+    &lt;p style=&quot;font-size: 15px; color: #6B7280; margin: 0;&quot;&gt;Diferen&ccedil;as entre m&eacute;tricas que se parecem&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;border: 2px solid #E5E7EB; border-radius: 10px; margin-bottom: 20px; overflow: hidden;&quot;&gt;
+    &lt;div style=&quot;background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;&quot;&gt;
+      &lt;h2 style=&quot;font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;&quot;&gt;Receita vs Lucro&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: 0;&quot;&gt;
+      &lt;div style=&quot;padding: 18px; border-right: 1px solid #E5E7EB;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;&quot;&gt;💰 Receita&lt;/h3&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Total de vendas ANTES de descontar custos. Inclui impostos e despesas.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;padding: 18px;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #10B981; margin: 0 0 10px 0;&quot;&gt;💵 Lucro&lt;/h3&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;O que sobra DEPOIS de pagar todos os custos. &Eacute; o ganho real.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;border: 2px solid #E5E7EB; border-radius: 10px; margin-bottom: 20px; overflow: hidden;&quot;&gt;
+    &lt;div style=&quot;background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;&quot;&gt;
+      &lt;h2 style=&quot;font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;&quot;&gt;Clientes vs Leads&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: 0;&quot;&gt;
+      &lt;div style=&quot;padding: 18px; border-right: 1px solid #E5E7EB;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;&quot;&gt;👥 Clientes&lt;/h3&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Pessoas que J&Aacute; compraram. T&ecirc;m hist&oacute;rico de transa&ccedil;&otilde;es.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;padding: 18px;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #FDB813; margin: 0 0 10px 0;&quot;&gt;🎯 Leads&lt;/h3&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;Potenciais clientes. Demonstraram interesse mas AINDA N&Atilde;O compraram.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;&quot;&gt;
+    &lt;div style=&quot;background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;&quot;&gt;
+      &lt;h2 style=&quot;font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;&quot;&gt;Taxa de Convers&atilde;o vs Taxa de Reten&ccedil;&atilde;o&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: 0;&quot;&gt;
+      &lt;div style=&quot;padding: 18px; border-right: 1px solid #E5E7EB;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;&quot;&gt;🎯 Convers&atilde;o&lt;/h3&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;% de NOVOS visitantes/leads que se tornaram clientes.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;padding: 18px;&quot;&gt;
+        &lt;h3 style=&quot;font-size: 16px; font-weight: 600; color: #6366F1; margin: 0 0 10px 0;&quot;&gt;🔄 Reten&ccedil;&atilde;o&lt;/h3&gt;
+        &lt;p style=&quot;font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;&quot;&gt;% de clientes EXISTENTES que continuaram comprando.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;background: #EEF2FF; padding: 16px; border-radius: 8px; margin-top: 20px; text-align: center;&quot;&gt;
+    &lt;p style=&quot;font-size: 13px; color: #4F46E5; margin: 0; font-weight: 500;&quot;&gt;📚 Consulte sempre o Gloss&aacute;rio para esclarecer d&uacute;vidas sobre m&eacute;tricas&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        DocumentaçãoHTML =
+        "
+        &lt;div style='max-width: 850px; margin: 0 auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Arial, sans-serif;'&gt;
+  &lt;div style='text-align: center; margin-bottom: 30px;'&gt;
+    &lt;div style='font-size: 44px; margin-bottom: 10px;'&gt;⚖️&lt;/div&gt;
+    &lt;h1 style='font-size: 30px; font-weight: 700; color: #1F2937; margin: 0 0 8px 0;'&gt;Comparativo de M&eacute;tricas&lt;/h1&gt;
+    &lt;p style='font-size: 15px; color: #6B7280; margin: 0;'&gt;Diferen&ccedil;as entre m&eacute;tricas que se parecem&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='border: 2px solid #E5E7EB; border-radius: 10px; margin-bottom: 20px; overflow: hidden;'&gt;
+    &lt;div style='background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;'&gt;
+      &lt;h2 style='font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;'&gt;Receita vs Lucro&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div style='display: grid; grid-template-columns: 1fr 1fr; gap: 0;'&gt;
+      &lt;div style='padding: 18px; border-right: 1px solid #E5E7EB;'&gt;
+        &lt;h3 style='font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;'&gt;💰 Receita&lt;/h3&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;'&gt;Total de vendas ANTES de descontar custos. Inclui impostos e despesas.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style='padding: 18px;'&gt;
+        &lt;h3 style='font-size: 16px; font-weight: 600; color: #10B981; margin: 0 0 10px 0;'&gt;💵 Lucro&lt;/h3&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;'&gt;O que sobra DEPOIS de pagar todos os custos. &Eacute; o ganho real.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='border: 2px solid #E5E7EB; border-radius: 10px; margin-bottom: 20px; overflow: hidden;'&gt;
+    &lt;div style='background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;'&gt;
+      &lt;h2 style='font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;'&gt;Clientes vs Leads&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div style='display: grid; grid-template-columns: 1fr 1fr; gap: 0;'&gt;
+      &lt;div style='padding: 18px; border-right: 1px solid #E5E7EB;'&gt;
+        &lt;h3 style='font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;'&gt;👥 Clientes&lt;/h3&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;'&gt;Pessoas que J&Aacute; compraram. T&ecirc;m hist&oacute;rico de transa&ccedil;&otilde;es.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style='padding: 18px;'&gt;
+        &lt;h3 style='font-size: 16px; font-weight: 600; color: #FDB813; margin: 0 0 10px 0;'&gt;🎯 Leads&lt;/h3&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;'&gt;Potenciais clientes. Demonstraram interesse mas AINDA N&Atilde;O compraram.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='border: 2px solid #E5E7EB; border-radius: 10px; overflow: hidden;'&gt;
+    &lt;div style='background: #F9FAFB; padding: 15px; border-bottom: 2px solid #E5E7EB;'&gt;
+      &lt;h2 style='font-size: 20px; font-weight: 700; color: #1F2937; margin: 0;'&gt;Taxa de Convers&atilde;o vs Taxa de Reten&ccedil;&atilde;o&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div style='display: grid; grid-template-columns: 1fr 1fr; gap: 0;'&gt;
+      &lt;div style='padding: 18px; border-right: 1px solid #E5E7EB;'&gt;
+        &lt;h3 style='font-size: 16px; font-weight: 600; color: #0078D4; margin: 0 0 10px 0;'&gt;🎯 Convers&atilde;o&lt;/h3&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;'&gt;% de NOVOS visitantes/leads que se tornaram clientes.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style='padding: 18px;'&gt;
+        &lt;h3 style='font-size: 16px; font-weight: 600; color: #6366F1; margin: 0 0 10px 0;'&gt;🔄 Reten&ccedil;&atilde;o&lt;/h3&gt;
+        &lt;p style='font-size: 14px; color: #4B5563; margin: 0; line-height: 1.6;'&gt;% de clientes EXISTENTES que continuaram comprando.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='background: #EEF2FF; padding: 16px; border-radius: 8px; margin-top: 20px; text-align: center;'&gt;
+    &lt;p style='font-size: 13px; color: #4F46E5; margin: 0; font-weight: 500;'&gt;📚 Consulte sempre o Gloss&aacute;rio para esclarecer d&uacute;vidas sobre m&eacute;tricas&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+
+
+
+          <!-- Fim dos Cards -->
+    </section>
+    
+
+  </main>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+  <script src="/src/js/script.js"></script>
+  <script src="/src/js/componentes.js"></script>
+</body>
+</html>
