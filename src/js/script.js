@@ -77,3 +77,12 @@ scrollTop.addEventListener('click', (e) => {
 // Eventos
 window.addEventListener('load', toggleScrollTop);
 document.addEventListener('scroll', toggleScrollTop);
+
+
+// Google Analytics
+
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RY77B4ZVWP');  // Substitua 'G-XXXXXXXXXX' pelo seu ID de rastreamento
