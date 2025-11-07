@@ -1771,24 +1771,41 @@
               <!-- PREVIEW E CÓDIGO -->
               <div class="component-row">
                 <!-- CARD VISUAL -->
-               <div style="background: #1e293b; border-radius: 16px; padding: 28px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; text-align: center;">
-                  <div style="font-size: 14px; color: #94a3b8; margin-bottom: 20px;">CONCLUSÃO DE TAREFAS</div>
-                  <div style="position: relative; width: 140px; height: 140px; margin: 0 auto 20px;">
-                    <svg width="140" height="140" style="transform: rotate(-90deg);">
-                      <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="12"/>
-                      <circle cx="70" cy="70" r="60" fill="none" stroke="url(#gradient)" stroke-width="12" stroke-dasharray="377" stroke-dashoffset="75.4" stroke-linecap="round"/>
-                      <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                          <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700;">80%</div>
+                  <div style="background: #1e293b; border-radius: 16px; padding: 28px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; text-align: center;">
+                    <div style="font-size: 14px; color: #94a3b8; margin-bottom: 20px;">CONCLUSÃO DE TAREFAS</div>
+                    <div style="position: relative; width: 140px; height: 140px; margin: 0 auto 20px;">
+                      <svg width="140" height="140" style="transform: rotate(-90deg);">
+                        <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="12"/>
+                        <circle id="progress-circle" cx="70" cy="70" r="60" fill="none" stroke="url(#gradient)" stroke-width="12" stroke-dasharray="377" stroke-dashoffset="377" stroke-linecap="round"/>
+                        <defs>
+                          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <!-- Valor de progresso: Alterar para 80, 90, etc. -->
+                      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700;" id="progress-text">80%</div> 
+                    </div>
+                    <div style="font-size: 14px; color: #94a3b8;">36 de 45 tarefas concluídas</div>
+                    <div style="margin-top: 16px; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 13px; color: #3b82f6;">🎯 Faltam apenas 9 tarefas!</div>
                   </div>
-                  <div style="font-size: 14px; color: #94a3b8;">36 de 45 tarefas concluídas</div>
-                  <div style="margin-top: 16px; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 13px; color: #3b82f6;">🎯 Faltam apenas 9 tarefas!</div>
-                </div>
+
+                  <style>
+                    /* Animação do círculo de progresso */
+                    @keyframes grow {
+                       0% {
+                        stroke-dashoffset: 377; /* Começa com o círculo vazio (0%) */
+                      }
+                      100% {
+                        stroke-dashoffset: 75.4; /* Para 80% (377 * 0.80 = 75.4) */
+                      }
+                    }
+                    /* Aplicando a animação ao círculo */
+                    #progress-circle {
+                      animation: grow 3s ease-out forwards; /* 3s para a animação */
+                    }
+                  </style>
                 <!-- CÓDIGO (INICIALMENTE OCULTO) -->
                 <div class="code-panel bg-dark rounded-4 p-3 d-none">
                     
@@ -1807,34 +1824,57 @@
 
                   <pre class="m-0"><code class="language-html html-code">
 &lt;div style=&quot;background: #1e293b; border-radius: 16px; padding: 28px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; text-align: center;&quot;&gt;
-  &lt;div style=&quot;font-size: 14px; color: #94a3b8; margin-bottom: 20px;&quot;&gt;CONCLUS&Atilde;O DE TAREFAS&lt;/div&gt;
-  &lt;div style=&quot;position: relative; width: 140px; height: 140px; margin: 0 auto 20px;&quot;&gt;
-    &lt;svg width=&quot;140&quot; height=&quot;140&quot; style=&quot;transform: rotate(-90deg);&quot;&gt;
-      &lt;circle cx=&quot;70&quot; cy=&quot;70&quot; r=&quot;60&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;12&quot;/&gt;
-      &lt;circle cx=&quot;70&quot; cy=&quot;70&quot; r=&quot;60&quot; fill=&quot;none&quot; stroke=&quot;url(#gradient)&quot; stroke-width=&quot;12&quot; stroke-dasharray=&quot;377&quot; stroke-dashoffset=&quot;75.4&quot; stroke-linecap=&quot;round&quot;/&gt;
-      &lt;defs&gt;
-        &lt;linearGradient id=&quot;gradient&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;&gt;
-          &lt;stop offset=&quot;0%&quot; style=&quot;stop-color:#3b82f6;stop-opacity:1&quot; /&gt;
-          &lt;stop offset=&quot;100%&quot; style=&quot;stop-color:#8b5cf6;stop-opacity:1&quot; /&gt;
-        &lt;/linearGradient&gt;
-      &lt;/defs&gt;
-    &lt;/svg&gt;
-    &lt;div style=&quot;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700;&quot;&gt;80%&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div style=&quot;font-size: 14px; color: #94a3b8;&quot;&gt;36 de 45 tarefas conclu&iacute;das&lt;/div&gt;
-  &lt;div style=&quot;margin-top: 16px; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 13px; color: #3b82f6;&quot;&gt;🎯 Faltam apenas 9 tarefas!&lt;/div&gt;
-&lt;/div&gt;
+                    &lt;div style=&quot;font-size: 14px; color: #94a3b8; margin-bottom: 20px;&quot;&gt;CONCLUS&Atilde;O DE TAREFAS&lt;/div&gt;
+                    &lt;div style=&quot;position: relative; width: 140px; height: 140px; margin: 0 auto 20px;&quot;&gt;
+                      &lt;svg width=&quot;140&quot; height=&quot;140&quot; style=&quot;transform: rotate(-90deg);&quot;&gt;
+                        &lt;circle cx=&quot;70&quot; cy=&quot;70&quot; r=&quot;60&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;12&quot;/&gt;
+                        &lt;circle id=&quot;progress-circle&quot; cx=&quot;70&quot; cy=&quot;70&quot; r=&quot;60&quot; fill=&quot;none&quot; stroke=&quot;url(#gradient)&quot; stroke-width=&quot;12&quot; stroke-dasharray=&quot;377&quot; stroke-dashoffset=&quot;377&quot; stroke-linecap=&quot;round&quot;/&gt;
+                        &lt;defs&gt;
+                          &lt;linearGradient id=&quot;gradient&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;&gt;
+                            &lt;stop offset=&quot;0%&quot; style=&quot;stop-color:#3b82f6;stop-opacity:1&quot; /&gt;
+                            &lt;stop offset=&quot;100%&quot; style=&quot;stop-color:#8b5cf6;stop-opacity:1&quot; /&gt;
+                          &lt;/linearGradient&gt;
+                        &lt;/defs&gt;
+                      &lt;/svg&gt;
+                      &lt;!-- Valor de progresso: Alterar para 80, 90, etc. --&gt;
+                      &lt;div style=&quot;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700;&quot; id=&quot;progress-text&quot;&gt;80%&lt;/div&gt; 
+                    &lt;/div&gt;
+                    &lt;div style=&quot;font-size: 14px; color: #94a3b8;&quot;&gt;36 de 45 tarefas conclu&iacute;das&lt;/div&gt;
+                    &lt;div style=&quot;margin-top: 16px; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 13px; color: #3b82f6;&quot;&gt;🎯 Faltam apenas 9 tarefas!&lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;style&gt;
+                    /* Anima&ccedil;&atilde;o do c&iacute;rculo de progresso */
+                    @keyframes grow {
+                       0% {
+                        stroke-dashoffset: 377; /* Come&ccedil;a com o c&iacute;rculo vazio (0%) */
+                      }
+                      100% {
+                        stroke-dashoffset: 75.4; /* Para 80% (377 * 0.80 = 75.4) */
+                      }
+                    }
+                    /* Aplicando a anima&ccedil;&atilde;o ao c&iacute;rculo */
+                    #progress-circle {
+                      animation: grow 3s ease-out forwards; /* 3s para a anima&ccedil;&atilde;o */
+                    }
+                  &lt;/style&gt;
                   </code></pre>
 
                   <pre class="m-0 d-none"><code class="language-html powerbi-code">
-        Cards_HTML =
-        "
+        Card = 
+Var SuaMedidaPercentual = 90 --Insira sua medida
+Var Calculo = (SuaMedidaPercentual / 100) -- Deixe o calculo
+Var SuaMedidaQuantidade = 45 -- Sua medida de Quantidade
+Var DashOffset = 377 * (1 - Calculo) -- Deixe o calculo
+
+RETURN
+"
 &lt;div style='background: #1e293b; border-radius: 16px; padding: 28px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; text-align: center;'&gt;
   &lt;div style='font-size: 14px; color: #94a3b8; margin-bottom: 20px;'&gt;CONCLUS&Atilde;O DE TAREFAS&lt;/div&gt;
   &lt;div style='position: relative; width: 140px; height: 140px; margin: 0 auto 20px;'&gt;
     &lt;svg width='140' height='140' style='transform: rotate(-90deg);'&gt;
       &lt;circle cx='70' cy='70' r='60' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='12'/&gt;
-      &lt;circle cx='70' cy='70' r='60' fill='none' stroke='url(#gradient)' stroke-width='12' stroke-dasharray='377' stroke-dashoffset='75.4' stroke-linecap='round'/&gt;
+      &lt;circle id='progress-circle' cx='70' cy='70' r='60' fill='none' stroke='url(#gradient)' stroke-width='12' stroke-dasharray='377' stroke-dashoffset='377' stroke-linecap='round'/&gt;
       &lt;defs&gt;
         &lt;linearGradient id='gradient' x1='0%' y1='0%' x2='100%' y2='100%'&gt;
           &lt;stop offset='0%' style='stop-color:#3b82f6;stop-opacity:1' /&gt;
@@ -1842,11 +1882,29 @@
         &lt;/linearGradient&gt;
       &lt;/defs&gt;
     &lt;/svg&gt;
-    &lt;div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700;'&gt;80%&lt;/div&gt;
+    &lt;!-- Valor de progresso: Alterar para 80, 90, etc. --&gt;
+    &lt;div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700;'&gt;&quot; &amp; SuaMedidaPercentual &amp; &quot;%&lt;/div&gt; 
   &lt;/div&gt;
-  &lt;div style='font-size: 14px; color: #94a3b8;'&gt;36 de 45 tarefas conclu&iacute;das&lt;/div&gt;
-  &lt;div style='margin-top: 16px; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 13px; color: #3b82f6;'&gt;🎯 Faltam apenas 9 tarefas!&lt;/div&gt;
+  &lt;div style='font-size: 14px; color: #94a3b8;'&gt;" & SuaMedidaQuantidade & " de " & SuaMedidaQuantidade & " tarefas conclu&iacute;das&lt;/div&gt;
+  &lt;div style='margin-top: 16px; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 13px; color: #3b82f6;'&gt;🎯 Faltam apenas " & SuaMedidaQuantidade & " tarefas!&lt;/div&gt;
 &lt;/div&gt;
+
+&lt;style&gt;
+  /* Anima&ccedil;&atilde;o do c&iacute;rculo de progresso */
+  @keyframes grow {
+    0% {
+      stroke-dashoffset: 377; /* Come&ccedil;a com o c&iacute;rculo vazio (0%) */
+    }
+    100% {
+      stroke-dashoffset: &quot; &amp; SUBSTITUTE(DashOffset, &quot;,&quot;, &quot;.&quot;) &amp; &quot;; /* Para o valor din&acirc;mico (Logica) */
+    }
+  }
+
+  /* Aplicando a anima&ccedil;&atilde;o ao c&iacute;rculo */
+  #progress-circle {
+    animation: grow 3s ease-out forwards; /* 3s para a anima&ccedil;&atilde;o */
+  }
+&lt;/style&gt;
 "
                   </code></pre>
                 </div>
