@@ -52,12 +52,21 @@
             <li><a href="/src/pages/doc.html" class="nav-link">Documentação</a></li>
             <li><a href="/src/pages/label.html" class="nav-link">Labels/Tags</a></li>
             <li><a href="/src/pages/tooltips.html" class="nav-link">Tooltips</a></li>
+            <li><a href="/src/pages/vs_JSON.html" class="nav-link">Gráficos JSON</a></li>
           </ul>
         </li>
 
         <li class="nav-item mb-2">
-          <a href="/src/pages/como_usar.html" class="nav-link">Como usar</a>
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsDoc" aria-expanded="false">
+            Como usar
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsDoc">
+            <li><a href="/src/pages/como_usar.html" class="nav-link">Visuais HTML</a></li>
+            <li><a href="/src/pages/como_usar_JSON.html" class="nav-link">Visuais JSON</a></li>
+          </ul>
         </li>
+
         <li class="nav-item mb-2">
           <a href="/src/pages/colaborar.html" class="nav-link">Colaborar</a>
         </li>
@@ -78,7 +87,6 @@
         </p>
 
         <div class="d-flex flex-wrap gap-3">
-          <button id="btnComponentes" class="btn btn-dark px-4 py-2">Ver Componentes</button>
           <button id="btnDocumentacao" class="btn btn-outline-dark px-4 py-2">Como usar</button>
           <a href="/src/pages/colaborar.html" class="btn btn-outline-secondary px-4 py-2">Colaborar</a>
         </div>
@@ -1924,10 +1932,1404 @@ RETURN
             </section>
 
 
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="padding: 24px 32px; background: rgba(30,41,59,0.98); border-top: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                      <div>
+                        <div style="color: white; font-weight: 700; margin-bottom: 4px;">Dashboard Analytics Pro</div>
+                        <div style="color: rgba(255,255,255,0.5); font-size: 13px;">Desenvolvido por Equipe de BI • © 2025</div>
+                      </div>
+                      <div style="display: flex; gap: 20px; align-items: center;">
+                        <div style="color: rgba(255,255,255,0.6); font-size: 13px;">Versão 2.4.1</div>
+                        <div style="width: 2px; height: 20px; background: rgba(255,255,255,0.1);"></div>
+                        <div style="display: flex; gap: 12px;">
+                          <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.background='rgba(14,165,233,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                            <span style="font-size: 16px;">📧</span>
+                          </div>
+                          <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.background='rgba(14,165,233,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                            <span style="font-size: 16px;">🔗</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                    &lt;div style=&quot;padding: 24px 32px; background: rgba(30,41,59,0.98); border-top: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);&quot;&gt;
+                    &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;&quot;&gt;
+                      &lt;div&gt;
+                        &lt;div style=&quot;color: white; font-weight: 700; margin-bottom: 4px;&quot;&gt;Dashboard Analytics Pro&lt;/div&gt;
+                        &lt;div style=&quot;color: rgba(255,255,255,0.5); font-size: 13px;&quot;&gt;Desenvolvido por Equipe de BI &bull; &copy; 2025&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div style=&quot;display: flex; gap: 20px; align-items: center;&quot;&gt;
+                        &lt;div style=&quot;color: rgba(255,255,255,0.6); font-size: 13px;&quot;&gt;Vers&atilde;o 2.4.1&lt;/div&gt;
+                        &lt;div style=&quot;width: 2px; height: 20px; background: rgba(255,255,255,0.1);&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;display: flex; gap: 12px;&quot;&gt;
+                          &lt;div style=&quot;width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;&quot; onmouseover=&quot;this.style.background='rgba(14,165,233,0.3)'&quot; onmouseout=&quot;this.style.background='rgba(255,255,255,0.1)'&quot;&gt;
+                            &lt;span style=&quot;font-size: 16px;&quot;&gt;📧&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div style=&quot;width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;&quot; onmouseover=&quot;this.style.background='rgba(14,165,233,0.3)'&quot; onmouseout=&quot;this.style.background='rgba(255,255,255,0.1)'&quot;&gt;
+                            &lt;span style=&quot;font-size: 16px;&quot;&gt;🔗&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+        &lt;div style='padding: 24px 32px; background: rgba(30,41,59,0.98); border-top: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);'&gt;
+                    &lt;div style='display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;'&gt;
+                      &lt;div&gt;
+                        &lt;div style='color: white; font-weight: 700; margin-bottom: 4px;'&gt;Dashboard Analytics Pro&lt;/div&gt;
+                        &lt;div style='color: rgba(255,255,255,0.5); font-size: 13px;'&gt;Desenvolvido por Equipe de BI &bull; &copy; "& [InserirSuaMedida] &" &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div style='display: flex; gap: 20px; align-items: center;'&gt;
+                        &lt;div style='color: rgba(255,255,255,0.6); font-size: 13px;'&gt;Vers&atilde;o 2.4.1&lt;/div&gt;
+                        &lt;div style='width: 2px; height: 20px; background: rgba(255,255,255,0.1);'&gt;&lt;/div&gt;
+                        &lt;div style='display: flex; gap: 12px;'&gt;
+                          &lt;div style='width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;' onmouseover='this.style.background='rgba(14,165,233,0.3)'' onmouseout='this.style.background='rgba(255,255,255,0.1)''&gt;
+                            &lt;span style='font-size: 16px;'&gt;📧&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div style='width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;' onmouseover='this.style.background='rgba(14,165,233,0.3)'' onmouseout='this.style.background='rgba(255,255,255,0.1)''&gt;
+                            &lt;span style='font-size: 16px;'&gt;🔗&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="font-family: 'Segoe UI', sans-serif; padding: 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <div style="font-size: 14px; opacity: 0.9; margin-bottom: 8px; font-weight: 500;">RECEITA TOTAL</div>
+                    <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">R$ 1.234.567</div>
+                    <div style="display: flex; align-items: center; font-size: 14px;">
+                      <span style="color: #4ade80; margin-right: 6px;">↑ 12.5%</span>
+                      <span style="opacity: 0.8;">vs mês anterior</span>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                    &lt;div style=&quot;font-family: 'Segoe UI', sans-serif; padding: 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);&quot;&gt;
+                      &lt;div style=&quot;font-size: 14px; opacity: 0.9; margin-bottom: 8px; font-weight: 500;&quot;&gt;RECEITA TOTAL&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 42px; font-weight: 700; margin-bottom: 8px;&quot;&gt;R$ 1.234.567&lt;/div&gt;
+                      &lt;div style=&quot;display: flex; align-items: center; font-size: 14px;&quot;&gt;
+                        &lt;span style=&quot;color: #4ade80; margin-right: 6px;&quot;&gt;&uarr; 12.5%&lt;/span&gt;
+                        &lt;span style=&quot;opacity: 0.8;&quot;&gt;vs m&ecirc;s anterior&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+        &lt;div style='font-family: 'Segoe UI', sans-serif; padding: 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);'&gt;
+          &lt;div style='font-size: 14px; opacity: 0.9; margin-bottom: 8px; font-weight: 500;'&gt;RECEITA TOTAL&lt;/div&gt;
+          &lt;div style='font-size: 42px; font-weight: 700; margin-bottom: 8px;'&gt;R$ "& [InserirSuaMedida] &" &lt;/div&gt;
+          &lt;div style='display: flex; align-items: center; font-size: 14px;'&gt;
+            &lt;span style='color: #4ade80; margin-right: 6px;'&gt;&uarr; "& [InserirSuaMedida] &" %&lt;/span&gt;
+            &lt;span style='opacity: 0.8;'&gt;vs m&ecirc;s anterior&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="font-family: 'Segoe UI', sans-serif; padding: 28px; background: white; border-radius: 12px; border-left: 4px solid #3b82f6; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <div style="font-size: 13px; color: #64748b; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">CLIENTES ATIVOS</div>
+                    <div style="font-size: 48px; font-weight: 700; color: #1e293b;">8.451</div>
+                    <div style="font-size: 12px; color: #94a3b8; margin-top: 8px;">Atualizado em tempo real</div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                   &lt;div style=&quot;font-family: 'Segoe UI', sans-serif; padding: 28px; background: white; border-radius: 12px; border-left: 4px solid #3b82f6; box-shadow: 0 4px 12px rgba(0,0,0,0.08);&quot;&gt;
+                    &lt;div style=&quot;font-size: 13px; color: #64748b; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;&quot;&gt;CLIENTES ATIVOS&lt;/div&gt;
+                    &lt;div style=&quot;font-size: 48px; font-weight: 700; color: #1e293b;&quot;&gt;8.451&lt;/div&gt;
+                    &lt;div style=&quot;font-size: 12px; color: #94a3b8; margin-top: 8px;&quot;&gt;Atualizado em tempo real&lt;/div&gt;
+                  &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+       &lt;div style='font-family: 'Segoe UI', sans-serif; padding: 28px; background: white; border-radius: 12px; border-left: 4px solid #3b82f6; box-shadow: 0 4px 12px rgba(0,0,0,0.08);'&gt;
+        &lt;div style='font-size: 13px; color: #64748b; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;'&gt;CLIENTES ATIVOS&lt;/div&gt;
+        &lt;div style='font-size: 48px; font-weight: 700; color: #1e293b;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+        &lt;div style='font-size: 12px; color: #94a3b8; margin-top: 8px;'&gt;Atualizado em tempo real&lt;/div&gt;
+      &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 3px solid #10b981;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                      <span style="font-size: 13px; color: #64748b; font-weight: 600;">VENDAS HOJE</span>
+                      <span style="background: #d1fae5; color: #059669; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">EXCELENTE</span>
+                    </div>
+                    <div style="font-size: 40px; font-weight: 700; color: #1e293b; margin-bottom: 6px;">R$ 45.890</div>
+                    <div style="font-size: 12px; color: #94a3b8;">Meta diária: R$ 40.000</div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                  &lt;div style=&quot;font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 3px solid #10b981;&quot;&gt;
+                    &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;&quot;&gt;
+                      &lt;span style=&quot;font-size: 13px; color: #64748b; font-weight: 600;&quot;&gt;VENDAS HOJE&lt;/span&gt;
+                      &lt;span style=&quot;background: #d1fae5; color: #059669; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;&quot;&gt;EXCELENTE&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;font-size: 40px; font-weight: 700; color: #1e293b; margin-bottom: 6px;&quot;&gt;R$ 45.890&lt;/div&gt;
+                    &lt;div style=&quot;font-size: 12px; color: #94a3b8;&quot;&gt;Meta di&aacute;ria: R$ 40.000&lt;/div&gt;
+                  &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+       &lt;div style='font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 3px solid #10b981;'&gt;
+        &lt;div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;'&gt;
+          &lt;span style='font-size: 13px; color: #64748b; font-weight: 600;'&gt;VENDAS HOJE&lt;/span&gt;
+          &lt;span style='background: #d1fae5; color: #059669; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;'&gt;"& [InserirSuaMedida] &"&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style='font-size: 40px; font-weight: 700; color: #1e293b; margin-bottom: 6px;'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+        &lt;div style='font-size: 12px; color: #94a3b8;'&gt;Meta di&aacute;ria: R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+             <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="font-family: 'Segoe UI', sans-serif; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <div style="display: grid; grid-template-columns: 1fr 1px 1fr; gap: 20px;">
+                      <div>
+                        <div style="font-size: 12px; color: #64748b; margin-bottom: 8px; font-weight: 600;">VENDAS</div>
+                        <div style="font-size: 32px; font-weight: 700; color: #3b82f6;">1.234</div>
+                        <div style="font-size: 11px; color: #10b981; font-weight: 600;">↑ 15%</div>
+                      </div>
+                      <div style="background: #e2e8f0;"></div>
+                      <div>
+                        <div style="font-size: 12px; color: #64748b; margin-bottom: 8px; font-weight: 600;">TICKET MÉDIO</div>
+                        <div style="font-size: 32px; font-weight: 700; color: #8b5cf6;">R$ 456</div>
+                        <div style="font-size: 11px; color: #f59e0b; font-weight: 600;">→ 0%</div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                 &lt;div style=&quot;font-family: 'Segoe UI', sans-serif; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);&quot;&gt;
+                  &lt;div style=&quot;display: grid; grid-template-columns: 1fr 1px 1fr; gap: 20px;&quot;&gt;
+                    &lt;div&gt;
+                      &lt;div style=&quot;font-size: 12px; color: #64748b; margin-bottom: 8px; font-weight: 600;&quot;&gt;VENDAS&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 32px; font-weight: 700; color: #3b82f6;&quot;&gt;1.234&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 11px; color: #10b981; font-weight: 600;&quot;&gt;&uarr; 15%&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;background: #e2e8f0;&quot;&gt;&lt;/div&gt;
+                    &lt;div&gt;
+                      &lt;div style=&quot;font-size: 12px; color: #64748b; margin-bottom: 8px; font-weight: 600;&quot;&gt;TICKET M&Eacute;DIO&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 32px; font-weight: 700; color: #8b5cf6;&quot;&gt;R$ 456&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 11px; color: #f59e0b; font-weight: 600;&quot;&gt;&rarr; 0%&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+       &lt;div style='font-family: 'Segoe UI', sans-serif; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);'&gt;
+        &lt;div style='display: grid; grid-template-columns: 1fr 1px 1fr; gap: 20px;'&gt;
+          &lt;div&gt;
+            &lt;div style='font-size: 12px; color: #64748b; margin-bottom: 8px; font-weight: 600;'&gt;VENDAS&lt;/div&gt;
+            &lt;div style='font-size: 32px; font-weight: 700; color: #3b82f6;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+            &lt;div style='font-size: 11px; color: #10b981; font-weight: 600;'&gt;&uarr; "& [InserirSuaMedida] &"%&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div style='background: #e2e8f0;'&gt;&lt;/div&gt;
+          &lt;div&gt;
+            &lt;div style='font-size: 12px; color: #64748b; margin-bottom: 8px; font-weight: 600;'&gt;TICKET M&Eacute;DIO&lt;/div&gt;
+            &lt;div style='font-size: 32px; font-weight: 700; color: #8b5cf6;'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+            &lt;div style='font-size: 11px; color: #f59e0b; font-weight: 600;'&gt;&rarr; "& [InserirSuaMedida] &"%&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <div style="font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 16px;">Análise de Tendências</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                        <span style="font-size: 13px; color: #64748b;">vs Semana passada</span>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                          <span style="font-size: 20px;">📈</span>
+                          <span style="font-size: 16px; font-weight: 700; color: #10b981;">+8.5%</span>
+                        </div>
+                      </div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                        <span style="font-size: 13px; color: #64748b;">vs Mês passado</span>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                          <span style="font-size: 20px;">📈</span>
+                          <span style="font-size: 16px; font-weight: 700; color: #10b981;">+24.3%</span>
+                        </div>
+                      </div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                        <span style="font-size: 13px; color: #64748b;">vs Ano passado</span>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                          <span style="font-size: 20px;">📊</span>
+                          <span style="font-size: 16px; font-weight: 700; color: #f59e0b;">+2.1%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                 &lt;div style=&quot;font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);&quot;&gt;
+                  &lt;div style=&quot;font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 16px;&quot;&gt;An&aacute;lise de Tend&ecirc;ncias&lt;/div&gt;
+                  &lt;div style=&quot;display: flex; flex-direction: column; gap: 12px;&quot;&gt;
+                    &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;&quot;&gt;
+                      &lt;span style=&quot;font-size: 13px; color: #64748b;&quot;&gt;vs Semana passada&lt;/span&gt;
+                      &lt;div style=&quot;display: flex; align-items: center; gap: 6px;&quot;&gt;
+                        &lt;span style=&quot;font-size: 20px;&quot;&gt;📈&lt;/span&gt;
+                        &lt;span style=&quot;font-size: 16px; font-weight: 700; color: #10b981;&quot;&gt;+8.5%&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;&quot;&gt;
+                      &lt;span style=&quot;font-size: 13px; color: #64748b;&quot;&gt;vs M&ecirc;s passado&lt;/span&gt;
+                      &lt;div style=&quot;display: flex; align-items: center; gap: 6px;&quot;&gt;
+                        &lt;span style=&quot;font-size: 20px;&quot;&gt;📈&lt;/span&gt;
+                        &lt;span style=&quot;font-size: 16px; font-weight: 700; color: #10b981;&quot;&gt;+24.3%&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;&quot;&gt;
+                      &lt;span style=&quot;font-size: 13px; color: #64748b;&quot;&gt;vs Ano passado&lt;/span&gt;
+                      &lt;div style=&quot;display: flex; align-items: center; gap: 6px;&quot;&gt;
+                        &lt;span style=&quot;font-size: 20px;&quot;&gt;📊&lt;/span&gt;
+                        &lt;span style=&quot;font-size: 16px; font-weight: 700; color: #f59e0b;&quot;&gt;+2.1%&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+       &lt;div style='font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);'&gt;
+  &lt;div style='font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 16px;'&gt;An&aacute;lise de Tend&ecirc;ncias&lt;/div&gt;
+  &lt;div style='display: flex; flex-direction: column; gap: 12px;'&gt;
+    &lt;div style='display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;'&gt;
+      &lt;span style='font-size: 13px; color: #64748b;'&gt;vs Semana passada&lt;/span&gt;
+      &lt;div style='display: flex; align-items: center; gap: 6px;'&gt;
+        &lt;span style='font-size: 20px;'&gt;📈&lt;/span&gt;
+        &lt;span style='font-size: 16px; font-weight: 700; color: #10b981;'&gt;"& [InserirSuaMedida] &"%&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;'&gt;
+      &lt;span style='font-size: 13px; color: #64748b;'&gt;vs M&ecirc;s passado&lt;/span&gt;
+      &lt;div style='display: flex; align-items: center; gap: 6px;'&gt;
+        &lt;span style='font-size: 20px;'&gt;📈&lt;/span&gt;
+        &lt;span style='font-size: 16px; font-weight: 700; color: #10b981;'&gt;"& [InserirSuaMedida] &"%&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px;'&gt;
+      &lt;span style='font-size: 13px; color: #64748b;'&gt;vs Ano passado&lt;/span&gt;
+      &lt;div style='display: flex; align-items: center; gap: 6px;'&gt;
+        &lt;span style='font-size: 20px;'&gt;📊&lt;/span&gt;
+        &lt;span style='font-size: 16px; font-weight: 700; color: #f59e0b;'&gt;"& [InserirSuaMedida] &"%&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+                      <div>
+                        <div style="font-size: 13px; color: #64748b; margin-bottom: 6px;">DESEMPENHO GERAL</div>
+                        <div style="font-size: 36px; font-weight: 700; color: #1e293b;">92</div>
+                      </div>
+                      <div style="background: #dcfce7; padding: 8px 16px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 24px; margin-bottom: 4px;">↗</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #166534;">+15%</div>
+                      </div>
+                    </div>
+                    <div style="padding: 12px; background: linear-gradient(90deg, #dcfce7 0%, transparent 100%); border-left: 3px solid #10b981; border-radius: 4px;">
+                      <span style="font-size: 14px; font-weight: 600; color: #166534;">🎯 Excelente Performance</span>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                &lt;div style=&quot;font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);&quot;&gt;
+                  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;&quot;&gt;
+                    &lt;div&gt;
+                      &lt;div style=&quot;font-size: 13px; color: #64748b; margin-bottom: 6px;&quot;&gt;DESEMPENHO GERAL&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 36px; font-weight: 700; color: #1e293b;&quot;&gt;92&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;background: #dcfce7; padding: 8px 16px; border-radius: 12px; text-align: center;&quot;&gt;
+                      &lt;div style=&quot;font-size: 24px; margin-bottom: 4px;&quot;&gt;↗&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 16px; font-weight: 700; color: #166534;&quot;&gt;+15%&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div style=&quot;padding: 12px; background: linear-gradient(90deg, #dcfce7 0%, transparent 100%); border-left: 3px solid #10b981; border-radius: 4px;&quot;&gt;
+                    &lt;span style=&quot;font-size: 14px; font-weight: 600; color: #166534;&quot;&gt;🎯 Excelente Performance&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+        &lt;div style='font-family: 'Segoe UI', sans-serif; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);'&gt;
+          &lt;div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;'&gt;
+            &lt;div&gt;
+              &lt;div style='font-size: 13px; color: #64748b; margin-bottom: 6px;'&gt;DESEMPENHO GERAL&lt;/div&gt;
+              &lt;div style='font-size: 36px; font-weight: 700; color: #1e293b;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style='background: #dcfce7; padding: 8px 16px; border-radius: 12px; text-align: center;'&gt;
+              &lt;div style='font-size: 24px; margin-bottom: 4px;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+              &lt;div style='font-size: 16px; font-weight: 700; color: #166534;'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div style='padding: 12px; background: linear-gradient(90deg, #dcfce7 0%, transparent 100%); border-left: 3px solid #10b981; border-radius: 4px;'&gt;
+            &lt;span style='font-size: 14px; font-weight: 600; color: #166534;'&gt;🎯 "& [InserirSuaMedida] &"&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;            
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="background: linear-gradient(135deg, #F8FAFC, #E2E8F0); padding: 24px; border-radius: 16px; font-family: 'Segoe UI', sans-serif; height: 100%;">
+                    <div style="font-size: 18px; font-weight: 700; color: #1E293B; margin-bottom: 16px;">Dashboard Executivo</div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px;">
+                      <div style="background: linear-gradient(135deg, #0078D4, #00BCF2); border-radius: 12px; padding: 16px; color: white;">
+                        <div style="font-size: 24px; font-weight: bold; margin-bottom: 4px;">R$ 2.4M</div>
+                        <div style="font-size: 11px; opacity: 0.9; font-weight: 600;">Receita Total</div>
+                      </div>
+                      <div style="background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; padding: 16px; color: white;">
+                        <div style="font-size: 24px; font-weight: bold; margin-bottom: 4px;">3.2K</div>
+                        <div style="font-size: 11px; opacity: 0.9; font-weight: 600;">Clientes</div>
+                      </div>
+                      <div style="background: linear-gradient(135deg, #F7931E, #FF6B35); border-radius: 12px; padding: 16px; color: white;">
+                        <div style="font-size: 24px; font-weight: bold; margin-bottom: 4px;">89%</div>
+                        <div style="font-size: 11px; opacity: 0.9; font-weight: 600;">NPS Score</div>
+                      </div>
+                    </div>
+                    
+                    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                      <div style="font-size: 14px; font-weight: 700; margin-bottom: 12px; color: #1E293B;">🏆 Top Produtos</div>
+                      <div style="display: flex; padding: 10px 0; border-bottom: 2px solid #E5E7EB; align-items: center;">
+                        <span style="flex: 1; color: #64748B; font-size: 13px;">Produto Alpha</span>
+                        <span style="font-weight: 700; color: #10B981; font-size: 14px;">R$ 450K</span>
+                      </div>
+                      <div style="display: flex; padding: 10px 0; border-bottom: 1px solid #E5E7EB; align-items: center;">
+                        <span style="flex: 1; color: #64748B; font-size: 13px;">Produto Beta</span>
+                        <span style="font-weight: 700; color: #10B981; font-size: 14px;">R$ 380K</span>
+                      </div>
+                      <div style="display: flex; padding: 10px 0; align-items: center;">
+                        <span style="flex: 1; color: #64748B; font-size: 13px;">Produto Gamma</span>
+                        <span style="font-weight: 700; color: #10B981; font-size: 14px;">R$ 290K</span>
+                      </div>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                    &lt;div style=&quot;background: linear-gradient(135deg, #F8FAFC, #E2E8F0); padding: 24px; border-radius: 16px; font-family: 'Segoe UI', sans-serif; height: 100%;&quot;&gt;
+                  &lt;div style=&quot;font-size: 18px; font-weight: 700; color: #1E293B; margin-bottom: 16px;&quot;&gt;Dashboard Executivo&lt;/div&gt;
+                  
+                  &lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px;&quot;&gt;
+                    &lt;div style=&quot;background: linear-gradient(135deg, #0078D4, #00BCF2); border-radius: 12px; padding: 16px; color: white;&quot;&gt;
+                      &lt;div style=&quot;font-size: 24px; font-weight: bold; margin-bottom: 4px;&quot;&gt;R$ 2.4M&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 11px; opacity: 0.9; font-weight: 600;&quot;&gt;Receita Total&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; padding: 16px; color: white;&quot;&gt;
+                      &lt;div style=&quot;font-size: 24px; font-weight: bold; margin-bottom: 4px;&quot;&gt;3.2K&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 11px; opacity: 0.9; font-weight: 600;&quot;&gt;Clientes&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;background: linear-gradient(135deg, #F7931E, #FF6B35); border-radius: 12px; padding: 16px; color: white;&quot;&gt;
+                      &lt;div style=&quot;font-size: 24px; font-weight: bold; margin-bottom: 4px;&quot;&gt;89%&lt;/div&gt;
+                      &lt;div style=&quot;font-size: 11px; opacity: 0.9; font-weight: 600;&quot;&gt;NPS Score&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  
+                  &lt;div style=&quot;background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);&quot;&gt;
+                    &lt;div style=&quot;font-size: 14px; font-weight: 700; margin-bottom: 12px; color: #1E293B;&quot;&gt;🏆 Top Produtos&lt;/div&gt;
+                    &lt;div style=&quot;display: flex; padding: 10px 0; border-bottom: 2px solid #E5E7EB; align-items: center;&quot;&gt;
+                      &lt;span style=&quot;flex: 1; color: #64748B; font-size: 13px;&quot;&gt;Produto Alpha&lt;/span&gt;
+                      &lt;span style=&quot;font-weight: 700; color: #10B981; font-size: 14px;&quot;&gt;R$ 450K&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;display: flex; padding: 10px 0; border-bottom: 1px solid #E5E7EB; align-items: center;&quot;&gt;
+                      &lt;span style=&quot;flex: 1; color: #64748B; font-size: 13px;&quot;&gt;Produto Beta&lt;/span&gt;
+                      &lt;span style=&quot;font-weight: 700; color: #10B981; font-size: 14px;&quot;&gt;R$ 380K&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div style=&quot;display: flex; padding: 10px 0; align-items: center;&quot;&gt;
+                      &lt;span style=&quot;flex: 1; color: #64748B; font-size: 13px;&quot;&gt;Produto Gamma&lt;/span&gt;
+                      &lt;span style=&quot;font-weight: 700; color: #10B981; font-size: 14px;&quot;&gt;R$ 290K&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+        &lt;div style='background: linear-gradient(135deg, #F8FAFC, #E2E8F0); padding: 24px; border-radius: 16px; font-family: 'Segoe UI', sans-serif; height: 100%;'&gt;
+  &lt;div style='font-size: 18px; font-weight: 700; color: #1E293B; margin-bottom: 16px;'&gt;Dashboard Executivo&lt;/div&gt;
+  
+  &lt;div style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px;'&gt;
+    &lt;div style='background: linear-gradient(135deg, #0078D4, #00BCF2); border-radius: 12px; padding: 16px; color: white;'&gt;
+      &lt;div style='font-size: 24px; font-weight: bold; margin-bottom: 4px;'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; opacity: 0.9; font-weight: 600;'&gt;Receita Total&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; padding: 16px; color: white;'&gt;
+      &lt;div style='font-size: 24px; font-weight: bold; margin-bottom: 4px;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; opacity: 0.9; font-weight: 600;'&gt;Clientes&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: linear-gradient(135deg, #F7931E, #FF6B35); border-radius: 12px; padding: 16px; color: white;'&gt;
+      &lt;div style='font-size: 24px; font-weight: bold; margin-bottom: 4px;'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+      &lt;div style='font-size: 11px; opacity: 0.9; font-weight: 600;'&gt;NPS Score&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style='background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'&gt;
+    &lt;div style='font-size: 14px; font-weight: 700; margin-bottom: 12px; color: #1E293B;'&gt;🏆 Top Produtos&lt;/div&gt;
+    &lt;div style='display: flex; padding: 10px 0; border-bottom: 2px solid #E5E7EB; align-items: center;'&gt;
+      &lt;span style='flex: 1; color: #64748B; font-size: 13px;'&gt;Produto "& [InserirSuaMedida] &"&lt;/span&gt;
+      &lt;span style='font-weight: 700; color: #10B981; font-size: 14px;'&gt;R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='display: flex; padding: 10px 0; border-bottom: 1px solid #E5E7EB; align-items: center;'&gt;
+      &lt;span style='flex: 1; color: #64748B; font-size: 13px;'&gt;Produto "& [InserirSuaMedida] &"&lt;/span&gt;
+      &lt;span style='font-weight: 700; color: #10B981; font-size: 14px;'&gt;R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='display: flex; padding: 10px 0; align-items: center;'&gt;
+      &lt;span style='flex: 1; color: #64748B; font-size: 13px;'&gt;Produto "& [InserirSuaMedida] &"&lt;/span&gt;
+      &lt;span style='font-weight: 700; color: #10B981; font-size: 14px;'&gt;R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;         
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif; height: 100%;">
+                    <div style="display: flex; gap: 16px;">
+                      <div style="flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-radius: 10px;">
+                        <div style="font-size: 26px; font-weight: bold; color: #0078D4; margin-bottom: 6px;">847</div>
+                        <div style="font-size: 11px; color: #64748B; font-weight: 600;">Visitas Hoje</div>
+                      </div>
+                      <div style="flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-radius: 10px;">
+                        <div style="font-size: 26px; font-weight: bold; color: #10B981; margin-bottom: 6px;">124</div>
+                        <div style="font-size: 11px; color: #64748B; font-weight: 600;">Conversões</div>
+                      </div>
+                      <div style="flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: 10px;">
+                        <div style="font-size: 26px; font-weight: bold; color: #F59E0B; margin-bottom: 6px;">14.6%</div>
+                        <div style="font-size: 11px; color: #64748B; font-weight: 600;">Taxa</div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                   &lt;div style=&quot;background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif; height: 100%;&quot;&gt;
+  &lt;div style=&quot;display: flex; gap: 16px;&quot;&gt;
+    &lt;div style=&quot;flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-radius: 10px;&quot;&gt;
+      &lt;div style=&quot;font-size: 26px; font-weight: bold; color: #0078D4; margin-bottom: 6px;&quot;&gt;847&lt;/div&gt;
+      &lt;div style=&quot;font-size: 11px; color: #64748B; font-weight: 600;&quot;&gt;Visitas Hoje&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-radius: 10px;&quot;&gt;
+      &lt;div style=&quot;font-size: 26px; font-weight: bold; color: #10B981; margin-bottom: 6px;&quot;&gt;124&lt;/div&gt;
+      &lt;div style=&quot;font-size: 11px; color: #64748B; font-weight: 600;&quot;&gt;Convers&otilde;es&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: 10px;&quot;&gt;
+      &lt;div style=&quot;font-size: 26px; font-weight: bold; color: #F59E0B; margin-bottom: 6px;&quot;&gt;14.6%&lt;/div&gt;
+      &lt;div style=&quot;font-size: 11px; color: #64748B; font-weight: 600;&quot;&gt;Taxa&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+       &lt;div style='background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif; height: 100%;'&gt;
+  &lt;div style='display: flex; gap: 16px;'&gt;
+    &lt;div style='flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-radius: 10px;'&gt;
+      &lt;div style='font-size: 26px; font-weight: bold; color: #0078D4; margin-bottom: 6px;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; color: #64748B; font-weight: 600;'&gt;Visitas Hoje&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-radius: 10px;'&gt;
+      &lt;div style='font-size: 26px; font-weight: bold; color: #10B981; margin-bottom: 6px;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; color: #64748B; font-weight: 600;'&gt;Convers&otilde;es&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='flex: 1; text-align: center; padding: 16px; background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: 10px;'&gt;
+      &lt;div style='font-size: 26px; font-weight: bold; color: #F59E0B; margin-bottom: 6px;'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+      &lt;div style='font-size: 11px; color: #64748B; font-weight: 600;'&gt;Taxa&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif; height: 100%;">
+                    <div style="font-size: 14px; font-weight: 700; color: #1E293B; margin-bottom: 16px;">Comparativo Trimestral</div>
+                    <div style="display: flex; gap: 12px;">
+                      <div style="flex: 1; background: linear-gradient(135deg, #EFF6FF, #DBEAFE); padding: 16px; border-radius: 10px; border-left: 4px solid #0078D4;">
+                        <div style="font-size: 11px; color: #475569; margin-bottom: 6px; font-weight: 600;">Q1 2024</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #0078D4;">R$ 2.4M</div>
+                      </div>
+                      <div style="flex: 1; background: linear-gradient(135deg, #ECFDF5, #D1FAE5); padding: 16px; border-radius: 10px; border-left: 4px solid #10B981;">
+                        <div style="font-size: 11px; color: #475569; margin-bottom: 6px; font-weight: 600;">Q2 2024</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #10B981;">R$ 3.1M</div>
+                      </div>
+                    </div>
+                    <div style="margin-top: 16px; padding: 10px; background: #F0FDF4; border-radius: 8px; text-align: center; font-size: 12px; color: #166534; font-weight: 600;">
+                      ↑ Crescimento de 29.2%
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                  &lt;div style=&quot;background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif; height: 100%;&quot;&gt;
+  &lt;div style=&quot;font-size: 14px; font-weight: 700; color: #1E293B; margin-bottom: 16px;&quot;&gt;Comparativo Trimestral&lt;/div&gt;
+  &lt;div style=&quot;display: flex; gap: 12px;&quot;&gt;
+    &lt;div style=&quot;flex: 1; background: linear-gradient(135deg, #EFF6FF, #DBEAFE); padding: 16px; border-radius: 10px; border-left: 4px solid #0078D4;&quot;&gt;
+      &lt;div style=&quot;font-size: 11px; color: #475569; margin-bottom: 6px; font-weight: 600;&quot;&gt;Q1 2024&lt;/div&gt;
+      &lt;div style=&quot;font-size: 24px; font-weight: bold; color: #0078D4;&quot;&gt;R$ 2.4M&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;flex: 1; background: linear-gradient(135deg, #ECFDF5, #D1FAE5); padding: 16px; border-radius: 10px; border-left: 4px solid #10B981;&quot;&gt;
+      &lt;div style=&quot;font-size: 11px; color: #475569; margin-bottom: 6px; font-weight: 600;&quot;&gt;Q2 2024&lt;/div&gt;
+      &lt;div style=&quot;font-size: 24px; font-weight: bold; color: #10B981;&quot;&gt;R$ 3.1M&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-top: 16px; padding: 10px; background: #F0FDF4; border-radius: 8px; text-align: center; font-size: 12px; color: #166534; font-weight: 600;&quot;&gt;
+    &uarr; Crescimento de 29.2%
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+       &lt;div style='background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif; height: 100%;'&gt;
+  &lt;div style='font-size: 14px; font-weight: 700; color: #1E293B; margin-bottom: 16px;'&gt;Comparativo Trimestral&lt;/div&gt;
+  &lt;div style='display: flex; gap: 12px;'&gt;
+    &lt;div style='flex: 1; background: linear-gradient(135deg, #EFF6FF, #DBEAFE); padding: 16px; border-radius: 10px; border-left: 4px solid #0078D4;'&gt;
+      &lt;div style='font-size: 11px; color: #475569; margin-bottom: 6px; font-weight: 600;'&gt;Q1 "& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 24px; font-weight: bold; color: #0078D4;'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='flex: 1; background: linear-gradient(135deg, #ECFDF5, #D1FAE5); padding: 16px; border-radius: 10px; border-left: 4px solid #10B981;'&gt;
+      &lt;div style='font-size: 11px; color: #475569; margin-bottom: 6px; font-weight: 600;'&gt;Q2 "& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 24px; font-weight: bold; color: #10B981;'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-top: 16px; padding: 10px; background: #F0FDF4; border-radius: 8px; text-align: center; font-size: 12px; color: #166534; font-weight: 600;'&gt;
+    "& [InserirSuaMedida] &"
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(16,185,129,0.3); font-family: 'Segoe UI', sans-serif; height: 100%;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                      <div style="font-size: 12px; opacity: 0.9;">Taxa de Conversão</div>
+                      <div style="font-size: 24px;">📈</div>
+                    </div>
+                    <div style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">24.8%</div>
+                    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px;">
+                      <div style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; font-weight: 600;">↑ +3.2%</div>
+                      <div style="opacity: 0.8;">vs semana anterior</div>
+                    </div>
+                    <div style="margin-top: 16px; height: 3px; background: rgba(255,255,255,0.2); border-radius: 3px; overflow: hidden;">
+                      <div style="width: 75%; height: 100%; background: rgba(255,255,255,0.6); border-radius: 3px;"></div>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                  &lt;div style=&quot;background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(16,185,129,0.3); font-family: 'Segoe UI', sans-serif; height: 100%;&quot;&gt;
+  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;&quot;&gt;
+    &lt;div style=&quot;font-size: 12px; opacity: 0.9;&quot;&gt;Taxa de Convers&atilde;o&lt;/div&gt;
+    &lt;div style=&quot;font-size: 24px;&quot;&gt;📈&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;font-size: 36px; font-weight: bold; margin-bottom: 10px;&quot;&gt;24.8%&lt;/div&gt;
+  &lt;div style=&quot;display: flex; align-items: center; gap: 8px; font-size: 12px;&quot;&gt;
+    &lt;div style=&quot;background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; font-weight: 600;&quot;&gt;&uarr; +3.2%&lt;/div&gt;
+    &lt;div style=&quot;opacity: 0.8;&quot;&gt;vs semana anterior&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;margin-top: 16px; height: 3px; background: rgba(255,255,255,0.2); border-radius: 3px; overflow: hidden;&quot;&gt;
+    &lt;div style=&quot;width: 75%; height: 100%; background: rgba(255,255,255,0.6); border-radius: 3px;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+      &lt;div style='background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(16,185,129,0.3); font-family: 'Segoe UI', sans-serif; height: 100%;'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;'&gt;
+    &lt;div style='font-size: 12px; opacity: 0.9;'&gt;Taxa de Convers&atilde;o&lt;/div&gt;
+    &lt;div style='font-size: 24px;'&gt;📈&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='font-size: 36px; font-weight: bold; margin-bottom: 10px;'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+  &lt;div style='display: flex; align-items: center; gap: 8px; font-size: 12px;'&gt;
+    &lt;div style='background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; font-weight: 600;'&gt; "& [InserirSuaMedida] &"%&lt;/div&gt;
+    &lt;div style='opacity: 0.8;'&gt;vs semana anterior&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-top: 16px; height: 3px; background: rgba(255,255,255,0.2); border-radius: 3px; overflow: hidden;'&gt;
+    &lt;div style='width: 75%; height: 100%; background: rgba(255,255,255,0.6); border-radius: 3px;'&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                      <div style="font-size: 16px; font-weight: 600;">Projeto Alpha - Sprint 12</div>
+                      <div style="background: rgba(16, 185, 129, 0.2); padding: 6px 12px; border-radius: 8px; font-size: 11px; font-weight: 600; color: #10b981;">NO PRAZO</div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                      <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px;">
+                        <span style="color: #94a3b8;">Progresso geral</span>
+                        <span style="font-weight: 600;">73%</span>
+                      </div>
+                      <div style="height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden;">
+                        <div style="height: 100%; width: 73%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); border-radius: 5px; box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);"></div>
+                      </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 20px;">
+                      <div style="text-align: center; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                        <div style="font-size: 20px; font-weight: 700; color: #10b981;">47</div>
+                        <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">Concluídas</div>
+                      </div>
+                      <div style="text-align: center; padding: 12px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2);">
+                        <div style="font-size: 20px; font-weight: 700; color: #3b82f6;">12</div>
+                        <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">Em progresso</div>
+                      </div>
+                      <div style="text-align: center; padding: 12px; background: rgba(245, 158, 11, 0.1); border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.2);">
+                        <div style="font-size: 20px; font-weight: 700; color: #f59e0b;">6</div>
+                        <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">Pendentes</div>
+                      </div>
+                    </div>
+                    <div style="padding: 12px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2); display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+                      <span style="color: #94a3b8;">Deadline</span>
+                      <span style="font-weight: 600; color: #3b82f6;">15 dias restantes</span>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                  &lt;div style='background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(16,185,129,0.3); font-family: 'Segoe UI', sans-serif; height: 100%;'&gt;
+                    &lt;div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;'&gt;
+                      &lt;div style='font-size: 12px; opacity: 0.9;'&gt;Taxa de Convers&atilde;o&lt;/div&gt;
+                      &lt;div style='font-size: 24px;'&gt;📈&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style='font-size: 36px; font-weight: bold; margin-bottom: 10px;'&gt;24.8%&lt;/div&gt;
+                    &lt;div style='display: flex; align-items: center; gap: 8px; font-size: 12px;'&gt;
+                      &lt;div style='background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; font-weight: 600;'&gt;&uarr; +3.2%&lt;/div&gt;
+                      &lt;div style='opacity: 0.8;'&gt;vs semana anterior&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div style='margin-top: 16px; height: 3px; background: rgba(255,255,255,0.2); border-radius: 3px; overflow: hidden;'&gt;
+                      &lt;div style='width: 75%; height: 100%; background: rgba(255,255,255,0.6); border-radius: 3px;'&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+      &lt;div style='background: #1e293b; border-radius: 16px; padding: 24px; color: white; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 340px;'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;'&gt;
+    &lt;div style='font-size: 16px; font-weight: 600;'&gt;Projeto "& [InserirSuaMedida] &"&lt;/div&gt;
+    &lt;div style='background: rgba(16, 185, 129, 0.2); padding: 6px 12px; border-radius: 8px; font-size: 11px; font-weight: 600; color: #10b981;'&gt;NO PRAZO&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='margin-bottom: 20px;'&gt;
+    &lt;div style='display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px;'&gt;
+      &lt;span style='color: #94a3b8;'&gt;Progresso geral&lt;/span&gt;
+      &lt;span style='font-weight: 600;'&gt;"& [InserirSuaMedida] &"%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style='height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden;'&gt;
+      &lt;div style='height: 100%; width: 73%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); border-radius: 5px; box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);'&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 20px;'&gt;
+    &lt;div style='text-align: center; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2);'&gt;
+      &lt;div style='font-size: 20px; font-weight: 700; color: #10b981;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; color: #94a3b8; margin-top: 4px;'&gt;Conclu&iacute;das&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='text-align: center; padding: 12px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2);'&gt;
+      &lt;div style='font-size: 20px; font-weight: 700; color: #3b82f6;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; color: #94a3b8; margin-top: 4px;'&gt;Em progresso&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='text-align: center; padding: 12px; background: rgba(245, 158, 11, 0.1); border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.2);'&gt;
+      &lt;div style='font-size: 20px; font-weight: 700; color: #f59e0b;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; color: #94a3b8; margin-top: 4px;'&gt;Pendentes&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style='padding: 12px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2); display: flex; justify-content: space-between; align-items: center; font-size: 13px;'&gt;
+    &lt;span style='color: #94a3b8;'&gt;Deadline&lt;/span&gt;
+    &lt;span style='font-weight: 600; color: #3b82f6;'&gt;"& [InserirSuaMedida] &" dias restantes&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(255,107,53,0.3); height: 100%;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                      <div>
+                        <div style="font-size: 12px; opacity: 0.9; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif;">Novos Clientes</div>
+                        <div style="font-size: 32px; font-weight: bold; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif;">2.847</div>
+                        <div style="font-size: 11px; background: rgba(255,255,255,0.2); display: inline-block; padding: 4px 8px; border-radius: 6px; font-family: 'Segoe UI', sans-serif;">
+                          ↑ +28.5% este mês
+                        </div>
+                      </div>
+                      <div style="background: rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                        👥
+                      </div>
+                    </div>
+                  </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                  &lt;div style=&quot;background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(255,107,53,0.3); height: 100%;&quot;&gt;
+                    &lt;div style=&quot;display: flex; justify-content: space-between; align-items: flex-start;&quot;&gt;
+                      &lt;div&gt;
+                        &lt;div style=&quot;font-size: 12px; opacity: 0.9; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif;&quot;&gt;Novos Clientes&lt;/div&gt;
+                        &lt;div style=&quot;font-size: 32px; font-weight: bold; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif;&quot;&gt;2.847&lt;/div&gt;
+                        &lt;div style=&quot;font-size: 11px; background: rgba(255,255,255,0.2); display: inline-block; padding: 4px 8px; border-radius: 6px; font-family: 'Segoe UI', sans-serif;&quot;&gt;
+                          &uarr; +28.5% este m&ecirc;s
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div style=&quot;background: rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px;&quot;&gt;
+                        👥
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+        &lt;div style='background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(255,107,53,0.3); height: 100%;'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: flex-start;'&gt;
+    &lt;div&gt;
+      &lt;div style='font-size: 12px; opacity: 0.9; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif;'&gt;Novos Clientes&lt;/div&gt;
+      &lt;div style='font-size: 32px; font-weight: bold; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif;'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+      &lt;div style='font-size: 11px; background: rgba(255,255,255,0.2); display: inline-block; padding: 4px 8px; border-radius: 6px; font-family: 'Segoe UI', sans-serif;'&gt;
+        "& [InserirSuaMedida] &" este m&ecirc;s
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px;'&gt;
+      👥
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;            
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+            <!-- Proximo Card -->
+
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+                  <div style="background: linear-gradient(135deg, #0078D4 0%, #00BCF2 100%); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(0,120,212,0.3); height: 100%; display: flex; flex-direction: column;">
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                      <div style="font-size: 12px; opacity: 0.9; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif;">Receita Total</div>
+                      <div style="font-size: 32px; font-weight: bold; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif;">R$ 1,2M</div>
+                      <div style="font-size: 11px; background: rgba(255,255,255,0.2); display: inline-block; padding: 4px 8px; border-radius: 6px; font-family: 'Segoe UI', sans-serif;">
+                        ↑ +15.3% vs mês anterior
+                      </div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                      💰
+                    </div>
+                  </div>
+                </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                 &lt;div style=&quot;background: linear-gradient(135deg, #0078D4 0%, #00BCF2 100%); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(0,120,212,0.3); height: 100%; display: flex; flex-direction: column;&quot;&gt;
+  &lt;div style=&quot;display: flex; justify-content: space-between; align-items: flex-start;&quot;&gt;
+    &lt;div&gt;
+      &lt;div style=&quot;font-size: 12px; opacity: 0.9; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif;&quot;&gt;Receita Total&lt;/div&gt;
+      &lt;div style=&quot;font-size: 32px; font-weight: bold; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif;&quot;&gt;R$ 1,2M&lt;/div&gt;
+      &lt;div style=&quot;font-size: 11px; background: rgba(255,255,255,0.2); display: inline-block; padding: 4px 8px; border-radius: 6px; font-family: 'Segoe UI', sans-serif;&quot;&gt;
+        &uarr; +15.3% vs m&ecirc;s anterior
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background: rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px;&quot;&gt;
+      💰
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML =
+        Var InserirSuaMedida = 0 --SuaMedida
+
+        RETURN
+        "
+        &lt;div style='background: linear-gradient(135deg, #0078D4 0%, #00BCF2 100%); border-radius: 12px; padding: 20px; color: white; box-shadow: 0 4px 12px rgba(0,120,212,0.3); height: 100%; display: flex; flex-direction: column;'&gt;
+  &lt;div style='display: flex; justify-content: space-between; align-items: flex-start;'&gt;
+    &lt;div&gt;
+      &lt;div style='font-size: 12px; opacity: 0.9; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif;'&gt;Receita Total&lt;/div&gt;
+      &lt;div style='font-size: 32px; font-weight: bold; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif;'&gt;R$ "& [InserirSuaMedida] &"M&lt;/div&gt;
+      &lt;div style='font-size: 11px; background: rgba(255,255,255,0.2); display: inline-block; padding: 4px 8px; border-radius: 6px; font-family: 'Segoe UI', sans-serif;'&gt;
+        "& [InserirSuaMedida] &"% vs m&ecirc;s anterior
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style='background: rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px;'&gt;
+      💰
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;      
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
 
           <!-- Fim dos Cards -->
     </section>
-    
 
   </main>
   <!-- Scroll Top -->

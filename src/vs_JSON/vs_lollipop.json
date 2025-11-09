@@ -1,0 +1,242 @@
+{
+  "usermeta": {
+    "information": {
+      "uuid": "8a1bea74-f2a3-46da-a02e-11221a7c6a2f",
+      "generated": "2025-11-09T13:26:04.489Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ4AAAA0CAYAAAB7AoHzAAAP30lEQVR4Aexd+VMUSRb+suimm1tO5YYGVEBBbtARdWePmYiN/WX+v/0LdmMjdmMn5vIIFA9EBJRDuW9BEOQ+uza/goKq6qqWcVjFniKozqx8+TLfe/nly6u6WlHD/K1vbKvtL6bU//zSr07Nvle/v9uvPuoYV3sH59R/fN+jrq5vheF2Sa4FnC2gIMxfjN+L6vIsfHvrPLIyEvHtzQtorMpFaVE6vvu2DHEx0WG4XZJrAWcLhAUe2YQAohSB9+sq/t6yg4cDe0x2L9cCv8kCHwSeXvralorno0HMLKl6khu6FvhoCyhzc3N4/fo1Hj9+jNbWVjx//hzPnj1DZ2cnVldXDwvOSlbw1yoPvi6POkxzI64FPtYCSkZGBs6fP4/GxkZcu3YNVVVVqKmpwZUrVxAfH28qN8ZrunVvXAt8tAWOPdR+dA2RwujqcaIWcIF3ouZ0CzuuBVzgHddSbr4TtYALvBM1p1vYcS2gzM/P49WrVx9c1doVuLG5g4fPxnH38Qgedkzgx5YBtHVP4u6jUdx5OIy1jW07NjfNtQCUtLQ0XLggTyRsVrV+vz+siXiy0VSdh+b6AlytzkVjbTHqK3Jwq6kAf7gacE82wlrv900MO9R6PJ4PWkc/2ZhYUPGv9iA6Rt0N5g8aLbIzHEu7sMA7VgkHmeIPnGPCQXiQ7AauBWwtcGLAS44TuJQrkJ8mDitaWt5E+4upwzlgV98b9I8soKN3RpsDTs8t43brIHoH5nD3yTB+ahnE445x/HR/EA+fj2Nre/ewLDcSWRY4MeDZmeVMoh81l7IP54DFgXO4WJiK6rJMbQ6YlZGIm01FKC3OwK2GAP54vRiNcs74ZxlercrDxubuITBb28c0QHb3zaDlyagLTHzZf8q7d+8cz2rX19d/s3b6HHDkrYofuvcwJueCxkL55AvzvJ4J4r+de5hfOZojErg6MK/V5oOArCjNRHODXMxIYM7MreBO6zC6+iUY28Zw78kIeqT3/OcPPXjeM2Osxo2fMgsoKSkpjme1x1lcHFefWJ/A7p6K2Gh7DlUVWNkACEIY/nRgjkvAPh8LYjd4RCzISUZzYwEqL2aiuT4fNxsKUV6Sge++KUdVeeZRRjd26iwQdqiNjo4+MYHPJgIl5xSkJwjbMgszBCryBFLj7enTS0G8mlGxunnkEVmQJ2pfhe6JIO7172ngZrp7nW4L7Lfa6ZZRk64sW0FZloIzsfbAJCAXVgDpVLX8v+bDzfvpLfDFAC9K4i3W52wgArOmUIHPI5wzuZRTY4EvBnjHsZjiYu44ZjoVeRQ+ZTw8PGx7Vru1tXUqhHSFiDwLKHzKOBAI2D6BLMSX7UJGJxfxs9yM7h16qz240Co3p9u6JnD74ZC23dI3KNMfDuPVyDzuPx3DLw+GtIcefmgZwMTM+8hr7VOkUdih9iRXtZ9DZ2633LoaQFlROsrK8lEYyEV9ZS6+vlqkbbeUFqfjekMBLhSmoaYyH9fqA7hak4dvmkuQm5mE9u4peZIygQF52nL/6Sh6Xs+hRYY/S4AOjC7g2ctpPHsxrdF/aR1CW9ckXr56A9Jd4CLsnxKWGgFEfbuFG9dDsyr2DPuAVI90pnWNB9E7bd6qqbmcjborOSjhaUtFPkoC6WiuK8CfvipCSUEq+J3jK3K/kPSm2gBqK3Jw6cI5jZ6WHKt5z7auKQyMvdOOCDt6pzXPy0fG5hfXDumvJLAfdU5KLzy973VP7XEhLXYyl3IyxZz+UnJSFOSlAgfbfiaBmXYmFkiMEaZ0zjSi5IqFR8Y9EpSvZ82o1en86idBOyxPZ/QC9EfGai5noTA3BedLCyVwM3GrqQB8ZCwtOQ5N8niQ9AsS2E0S4FXlWfijBDWPC33RHr2oiAx/N8CL8wHxfuHYiBmJArzsMhAD8ZI/McbeXDHRAtEeFcxj5D8CJjC1qOK9PJmxo2/uAJOSviFDIz2S40okK3eSuvHEJdXhVEU6RQlaBclx9sBOigFS44CzEtx2Mq1tq3izrGJ9244amWnK2toaRkdHbbdTlpeXI1Prz6AVvSIBald1qgRssjyRSY07ouqPlHXIBczdx8NoaRtD38BbPJCrbz4yNju/qj258/L1LJ7KRc2PDwa0xc6/b/ej/cXUUUGnNKbExcWhoKDAdjslMTHxlIodeWL5LFM6PpnDR8oqyzJxqzGAhup8lJak46u6fHAOeDYtXnukrLzkLOoqc/CXr0pQcykLf/v6ImrloojAvd06iK6+GTyRCxduJXX2vZGLnP2tpM9tQeVzC+DW72wBfY64sKpi/J2KtS1zXi58mIdzR2478ukfPQeBe7OpCBUXM9EgFy7X5ELmSuk5ubAp0raSdGDSow6OL6KzZwb6VtGn2ApSdEEjNIwItbi4UYQqFzD26mzuBLG8wa0i8xxTB+bypoqFNTPvmUS/5jG5ki7KTcZlCUp9q4h7mNx852Z7+8spDZS3Hw0ebgXx24PcfL8npwAdvTPgVKBH3+NsHT7W5rsLPHN7nMq7OJ9Aktzq8Tq8LylFzhHTEgR8Xnvxud2ztK6anmVkTh2YXNhMLwGqYRuTm+81l3NQU56N4uJMNNYU41ZTgfSY+98e5Ob7V3JPk0+TN9YEUFKUsb/HeS2gbb7rHpUP5957PIKn3VNymB8+fHJcoQDu9eVbgE/vOGnBhUtKHOBR7HMw3SNBzWHbmIPA5P2iBC2By7jx8kQp2ob8vJwKLK4ZUCsz6R71Rn0h6qoKUVmWrYGW81PuUSo7OzuYnZ11V7XSWJH6z9W0Jwwy+c1AelQ7/QnGJD+QID2uHV1iD3yLWKz0ylZ6lKx4N6jK/UsVq5vmzXfF6/Xi7Nmz7qrWajX3/tACXukNo+V1mGCJEHh+jyXx4NYrAc+tpFi5yX6QpAUOzlejuR+uBU7EAlwceSzAdYF3IqaNgEI+sQou8D6xwd3q9i3gAm/fDu7nJ7aAI/B6enpgPasty9yxfaxIl7koLfzjFYUplq13nfEgzE50pnOFlB63fZAzNPB7BZJ8znROgKNFGLpnDx44yx/r2UG4CXaCdxtyERcq2EFKONmYJSnaWXfSfWKTge0lhJCyO9Npu6igc/lcAIigs208igp115muqDthdRd7WxBCmGR3BF55eTmsZ7UJfgGfsmMqwHiztbYIVVZiTNPju7u72NlcAUM9zRhyAhqO7lX2NH7VuMtpKMDnUbG7tQonujdKRRzRZ+AxRklfX5W7qMZEQzxGHqYGd7cMKeaoN0puwO5tmxMNd+Td3XHm54/VOMlOQMf4vIbSzNEoeaqxtbHmqDtPPfxh+GWjUXhzocY7dQ/hZOe+XDj6ngTt1qb5rRSKsfxw8Y2NDdALLi4u2mZbWVnBwsICoqJkC9jkGB0dxcDAAPb27H+gZXJyEi9fvnSks96ZmRlH+p07d7T9SLvy2aD8SYWuri5b4Ot01sG4VXy+yoP8lNFK4z33Qvv7+8HXgfDeejGd+jOflcZ7lkvZaD/eW6/379/j0aNHYGilBYNB9Pb2YmJiwkrS7qkP262zs9NRd76Yc3Bw0JZOmcn/5s0brTzrB9u9paUF1MFK4z352e6rhp+uYPqxgEcmVl5QUADu+ZHReNEgBE1+fj48lnfq7UpPNzIyAgrY0NAAn89nZNXim5uboIDXr1+3pU9NTeHFixcoLCy0LV+XraysLITOsgkKIQQqKytD6Nvb23jw4AEY8mcXhDAPCfymXXt7u6Z3UVGRJq/xg7Zho/Ipn3PnzhlJWryvrw/d3d3IysoK+fkGZiA/bVNSUoK0tDQmmS4Cir87Ul9fj6SkJBONN+QVQmgv1xTCLDt1p+2EEAgEAiG6k58dip318uXLIXTahICkbsXFxcxuutghOR2j3Zxsw7ZJT09HRkaGifeDwHv79i1YeU5ODlJSUkzMvOFXI8fGxlBdXR1iWPY2Kk/wXbp0KUQx0ullKBzL9srNbJapXzp9bm4Ozc3NlvL3cw0NDYEGYKfYTzn6pDcgcBjSMIpiVpd1t7W1ybPIYu33PY44j2JsuNLSUiQnJx8lHsSoG3s6O4RTw5w5cwZNTU22oOJrgOnpsrOzQ3SjzSgfOy1/f8SuwxI04+PjyMvLQ0xMzIFURwFBy/bjG18pxxEFmndjh2A9bBsjjXGm0xPSkbBTCGEGNe3K+oUQyMwMfU8NbU5s8FuMubm5LNJ0mVvCQGKjszfRW7C32PVmNnhsbKzW2+wMQ+FpGApmBRWropfkEERPZNebCbjp6WnNU1mHcCrOoYmesra2NmSIZ0+kl+QQwfmqHT8Bf/HiRVvDEVQEpd/vB3ss5TVerJfejHqlpqYaSVqcwyt/KYn1Wm1D2xLQlJ+Nbp1Ls9FYP+kErZWfdDY6y6anYuNqlR58cFpE3fmQb1VVVUiHp4dj25KPnUoIM6goH/kpF0F3UOxhwBGOdHY2enIhzPxLS0va8E8G5mFovRRrgn5PULHRGxsbQxYZzMMhgg0jhLAdHukJOjo6QMBSQfIYLxqOwKJi7FVGGgHL3sKGpae1eioajg1HGQkcIcyK03Ckc4hgbzeWzTj5CfhCOXTbDW9sWHoKemEaljzGi/UStPoQI4S5fsrP82+CxjrEUDbajh2CHdquwxG01J22I7CNdZOfuhGU9JRGmh6n7ZiPHVpP00PqRk/IMugprbZlh6JDYNmcOul8ekg6bUe72LUrQc/yyV9RUaGzhYSKNYUCcwjgvIXMVsWZn6Ah4ulJrIYlnb2JlXP4ZeMxzXixx7BXcE5nFZ7zCirOPDdu3LCd13B4pYz0pHagJT/ltuttNBx1Y2+mfka59Dgbh+VyeNbTGNI2HP7IT14Cm+nWi7z0JFbd9HzscAQdZdTT9JCenMBz4ucIQhno5a2ekIDnfJQ2ZKMLEdohuEihfvS0lFOvlyH5njx5ok0L7NqVHY7OiG1K4JHHeNFLE/RcB9hNTYx5Q4BHo7C32rlwnZFegnQOQUIcKUfFOR/k3IGgszMsy2Av52Q52uY1aEyjUhwihDgqm3xslPv372vDal1dXcgQwjz0ZmxwNizvjRcNwx8LpFEJWiPNGGeDkC6EuX42DFdo9LLU3chz3LgQAgS0U8MQTPSk1MGuTA7r7FC0rRBm+Tj0Um/azo6XaSybnp5x40VPRVByhKHuRpoeZ9v45dSDefQ0PaQjoDPiXJv21dOdwhDgJSQkgMz0CE5MRLyTYegVCCoa0In/Q+lOglNxGp1DgBBmo+tlsl4a1jqE0MNyok7d7Ca7On+4kGVTN+ofLt//k0a7c15tV4cQwnYBqOdlh2KHESLUduywBCzto+e3huSnNxPCzE+HwLUA7e40CljLCgEelTous7UwCsY5G3ujlXYS90Lsr6BYz68tj4alXh8Lul9b32nKfxxZCOhwziZcGeyQXAtwJAyXz0j7HwAAAP//ws6lGQAAAAZJREFUAwBpLWTZPkfChwAAAABJRU5ErkJggg==",
+      "name": "Lollipop Chart",
+      "description": "Gráfico Lollipop que exibe o valor por uma descrição, ordenado do maior para o menor.\nApresenta tons de azul, destaque visual ao selecionar, tooltip interativo e rótulos otimizados sem sobreposição.\nInclui rolagem horizontal automática para melhor visualização em conjuntos extensos de dados.",
+      "author": "David Marques"
+    },
+    "deneb": {
+      "build": "1.8.2.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": true,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Descrição",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__1__",
+        "name": "Soma de Valor",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Gráfico Lollipop em tons de azul com destaque, rótulos legíveis e rolagem horizontal.",
+  "data": {
+    "name": "dataset"
+  },
+  "width": {
+    "step": 60
+  },
+  "height": 400,
+  "background": "#ffffff",
+  "config": {
+    "font": "Segoe UI",
+    "view": {
+      "stroke": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "field": "__0__",
+          "type": "nominal",
+          "sort": {
+            "field": "__1__",
+            "order": "descending"
+          },
+          "axis": {
+            "labelAngle": -45,
+            "labelFontSize": 11,
+            "labelColor": "#444",
+            "grid": false,
+            "domain": false,
+            "title": null
+          }
+        },
+        "y": {
+          "field": "__1__",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "labelFontSize": 11,
+            "labelColor": "#444",
+            "grid": false,
+            "domain": false,
+            "title": null
+          }
+        },
+        "y2": {
+          "datum": 0
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.__selected__ == 'on'",
+              "value": "#1d4ed8"
+            },
+            {
+              "test": "datum['_isHighlight_'] == true",
+              "value": "#2563eb"
+            }
+          ],
+          "field": "__1__",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              "#dbeafe",
+              "#3b82f6"
+            ]
+          },
+          "legend": null
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "datum['_selected_'] == 'on'",
+            "value": 5
+          },
+          "value": 3
+        },
+        "tooltip": [
+          {
+            "field": "__0__",
+            "type": "nominal",
+            "title": "Responsável"
+          },
+          {
+            "field": "__1__",
+            "type": "quantitative",
+            "format": "$,.2f",
+            "title": "Valor"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 200,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "field": "__0__",
+          "type": "nominal",
+          "sort": {
+            "field": "__1__",
+            "order": "descending"
+          }
+        },
+        "y": {
+          "field": "__1__",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.__selected__ == 'on'",
+              "value": "#1e3a8a"
+            },
+            {
+              "test": "datum['_isHighlight_'] == true",
+              "value": "#2563eb"
+            }
+          ],
+          "field": "__1__",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              "#c7d2fe",
+              "#3b82f6"
+            ]
+          },
+          "legend": null
+        },
+        "fillOpacity": {
+          "condition": {
+            "test": "datum['_selected_'] == 'on'",
+            "value": 1
+          },
+          "value": 0.9
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "datum['_selected_'] == 'on'",
+            "value": 2
+          },
+          "value": 0
+        },
+        "stroke": {
+          "condition": {
+            "test": "datum['_selected_'] == 'on'",
+            "value": "#172554"
+          },
+          "value": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "align": "center",
+        "baseline": "bottom",
+        "fontSize": 10,
+        "fontWeight": "600",
+        "color": "#1e3a8a"
+      },
+      "encoding": {
+        "x": {
+          "field": "__0__",
+          "type": "nominal",
+          "sort": {
+            "field": "__1__",
+            "order": "descending"
+          }
+        },
+        "y": {
+          "field": "__1__",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "__1__",
+          "type": "quantitative",
+          "format": "$,.0f"
+        }
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  }
+}

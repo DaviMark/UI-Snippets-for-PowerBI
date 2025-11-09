@@ -1,0 +1,156 @@
+{
+  "usermeta": {
+    "information": {
+      "uuid": "0e36a7f0-f792-428e-b05e-52e1597ec42e",
+      "generated": "2025-11-09T12:41:07.528Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Gráfico de coluna",
+      "description": "Gráfico de colunas horizontais que exibe o valor negociado por responsável, ordenado de forma decrescente. As barras utilizam tons de azul para representar a intensidade dos valores e contam com barra de rolagem horizontal para facilitar a visualização quando há muitos responsáveis.",
+      "author": "David Marques"
+    },
+    "deneb": {
+      "build": "1.8.2.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": true,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Descrição",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__1__",
+        "name": "Valor",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Gráfico de colunas com ordenação decrescente, tons de azul e rolagem horizontal",
+  "data": {
+    "name": "dataset"
+  },
+  "width": {
+    "step": 45
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 10,
+    "cornerRadiusTopRight": 10,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "__0__",
+      "type": "nominal",
+      "sort": "-y",
+      "axis": {
+        "labelAngle": 45,
+        "labelFontSize": 11,
+        "labelColor": "#444",
+        "labelFontWeight": "500",
+        "title": null,
+        "labelPadding": 10
+      }
+    },
+    "y": {
+      "field": "__1__",
+      "type": "quantitative",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelColor": "#777"
+      }
+    },
+    "color": {
+      "condition": {
+        "test": "datum.__selected__ == 'on'",
+        "value": "#1d4ed8" 
+      },
+      "field": "__1__",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "range": [
+          "#dbeafe",
+          "#1e40af"
+        ] 
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "__0__",
+        "type": "nominal",
+        "title": "__0__"
+      },
+      {
+        "field": "__1__",
+        "type": "quantitative",
+        "format": "$,.2f",
+        "title": "Valor Negociado"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 10,
+        "cornerRadiusTopRight": 10
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": "datum.__selected__ == 'on'",
+            "value": 1
+          },
+          "value": 0.9
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "color": "#1e3a8a",
+        "fontWeight": "600",
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "__1__",
+          "type": "quantitative",
+          "format": ",.4s"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent",
+      "continuousHeight": 400
+    },
+    "background": "#ffffff",
+    "axis": {
+      "grid": false,
+      "domain": false
+    },
+    "font": "Segoe UI"
+  }
+}

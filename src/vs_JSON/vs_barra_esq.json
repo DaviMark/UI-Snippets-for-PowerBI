@@ -1,0 +1,180 @@
+{
+  "usermeta": {
+    "information": {
+      "uuid": "5b2c55d9-f68d-4f16-91fb-c6f70014135b",
+      "generated": "2025-11-09T12:51:08.427Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Barras Horizontais",
+      "description": "Exibe o valor por uma descrição em barras horizontais ordenadas do maior para o menor.\nAs cores variam em tons de azul conforme o valor, e a barra selecionada é destacada em azul intenso.\nInclui tooltip interativo e rolagem vertical automática para melhor visualização de múltiplos setores.",
+      "author": "David Marques"
+    },
+    "deneb": {
+      "build": "1.8.2.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": true,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Descrição",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__1__",
+        "name": "Valor",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Barras horizontais em tons de azul, com ordenação decrescente, tooltip e destaque ao selecionar.",
+  "data": {
+    "name": "dataset"
+  },
+  "height": {
+    "step": 35
+  },
+  "width": 500,
+  "background": "#ffffff",
+  "config": {
+    "font": "Segoe UI",
+    "view": {
+      "stroke": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopRight": 10,
+        "cornerRadiusBottomRight": 10,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "y": {
+          "field": "__0__",
+          "type": "nominal",
+          "sort": "-x",
+          "axis": {
+            "labelFontSize": 11,
+            "labelColor": "#444",
+            "grid": false,
+            "domain": false,
+            "title": null
+          }
+        },
+        "x": {
+          "field": "__1__",
+          "type": "quantitative",
+          "axis": {
+            "labelFontSize": 11,
+            "labelColor": "#444",
+            "grid": false,
+            "domain": false,
+            "title": null
+          }
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.__selected__ == 'on'",
+              "value": "#1d4ed8" 
+            },
+            {
+              "test": "datum['_isHighlight_'] == true",
+              "value": "#2563eb" 
+            }
+          ],
+          "field": "__1__",
+          "type": "quantitative",
+          "scale": {
+            "type": "linear",
+            "range": [
+              "#dbeafe",
+              "#3b82f6"
+            ]
+          },
+          "legend": null
+        },
+        "fillOpacity": {
+          "condition": {
+            "test": "datum['_selected_'] == 'on'",
+            "value": 1
+          },
+          "value": 0.85
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "datum['_selected_'] == 'on'",
+            "value": 2
+          },
+          "value": 0
+        },
+        "stroke": {
+          "condition": {
+            "test": "datum['_selected_'] == 'on'",
+            "value": "#172554"
+          },
+          "value": null
+        },
+        "tooltip": [
+          {
+            "field": "__0__",
+            "type": "nominal",
+            "title": "__0__"
+          },
+          {
+            "field": "__1__",
+            "type": "quantitative",
+            "format": "$,.2f",
+            "title": "Valor Orçado"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1e3a8a"
+      },
+      "encoding": {
+        "y": {
+          "field": "__0__",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "__1__",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "__1__",
+          "type": "quantitative",
+          "format": "$,.0f"
+        }
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit-y",
+    "contains": "padding"
+  }
+}

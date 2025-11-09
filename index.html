@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
 
   <link rel="stylesheet" href="/src/css/style.css">
+
+  <!-- Notyf -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
 </head>
 <body>
 
@@ -47,12 +52,21 @@
             <li><a href="/src/pages/doc.html" class="nav-link">Documentação</a></li>
             <li><a href="/src/pages/label.html" class="nav-link">Labels/Tags</a></li>
             <li><a href="/src/pages/tooltips.html" class="nav-link">Tooltips</a></li>
+            <li><a href="/src/pages/vs_JSON.html" class="nav-link">Gráficos JSON</a></li>
           </ul>
         </li>
 
-        <li class="nav-item mb-2">
-          <a href="/src/pages/como_usar.html" class="nav-link">Como usar</a>
+         <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsDoc" aria-expanded="false">
+            Como usar
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsDoc">
+            <li><a href="/src/pages/como_usar.html" class="nav-link">Visuais HTML</a></li>
+            <li><a href="/src/pages/como_usar_JSON.html" class="nav-link">Visuais JSON</a></li>
+          </ul>
         </li>
+        
         <li class="nav-item mb-2">
           <a href="/src/pages/colaborar.html" class="nav-link">Colaborar</a>
         </li>
@@ -114,7 +128,6 @@
                 </footer>
             </div>
         </div>
-
       </section>
 
       <section class="comparativo mt-5">
@@ -132,7 +145,8 @@
             style="max-width: 1000px; background: linear-gradient(135deg, #f8f9fa, #ffffff);">
           <div class="position-relative">
             <img src="/src/imgs/Comparacao_cards.png" alt="Comparativo Power BI vs HTML" 
-                class="img-fluid w-100 d-block">
+                class="img-fluid w-100 d-block"
+                style="width: auto; max-width: 100%; height: auto; image-rendering: -webkit-optimize-contrast;">
             <div class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm" 
                 style="font-size: 0.85rem;">Comparativo real</div>
           </div>
@@ -141,6 +155,36 @@
         <p class="mt-4 text-muted small text-center">
           À esquerda: card nativo do Power BI. &nbsp;•&nbsp; À direita: versão aprimorada com HTML e CSS.
         </p>
+        
+                <footer class="text-muted small">
+                </footer>
+
+        <section class="impacto mt-5">
+          <p class="text-uppercase small text-muted mb-2">Agora com um PLUS</p>
+          <h3 class="fw-bold mb-4">Gráficos JSON para elevar o padrão dos seus Dashboards</h3>
+
+          <div class="position-relative">
+            <img src="/src/imgs/vs_coluna.png" alt="Comparativo Power BI vs HTML" 
+                class="img-fluid w-100 d-block"
+                style="width: auto; max-width: 100%; height: auto; image-rendering: -webkit-optimize-contrast;">
+
+          </div>
+
+          <p class="text-secondary fs-6" style="max-width:850px;">
+            Gráficos em <strong>JSON</strong> vão além do visual tradicional — eles permitem criar 
+            <strong>componentes personalizados e interativos</strong> que se adaptam perfeitamente ao contexto dos seus dados.  
+            Com total liberdade para definir cores, gradientes, rótulos, formatos e animações, 
+            você transforma relatórios comuns em experiências visuais modernas e memoráveis.
+          </p>
+
+          <ul class="text-secondary lh-lg fs-6">
+            <li><strong>Visual sob medida:</strong> defina cada detalhe do gráfico de cores, fontes e espaçamento.</li>
+            <li><strong>Mais interatividade:</strong> gráficos que reagem à seleção e filtragem, tornando a análise mais fluida e intuitiva.</li>
+            <li><strong>Estilo profissional:</strong> relatórios com aparência moderna e coerente com a identidade visual única</li>
+            <li><strong>Personalização ilimitada:</strong> cada visual JSON pode ser ajustado para se integrar perfeitamente ao seu dashboard.</li>
+          </ul>
+
+        </section>
 
         <div class="navegacao-dica mt-5 text-center">
           <div class="navegacao-card mx-auto p-4 rounded-4 shadow-sm">
@@ -154,9 +198,6 @@
         </div>
       </section>
 
-      
-
-
       <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -168,6 +209,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="/src/js/script.js"></script>
+  <script src="/src/js/notyf.js"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY77B4ZVWP"></script>
 
