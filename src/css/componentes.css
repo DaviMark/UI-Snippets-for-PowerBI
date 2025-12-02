@@ -306,13 +306,13 @@ body {
 
 /* Contador de visuais */
 .visual-info {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  margin-top: 40px;
+  margin-top: 40px !important;
   color: #334155; /* cinza sofisticado */
   font-size: 15.5px;
   line-height: 1.6;

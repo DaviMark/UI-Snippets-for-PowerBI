@@ -4,6 +4,7 @@ const content = document.getElementById("content");
 const btnDoc = document.getElementById("btnDocumentacao");
 const btnComp = document.getElementById("btnComponentes");
 const componentsMenu = document.getElementById("componentsMenu");
+const componentsTemp = document.getElementById("componentsTemp");
 
 // Abre o menu lateral e o submenu de componentes
 const openSidebarAndComponents = () => {
@@ -14,6 +15,7 @@ const openSidebarAndComponents = () => {
   const collapse = new bootstrap.Collapse(componentsMenu, { toggle: false });
   collapse.show();
 };
+
 
 // Botão do menu
 toggleBtn.addEventListener("click", (e) => {
@@ -85,4 +87,4 @@ window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-RY77B4ZVWP');  // Substitua 'G-XXXXXXXXXX' pelo seu ID de rastreamento
+  gtag('config', 'G-RY77B4ZVWP'); 

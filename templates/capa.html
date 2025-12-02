@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Power Pack — Capa</title>
+  <link href="/src/imgs/Logo_PowerPack.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="/src/css/componentes.css">
+  <link rel="stylesheet" href="/templates/css/templates.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+
+
+  <link rel="stylesheet" href="/templates/css/capa.css">
+    <script src="/templates/js/capa.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="navbar fixed-top shadow-sm bg-white px-4 py-2 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      <img src="/src/imgs/Logo.png" alt="Logo" class="navbar-logo">
+      <h1>UI Power Pack</h1>
+    </div>
+  </nav>
+
+  <div class="wrapper d-flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="p-4 shadow-sm">
+      <ul class="nav flex-column" id="sidebarMenu">
+        <li class="nav-item mb-2">
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsMenu" aria-expanded="false">
+            Componentes
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsMenu">
+            <li><a href="/src/pages/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="/src/pages/storytelling.html" class="nav-link">Storytelling</a></li>
+            <li><a href="/src/pages/doc.html" class="nav-link">Documentação</a></li>
+            <li><a href="/src/pages/label.html" class="nav-link">Labels/Tags</a></li>
+            <li><a href="/src/pages/tooltips.html" class="nav-link">Tooltips</a></li>
+            <li><a href="/src/pages/vs_JSON.html" class="nav-link">Gráficos JSON</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsTemp" aria-expanded="false">
+            Templates
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsTemp">
+            <li><a href="/templates/template.html" class="nav-link">Layout</a></li>
+            <li><a href="/templates/capa.html" class="nav-link active">Capas</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsDoc" aria-expanded="false">
+            Como usar
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsDoc">
+            <li><a href="/src/pages/como_usar.html" class="nav-link">Visuais HTML</a></li>
+            <li><a href="/src/pages/como_usar_JSON.html" class="nav-link">Visuais JSON</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a href="/src/pages/colaborar.html" class="nav-link">Colaborar</a>
+        </li>
+      </ul>
+
+      <footer class="small text-muted pt-4 mt-auto border-top">
+        Feito por <strong>Davi Marques</strong>
+      </footer>
+    </aside>
+
+  <main id="content" class="flex-grow-1 p-5 shifted">
+    <section class="intro mt-5 ">
+        <p class="text-uppercase small text-muted mb-2">Capas Animadas</p>
+          <h1 class="fw-bold mb-3 display-6">Capas animadas em HTML + CSS para seus Dashboards</h1>
+          <p class="lead text-secondary mb-4" style="max-width:100%;">
+            Dê vida aos seus dashboards com capas animadas criadas em HTML + CSS, prontas para uso e fáceis de personalizar. 
+            Animações suaves, efeitos modernos e componentes responsivos para transformar a primeira impressão do seu relatório.
+          </p>
+          <p class="small text-muted mt-2">
+            Estas capas utilizam animações e estilos avançados em HTML + CSS. Em razão disso, insira-as sempre no componente 
+            <strong>HTML Content</strong> do Power BI. O <strong>HTML Lite</strong> não renderiza animações nem efeitos visuais completos.
+          </p>
+
+        <div class="container my-5">
+
+        <!-- Seção de Filtros e Pesquisa -->
+        <div class="filter-section mb-5">
+            <!-- Filtros de Categoria (Baseado em pasted_file_JUToDj_image.png ) -->
+            <div class="category-filters d-flex flex-wrap gap-3 mb-4">
+                <button class="btn filter-btn active" data-filter="todos">Todos</button>
+                <button class="btn filter-btn" data-filter="Darkline">Darkline</button>
+                <button class="btn filter-btn" data-filter="Lightline">Lightline</button>
+            </div>
+
+            <!-- Input de Pesquisa -->
+            <div class="search-input-container shadow-sm p-2 rounded-3">
+                <i class="bi bi-search me-2 text-muted"></i>
+                <input type="text" id="searchInput" class="form-control border-0" placeholder="Buscar templates por título ou tag...">
+            </div>
+        </div>
+
+        <!-- Contador de Templates -->
+        <h2 class="fs-5 mb-4"><span id="templateCount">0</span> Templates Encontrados</h2>
+
+        <!-- Grid de Cards de Templates -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="templateGrid">
+            
+            <!-- Card 1 -->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html1.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#01</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html1.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Executive Navy</h3>
+                            <p class="card-subtitle">Dashboard executivo com azul marinho e detalhes em laranja</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2-->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html2.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#02</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html2.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Corporate Dark</h3>
+                            <p class="card-subtitle">Visual moderno com fundo escuro e acentos em ciano</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3-->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html3.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#03</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html3.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Financial Pro</h3>
+                            <p class="card-subtitle">Dashboard financeiro com tons dourados</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html4.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#04</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html4.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Sales Performance</h3>
+                            <p class="card-subtitle">Dashboard de vendas com gradiente verde</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html5.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#05</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html5.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Operations Hub</h3>
+                            <p class="card-subtitle">Centro operacional com visual industrial</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html6.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#06</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html6.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">HR Analytics</h3>
+                            <p class="card-subtitle">Gestão de pessoas com tons de roxo</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html7.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#07</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html7.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Marketing Hub</h3>
+                            <p class="card-subtitle">Dashboard de marketing com rosa vibrante</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html8.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#08</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html8.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Supply Chain</h3>
+                            <p class="card-subtitle">Cadeia de suprimentos com azul profundo</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="col template-card" data-category="Darkline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html9.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#09</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html9.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Retail Intelligence</h3>
+                            <p class="card-subtitle">Inteligência para varejo com laranja quente</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="col template-card" data-category="Lightline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html10.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#10</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html10.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Minimal White</h3>
+                            <p class="card-subtitle">Design minimalista com fundo claro</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="col template-card" data-category="Lightline" data-tags="dashboard business intelligence kpi" data-html="/templates/arquivos/capa_html11.html">
+                    <div class="dashboard-card">
+                        <span class="card-number">#11</span>
+                        <div class="card-preview">
+                            <iframe src="/templates/arquivos/capa_html11.html" alt="Executive Navy Dashboard" class="preview-iframe" scrolling="no"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Clean Gray</h3>
+                            <p class="card-subtitle">Estilo limpo com cinza neutro</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+                                <button class="btn-copy">
+                                    <i class="bi bi-copy"></i>
+                                    <span>Copiar HTML</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+          <!-- Fim dos Cards -->
+        </div>
+    </div>
+
+    </section>
+
+  </main>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+  <script src="/src/js/script.js"></script>
+  <script src="/src/js/componentes.js"></script>
+  <script src="/templates/js/templates.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY77B4ZVWP"></script>
+</body>
+</html>

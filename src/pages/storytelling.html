@@ -1,0 +1,3353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Power Pack — Storytelling</title>
+  <link href="/src/imgs/Logo_PowerPack.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="/src/css/componentes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="navbar fixed-top shadow-sm bg-white px-4 py-2 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      <img src="/src/imgs/Logo.png" alt="Logo" class="navbar-logo">
+      <h1>UI Power Pack</h1>
+    </div>
+  </nav>
+
+  <div class="wrapper d-flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="p-4 shadow-sm">
+      <ul class="nav flex-column" id="sidebarMenu">
+        <li class="nav-item mb-2">
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsMenu" aria-expanded="false">
+            Componentes
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsMenu">
+            <li><a href="/src/pages/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="/src/pages/storytelling.html" class="nav-link active">Storytelling</a></li>
+            <li><a href="/src/pages/doc.html" class="nav-link">Documentação</a></li>
+            <li><a href="/src/pages/label.html" class="nav-link">Labels/Tags</a></li>
+            <li><a href="/src/pages/tooltips.html" class="nav-link">Tooltips</a></li>
+            <li><a href="/src/pages/vs_JSON.html" class="nav-link">Gráficos JSON</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsTemp" aria-expanded="false">
+            Templates
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsTemp">
+            <li><a href="/templates/template.html" class="nav-link">Layout</a></li>
+            <li><a href="/templates/capa.html" class="nav-link">Capas</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsDoc" aria-expanded="false">
+            Como usar
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsDoc">
+            <li><a href="/src/pages/como_usar.html" class="nav-link">Visuais HTML</a></li>
+            <li><a href="/src/pages/como_usar_JSON.html" class="nav-link">Visuais JSON</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a href="/src/pages/colaborar.html" class="nav-link">Colaborar</a>
+        </li>
+      </ul>
+
+      <footer class="small text-muted pt-4 mt-auto border-top">
+        Feito por <strong>Davi Marques</strong>
+      </footer>
+    </aside>
+
+  <main id="content" class="flex-grow-1 p-5 shifted">
+    <section class="intro mt-5 ">
+        <p class="text-uppercase small text-muted mb-2">Componentes</p>
+        <h1 class="fw-bold mb-3 display-6">Visuais HTML para Power BI</h1>
+        <p class="lead text-secondary mb-4" style="max-width:100%;">
+          Crie dashboards mais elegantes e profissionais com componentes HTML prontos. 
+          Copie, personalize e use no Power BI para transformar seus relatórios em experiências visuais modernas e interativas.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <button id="btnDocumentacao" class="btn btn-outline-dark px-4 py-2">Como usar</button>
+          <a href="/src/pages/colaborar.html" class="btn btn-outline-secondary px-4 py-2">Colaborar</a>
+        </div>
+
+        <div class="visual-info">
+          <span id="visualCount" class="visual-number">0</span>
+          <span class="visual-label">visuais disponíveis nesta página</span>
+        </div>
+
+      </section>
+      
+    <section class="impacto mt-5 "> <!-- Section PRINCIPAL -->
+
+      <!-- ############# Proximo Card #############-->
+          <!-- BLOCO DO CARD -->
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+    <style>
+        .storytelling-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        /* Story Block */
+        .story-block {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .story-block.reverse {
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        .story-block.reverse .story-content {
+            order: 2;
+        }
+
+        .story-block.reverse .story-visual {
+            order: 1;
+        }
+
+        .story-content {
+            order: 1;
+        }
+
+        .story-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            border-radius: 20px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #4F46E5;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .story-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+
+        .story-description {
+            font-size: 1.0625rem;
+            color: #4B5563;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .story-description strong {
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .story-highlight {
+            background: linear-gradient(135deg, #FEFCE8, #FEF3C7);
+            border-left: 3px solid #F59E0B;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #D97706;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-text {
+            font-size: 1rem;
+            color: #78350F;
+            line-height: 1.6;
+        }
+
+        .story-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #10B981;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            font-weight: 500;
+        }
+
+        /* Story Visual */
+        .story-visual {
+            order: 2;
+        }
+
+        .visual-card {
+            background: linear-gradient(135deg, #4F46E5, #6366F1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .visual-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .visual-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .visual-metric {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .visual-label {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .visual-details {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .detail-block {
+            text-align: center;
+        }
+
+        .detail-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-label {
+            font-size: 0.8125rem;
+            opacity: 0.8;
+        }
+
+        /* Timeline Version */
+        .timeline-block {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 3rem;
+            top: 6rem;
+            bottom: 3rem;
+            width: 2px;
+            background: linear-gradient(180deg, #4F46E5, #E5E7EB);
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr 300px;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-date {
+            text-align: right;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            position: relative;
+        }
+
+        .timeline-date::after {
+            content: '';
+            position: absolute;
+            right: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: #4F46E5;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #E5E7EB;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.9375rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .timeline-metric {
+            background: #F3F4F6;
+            padding: 1.25rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .timeline-metric-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #4F46E5;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-metric-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="storytelling-container">
+        <!-- Story Block 1 -->
+        <div class="story-block">
+            <div class="story-content">
+                <span class="story-tag">
+                    <span>📈</span>
+                    <span>Conquista Q1</span>
+                </span>
+                <h2 class="story-title">Superamos todas as expectativas no primeiro trimestre</h2>
+                <p class="story-description">
+                    Com <strong>R$ 2.8M em receita</strong>, alcançamos o melhor resultado da história da empresa. 
+                    Esse crescimento foi impulsionado por uma estratégia focada em <strong>experiência do cliente</strong> 
+                    e <strong>otimização de processos</strong>.
+                </p>
+                <div class="story-highlight">
+                    <div class="highlight-title">💡 Insight Principal</div>
+                    <div class="highlight-text">
+                        A taxa de retenção aumentou 35%, provando que investir em relacionamento com o cliente 
+                        gera resultados sustentáveis a longo prazo.
+                    </div>
+                </div>
+                <div class="story-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">+28.5%</div>
+                        <div class="stat-label">Crescimento vs. Q4</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1,847</div>
+                        <div class="stat-label">Novos Clientes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-visual">
+                <div class="visual-card">
+                    <div class="visual-content">
+                        <div class="visual-icon">🚀</div>
+                        <div class="visual-metric">R$ 2.8M</div>
+                        <div class="visual-label">Receita Total Q1 2024</div>
+                        <div class="visual-details">
+                            <div class="detail-block">
+                                <div class="detail-value">112%</div>
+                                <div class="detail-label">da Meta</div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-value">+R$ 600K</div>
+                                <div class="detail-label">vs. Projeção</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Story Block 2 (Reverse) -->
+        <div class="story-block reverse">
+            <div class="story-content">
+                <span class="story-tag">
+                    <span>⭐</span>
+                    <span>Satisfação Recorde</span>
+                </span>
+                <h2 class="story-title">Clientes mais felizes, resultados melhores</h2>
+                <p class="story-description">
+                    Nosso <strong>NPS subiu para +72</strong>, colocando-nos entre as empresas mais bem avaliadas 
+                    do setor. Esse resultado reflete o comprometimento da equipe em entregar 
+                    <strong>qualidade excepcional</strong> em cada interação.
+                </p>
+                <p class="story-description">
+                    Os clientes destacaram especialmente o <strong>suporte rápido</strong> (tempo médio de resposta 
+                    reduzido em 40%) e a <strong>facilidade de uso</strong> da plataforma (interface redesenhada 
+                    com base em feedback direto).
+                </p>
+                <div class="story-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">+72</div>
+                        <div class="stat-label">NPS Score</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">94%</div>
+                        <div class="stat-label">Satisfação Geral</div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-visual">
+                <div class="visual-card" style="background: linear-gradient(135deg, #10B981, #34D399);">
+                    <div class="visual-content">
+                        <div class="visual-icon">🎯</div>
+                        <div class="visual-metric">+72</div>
+                        <div class="visual-label">Net Promoter Score</div>
+                        <div class="visual-details">
+                            <div class="detail-block">
+                                <div class="detail-value">68%</div>
+                                <div class="detail-label">Promotores</div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-value">12%</div>
+                                <div class="detail-label">Detratores</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                     &lt;style&gt;
+        .storytelling-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        /* Story Block */
+        .story-block {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .story-block.reverse {
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        .story-block.reverse .story-content {
+            order: 2;
+        }
+
+        .story-block.reverse .story-visual {
+            order: 1;
+        }
+
+        .story-content {
+            order: 1;
+        }
+
+        .story-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            border-radius: 20px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #4F46E5;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .story-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+
+        .story-description {
+            font-size: 1.0625rem;
+            color: #4B5563;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .story-description strong {
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .story-highlight {
+            background: linear-gradient(135deg, #FEFCE8, #FEF3C7);
+            border-left: 3px solid #F59E0B;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #D97706;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-text {
+            font-size: 1rem;
+            color: #78350F;
+            line-height: 1.6;
+        }
+
+        .story-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #10B981;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            font-weight: 500;
+        }
+
+        /* Story Visual */
+        .story-visual {
+            order: 2;
+        }
+
+        .visual-card {
+            background: linear-gradient(135deg, #4F46E5, #6366F1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .visual-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .visual-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .visual-metric {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .visual-label {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .visual-details {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .detail-block {
+            text-align: center;
+        }
+
+        .detail-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-label {
+            font-size: 0.8125rem;
+            opacity: 0.8;
+        }
+
+        /* Timeline Version */
+        .timeline-block {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 3rem;
+            top: 6rem;
+            bottom: 3rem;
+            width: 2px;
+            background: linear-gradient(180deg, #4F46E5, #E5E7EB);
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr 300px;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-date {
+            text-align: right;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            position: relative;
+        }
+
+        .timeline-date::after {
+            content: '';
+            position: absolute;
+            right: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: #4F46E5;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #E5E7EB;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.9375rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .timeline-metric {
+            background: #F3F4F6;
+            padding: 1.25rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .timeline-metric-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #4F46E5;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-metric-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            font-weight: 500;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;storytelling-container&quot;&gt;
+        &lt;!-- Story Block 1 --&gt;
+        &lt;div class=&quot;story-block&quot;&gt;
+            &lt;div class=&quot;story-content&quot;&gt;
+                &lt;span class=&quot;story-tag&quot;&gt;
+                    &lt;span&gt;📈&lt;/span&gt;
+                    &lt;span&gt;Conquista Q1&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;h2 class=&quot;story-title&quot;&gt;Superamos todas as expectativas no primeiro trimestre&lt;/h2&gt;
+                &lt;p class=&quot;story-description&quot;&gt;
+                    Com &lt;strong&gt;R$ 2.8M em receita&lt;/strong&gt;, alcan&ccedil;amos o melhor resultado da hist&oacute;ria da empresa. 
+                    Esse crescimento foi impulsionado por uma estrat&eacute;gia focada em &lt;strong&gt;experi&ecirc;ncia do cliente&lt;/strong&gt; 
+                    e &lt;strong&gt;otimiza&ccedil;&atilde;o de processos&lt;/strong&gt;.
+                &lt;/p&gt;
+                &lt;div class=&quot;story-highlight&quot;&gt;
+                    &lt;div class=&quot;highlight-title&quot;&gt;💡 Insight Principal&lt;/div&gt;
+                    &lt;div class=&quot;highlight-text&quot;&gt;
+                        A taxa de reten&ccedil;&atilde;o aumentou 35%, provando que investir em relacionamento com o cliente 
+                        gera resultados sustent&aacute;veis a longo prazo.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;story-stats&quot;&gt;
+                    &lt;div class=&quot;stat-item&quot;&gt;
+                        &lt;div class=&quot;stat-value&quot;&gt;+28.5%&lt;/div&gt;
+                        &lt;div class=&quot;stat-label&quot;&gt;Crescimento vs. Q4&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;stat-item&quot;&gt;
+                        &lt;div class=&quot;stat-value&quot;&gt;1,847&lt;/div&gt;
+                        &lt;div class=&quot;stat-label&quot;&gt;Novos Clientes&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;story-visual&quot;&gt;
+                &lt;div class=&quot;visual-card&quot;&gt;
+                    &lt;div class=&quot;visual-content&quot;&gt;
+                        &lt;div class=&quot;visual-icon&quot;&gt;🚀&lt;/div&gt;
+                        &lt;div class=&quot;visual-metric&quot;&gt;R$ 2.8M&lt;/div&gt;
+                        &lt;div class=&quot;visual-label&quot;&gt;Receita Total Q1 2024&lt;/div&gt;
+                        &lt;div class=&quot;visual-details&quot;&gt;
+                            &lt;div class=&quot;detail-block&quot;&gt;
+                                &lt;div class=&quot;detail-value&quot;&gt;112%&lt;/div&gt;
+                                &lt;div class=&quot;detail-label&quot;&gt;da Meta&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;detail-block&quot;&gt;
+                                &lt;div class=&quot;detail-value&quot;&gt;+R$ 600K&lt;/div&gt;
+                                &lt;div class=&quot;detail-label&quot;&gt;vs. Proje&ccedil;&atilde;o&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Story Block 2 (Reverse) --&gt;
+        &lt;div class=&quot;story-block reverse&quot;&gt;
+            &lt;div class=&quot;story-content&quot;&gt;
+                &lt;span class=&quot;story-tag&quot;&gt;
+                    &lt;span&gt;⭐&lt;/span&gt;
+                    &lt;span&gt;Satisfa&ccedil;&atilde;o Recorde&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;h2 class=&quot;story-title&quot;&gt;Clientes mais felizes, resultados melhores&lt;/h2&gt;
+                &lt;p class=&quot;story-description&quot;&gt;
+                    Nosso &lt;strong&gt;NPS subiu para +72&lt;/strong&gt;, colocando-nos entre as empresas mais bem avaliadas 
+                    do setor. Esse resultado reflete o comprometimento da equipe em entregar 
+                    &lt;strong&gt;qualidade excepcional&lt;/strong&gt; em cada intera&ccedil;&atilde;o.
+                &lt;/p&gt;
+                &lt;p class=&quot;story-description&quot;&gt;
+                    Os clientes destacaram especialmente o &lt;strong&gt;suporte r&aacute;pido&lt;/strong&gt; (tempo m&eacute;dio de resposta 
+                    reduzido em 40%) e a &lt;strong&gt;facilidade de uso&lt;/strong&gt; da plataforma (interface redesenhada 
+                    com base em feedback direto).
+                &lt;/p&gt;
+                &lt;div class=&quot;story-stats&quot;&gt;
+                    &lt;div class=&quot;stat-item&quot;&gt;
+                        &lt;div class=&quot;stat-value&quot;&gt;+72&lt;/div&gt;
+                        &lt;div class=&quot;stat-label&quot;&gt;NPS Score&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;stat-item&quot;&gt;
+                        &lt;div class=&quot;stat-value&quot;&gt;94%&lt;/div&gt;
+                        &lt;div class=&quot;stat-label&quot;&gt;Satisfa&ccedil;&atilde;o Geral&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;story-visual&quot;&gt;
+                &lt;div class=&quot;visual-card&quot; style=&quot;background: linear-gradient(135deg, #10B981, #34D399);&quot;&gt;
+                    &lt;div class=&quot;visual-content&quot;&gt;
+                        &lt;div class=&quot;visual-icon&quot;&gt;🎯&lt;/div&gt;
+                        &lt;div class=&quot;visual-metric&quot;&gt;+72&lt;/div&gt;
+                        &lt;div class=&quot;visual-label&quot;&gt;Net Promoter Score&lt;/div&gt;
+                        &lt;div class=&quot;visual-details&quot;&gt;
+                            &lt;div class=&quot;detail-block&quot;&gt;
+                                &lt;div class=&quot;detail-value&quot;&gt;68%&lt;/div&gt;
+                                &lt;div class=&quot;detail-label&quot;&gt;Promotores&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;detail-block&quot;&gt;
+                                &lt;div class=&quot;detail-value&quot;&gt;12%&lt;/div&gt;
+                                &lt;div class=&quot;detail-label&quot;&gt;Detratores&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML = 
+        "
+                     &lt;style&gt;
+        .storytelling-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        /* Story Block */
+        .story-block {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .story-block.reverse {
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        .story-block.reverse .story-content {
+            order: 2;
+        }
+
+        .story-block.reverse .story-visual {
+            order: 1;
+        }
+
+        .story-content {
+            order: 1;
+        }
+
+        .story-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            border-radius: 20px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #4F46E5;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .story-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+
+        .story-description {
+            font-size: 1.0625rem;
+            color: #4B5563;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .story-description strong {
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .story-highlight {
+            background: linear-gradient(135deg, #FEFCE8, #FEF3C7);
+            border-left: 3px solid #F59E0B;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #D97706;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-text {
+            font-size: 1rem;
+            color: #78350F;
+            line-height: 1.6;
+        }
+
+        .story-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #10B981;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            font-weight: 500;
+        }
+
+        /* Story Visual */
+        .story-visual {
+            order: 2;
+        }
+
+        .visual-card {
+            background: linear-gradient(135deg, #4F46E5, #6366F1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .visual-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .visual-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .visual-metric {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .visual-label {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .visual-details {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .detail-block {
+            text-align: center;
+        }
+
+        .detail-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-label {
+            font-size: 0.8125rem;
+            opacity: 0.8;
+        }
+
+        /* Timeline Version */
+        .timeline-block {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 3rem;
+            top: 6rem;
+            bottom: 3rem;
+            width: 2px;
+            background: linear-gradient(180deg, #4F46E5, #E5E7EB);
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr 300px;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-date {
+            text-align: right;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            position: relative;
+        }
+
+        .timeline-date::after {
+            content: '';
+            position: absolute;
+            right: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: #4F46E5;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #E5E7EB;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.9375rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .timeline-metric {
+            background: #F3F4F6;
+            padding: 1.25rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .timeline-metric-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #4F46E5;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-metric-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            font-weight: 500;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class='storytelling-container'&gt;
+        &lt;!-- Story Block 1 --&gt;
+        &lt;div class='story-block'&gt;
+            &lt;div class='story-content'&gt;
+                &lt;span class='story-tag'&gt;
+                    &lt;span&gt;📈&lt;/span&gt;
+                    &lt;span&gt;Conquista "& [InserirSuaMedida] &"&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;h2 class='story-title'&gt;Superamos todas as expectativas no primeiro trimestre&lt;/h2&gt;
+                &lt;p class='story-description'&gt;
+                    Com &lt;strong&gt;R$ "& [InserirSuaMedida] &" em receita&lt;/strong&gt;, alcan&ccedil;amos o melhor resultado da hist&oacute;ria da empresa. 
+                    Esse crescimento foi impulsionado por uma estrat&eacute;gia focada em &lt;strong&gt;experi&ecirc;ncia do cliente&lt;/strong&gt; 
+                    e &lt;strong&gt;otimiza&ccedil;&atilde;o de processos&lt;/strong&gt;.
+                &lt;/p&gt;
+                &lt;div class='story-highlight'&gt;
+                    &lt;div class='highlight-title'&gt;💡 Insight Principal&lt;/div&gt;
+                    &lt;div class='highlight-text'&gt;
+                        A taxa de reten&ccedil;&atilde;o aumentou "& [InserirSuaMedida] &"%, provando que investir em relacionamento com o cliente 
+                        gera resultados sustent&aacute;veis a longo prazo.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class='story-stats'&gt;
+                    &lt;div class='stat-item'&gt;
+                        &lt;div class='stat-value'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+                        &lt;div class='stat-label'&gt;Crescimento vs. Q4&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class='stat-item'&gt;
+                        &lt;div class='stat-value'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+                        &lt;div class='stat-label'&gt;Novos Clientes&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class='story-visual'&gt;
+                &lt;div class='visual-card'&gt;
+                    &lt;div class='visual-content'&gt;
+                        &lt;div class='visual-icon'&gt;🚀&lt;/div&gt;
+                        &lt;div class='visual-metric'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+                        &lt;div class='visual-label'&gt;Receita Total "& [InserirSuaMedida] &"&lt;/div&gt;
+                        &lt;div class='visual-details'&gt;
+                            &lt;div class='detail-block'&gt;
+                                &lt;div class='detail-value'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+                                &lt;div class='detail-label'&gt;da Meta&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class='detail-block'&gt;
+                                &lt;div class='detail-value'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+                                &lt;div class='detail-label'&gt;vs. Proje&ccedil;&atilde;o&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Story Block 2 (Reverse) --&gt;
+        &lt;div class='story-block reverse'&gt;
+            &lt;div class='story-content'&gt;
+                &lt;span class='story-tag'&gt;
+                    &lt;span&gt;⭐&lt;/span&gt;
+                    &lt;span&gt;Satisfa&ccedil;&atilde;o Recorde&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;h2 class='story-title'&gt;Clientes mais felizes, resultados melhores&lt;/h2&gt;
+                &lt;p class='story-description'&gt;
+                    Nosso &lt;strong&gt;NPS subiu para "& [InserirSuaMedida] &"&lt;/strong&gt;, colocando-nos entre as empresas mais bem avaliadas 
+                    do setor. Esse resultado reflete o comprometimento da equipe em entregar 
+                    &lt;strong&gt;qualidade excepcional&lt;/strong&gt; em cada intera&ccedil;&atilde;o.
+                &lt;/p&gt;
+                &lt;p class='story-description'&gt;
+                    Os clientes destacaram especialmente o &lt;strong&gt;suporte r&aacute;pido&lt;/strong&gt; (tempo m&eacute;dio de resposta 
+                    reduzido em 40%) e a &lt;strong&gt;facilidade de uso&lt;/strong&gt; da plataforma (interface redesenhada 
+                    com base em feedback direto).
+                &lt;/p&gt;
+                &lt;div class='story-stats'&gt;
+                    &lt;div class='stat-item'&gt;
+                        &lt;div class='stat-value'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+                        &lt;div class='stat-label'&gt;NPS Score&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class='stat-item'&gt;
+                        &lt;div class='stat-value'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+                        &lt;div class='stat-label'&gt;Satisfa&ccedil;&atilde;o Geral&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class='story-visual'&gt;
+                &lt;div class='visual-card' style='background: linear-gradient(135deg, #10B981, #34D399);'&gt;
+                    &lt;div class='visual-content'&gt;
+                        &lt;div class='visual-icon'&gt;🎯&lt;/div&gt;
+                        &lt;div class='visual-metric'&gt;"& [InserirSuaMedida] &"&lt;/div&gt;
+                        &lt;div class='visual-label'&gt;Net Promoter Score&lt;/div&gt;
+                        &lt;div class='visual-details'&gt;
+                            &lt;div class='detail-block'&gt;
+                                &lt;div class='detail-value'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+                                &lt;div class='detail-label'&gt;Promotores&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class='detail-block'&gt;
+                                &lt;div class='detail-value'&gt;"& [InserirSuaMedida] &"%&lt;/div&gt;
+                                &lt;div class='detail-label'&gt;Detratores&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+      <!-- ############# Proximo Card #############-->
+          <!-- BLOCO DO CARD -->
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+    <style>
+        .comparative-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: #6B7280;
+        }
+
+        .comparative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .comparative-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparative-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .comparative-card.winner::before {
+            background: linear-gradient(90deg, #10B981, #34D399);
+        }
+
+        .comparative-card.challenger::before {
+            background: linear-gradient(90deg, #6B7280, #9CA3AF);
+        }
+
+        .comparative-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+        }
+
+        .winner .card-icon {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .challenger .card-icon {
+            background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .card-badge {
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .winner .card-badge {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .challenger .card-badge {
+            background: #F3F4F6;
+            color: #6B7280;
+        }
+
+        .main-metric {
+            margin-bottom: 2rem;
+        }
+
+        .metric-label {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .winner .metric-value {
+            color: #10B981;
+        }
+
+        .challenger .metric-value {
+            color: #6B7280;
+        }
+
+        .metric-trend {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .metric-trend.positive {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .metric-trend.negative {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .metric-trend.neutral {
+            background: #F3F4F6;
+            color: #6B7280;
+        }
+
+        .details-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid #F3F4F6;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-size: 0.9375rem;
+            color: #6B7280;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #F3F4F6;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 1.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .winner .progress-fill {
+            background: linear-gradient(90deg, #10B981, #34D399);
+        }
+
+        .challenger .progress-fill {
+            background: linear-gradient(90deg, #6B7280, #9CA3AF);
+        }
+
+        .comparison-footer {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #10B981;
+        }
+    </style>
+
+    <div class="comparative-container">
+        <div class="section-header">
+            <h2 class="section-title">Comparativo de Performance</h2>
+            <p class="section-subtitle">Análise lado a lado: Região Sudeste vs Sul • Q1 2024</p>
+        </div>
+
+        <div class="comparative-grid">
+            <!-- Card Vencedor -->
+            <div class="comparative-card winner">
+                <div class="card-header">
+                    <div class="card-title-wrapper">
+                        <div class="card-icon">🏆</div>
+                        <h3 class="card-title">Região Sudeste</h3>
+                    </div>
+                    <span class="card-badge">Líder</span>
+                </div>
+
+                <div class="main-metric">
+                    <div class="metric-label">Receita Total</div>
+                    <div class="metric-value">R$ 1.8M</div>
+                    <span class="metric-trend positive">
+                        <span>↑</span>
+                        <span>+28.5%</span>
+                    </span>
+                </div>
+
+                <ul class="details-list">
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>👥</span>
+                            <span>Novos Clientes</span>
+                        </span>
+                        <span class="detail-value">1,847</span>
+                    </li>
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>💳</span>
+                            <span>Ticket Médio</span>
+                        </span>
+                        <span class="detail-value">R$ 742</span>
+                    </li>
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>🎯</span>
+                            <span>Taxa de Conversão</span>
+                        </span>
+                        <span class="detail-value">22.4%</span>
+                    </li>
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>⭐</span>
+                            <span>NPS</span>
+                        </span>
+                        <span class="detail-value">+78</span>
+                    </li>
+                </ul>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+            </div>
+
+            <!-- Card Desafiante -->
+            <div class="comparative-card challenger">
+                <div class="card-header">
+                    <div class="card-title-wrapper">
+                        <div class="card-icon">📊</div>
+                        <h3 class="card-title">Região Sul</h3>
+                    </div>
+                    <span class="card-badge">2º Lugar</span>
+                </div>
+
+                <div class="main-metric">
+                    <div class="metric-label">Receita Total</div>
+                    <div class="metric-value">R$ 1.2M</div>
+                    <span class="metric-trend positive">
+                        <span>↑</span>
+                        <span>+15.2%</span>
+                    </span>
+                </div>
+
+                <ul class="details-list">
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>👥</span>
+                            <span>Novos Clientes</span>
+                        </span>
+                        <span class="detail-value">1,245</span>
+                    </li>
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>💳</span>
+                            <span>Ticket Médio</span>
+                        </span>
+                        <span class="detail-value">R$ 628</span>
+                    </li>
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>🎯</span>
+                            <span>Taxa de Conversão</span>
+                        </span>
+                        <span class="detail-value">18.7%</span>
+                    </li>
+                    <li class="detail-item">
+                        <span class="detail-label">
+                            <span>⭐</span>
+                            <span>NPS</span>
+                        </span>
+                        <span class="detail-value">+68</span>
+                    </li>
+                </ul>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 67%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-footer">
+            <div class="footer-title">Diferença entre as regiões</div>
+            <div class="footer-value">+R$ 600K (50% superior)</div>
+        </div>
+    </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                    &lt;style&gt;
+        .comparative-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: #6B7280;
+        }
+
+        .comparative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .comparative-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparative-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .comparative-card.winner::before {
+            background: linear-gradient(90deg, #10B981, #34D399);
+        }
+
+        .comparative-card.challenger::before {
+            background: linear-gradient(90deg, #6B7280, #9CA3AF);
+        }
+
+        .comparative-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+        }
+
+        .winner .card-icon {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .challenger .card-icon {
+            background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .card-badge {
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .winner .card-badge {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .challenger .card-badge {
+            background: #F3F4F6;
+            color: #6B7280;
+        }
+
+        .main-metric {
+            margin-bottom: 2rem;
+        }
+
+        .metric-label {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .winner .metric-value {
+            color: #10B981;
+        }
+
+        .challenger .metric-value {
+            color: #6B7280;
+        }
+
+        .metric-trend {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .metric-trend.positive {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .metric-trend.negative {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .metric-trend.neutral {
+            background: #F3F4F6;
+            color: #6B7280;
+        }
+
+        .details-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid #F3F4F6;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-size: 0.9375rem;
+            color: #6B7280;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #F3F4F6;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 1.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .winner .progress-fill {
+            background: linear-gradient(90deg, #10B981, #34D399);
+        }
+
+        .challenger .progress-fill {
+            background: linear-gradient(90deg, #6B7280, #9CA3AF);
+        }
+
+        .comparison-footer {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #10B981;
+        }
+    &lt;/style&gt;
+
+    &lt;div class=&quot;comparative-container&quot;&gt;
+        &lt;div class=&quot;section-header&quot;&gt;
+            &lt;h2 class=&quot;section-title&quot;&gt;Comparativo de Performance&lt;/h2&gt;
+            &lt;p class=&quot;section-subtitle&quot;&gt;An&aacute;lise lado a lado: Regi&atilde;o Sudeste vs Sul &bull; Q1 2024&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;comparative-grid&quot;&gt;
+            &lt;!-- Card Vencedor --&gt;
+            &lt;div class=&quot;comparative-card winner&quot;&gt;
+                &lt;div class=&quot;card-header&quot;&gt;
+                    &lt;div class=&quot;card-title-wrapper&quot;&gt;
+                        &lt;div class=&quot;card-icon&quot;&gt;🏆&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Regi&atilde;o Sudeste&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;card-badge&quot;&gt;L&iacute;der&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;main-metric&quot;&gt;
+                    &lt;div class=&quot;metric-label&quot;&gt;Receita Total&lt;/div&gt;
+                    &lt;div class=&quot;metric-value&quot;&gt;R$ 1.8M&lt;/div&gt;
+                    &lt;span class=&quot;metric-trend positive&quot;&gt;
+                        &lt;span&gt;&uarr;&lt;/span&gt;
+                        &lt;span&gt;+28.5%&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;ul class=&quot;details-list&quot;&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;👥&lt;/span&gt;
+                            &lt;span&gt;Novos Clientes&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;1,847&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;💳&lt;/span&gt;
+                            &lt;span&gt;Ticket M&eacute;dio&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;R$ 742&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;🎯&lt;/span&gt;
+                            &lt;span&gt;Taxa de Convers&atilde;o&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;22.4%&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;⭐&lt;/span&gt;
+                            &lt;span&gt;NPS&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;+78&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class=&quot;progress-bar&quot;&gt;
+                    &lt;div class=&quot;progress-fill&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Card Desafiante --&gt;
+            &lt;div class=&quot;comparative-card challenger&quot;&gt;
+                &lt;div class=&quot;card-header&quot;&gt;
+                    &lt;div class=&quot;card-title-wrapper&quot;&gt;
+                        &lt;div class=&quot;card-icon&quot;&gt;📊&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Regi&atilde;o Sul&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;card-badge&quot;&gt;2&ordm; Lugar&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;main-metric&quot;&gt;
+                    &lt;div class=&quot;metric-label&quot;&gt;Receita Total&lt;/div&gt;
+                    &lt;div class=&quot;metric-value&quot;&gt;R$ 1.2M&lt;/div&gt;
+                    &lt;span class=&quot;metric-trend positive&quot;&gt;
+                        &lt;span&gt;&uarr;&lt;/span&gt;
+                        &lt;span&gt;+15.2%&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;ul class=&quot;details-list&quot;&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;👥&lt;/span&gt;
+                            &lt;span&gt;Novos Clientes&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;1,245&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;💳&lt;/span&gt;
+                            &lt;span&gt;Ticket M&eacute;dio&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;R$ 628&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;🎯&lt;/span&gt;
+                            &lt;span&gt;Taxa de Convers&atilde;o&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;18.7%&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;detail-item&quot;&gt;
+                        &lt;span class=&quot;detail-label&quot;&gt;
+                            &lt;span&gt;⭐&lt;/span&gt;
+                            &lt;span&gt;NPS&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class=&quot;detail-value&quot;&gt;+68&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class=&quot;progress-bar&quot;&gt;
+                    &lt;div class=&quot;progress-fill&quot; style=&quot;width: 67%;&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;comparison-footer&quot;&gt;
+            &lt;div class=&quot;footer-title&quot;&gt;Diferen&ccedil;a entre as regi&otilde;es&lt;/div&gt;
+            &lt;div class=&quot;footer-value&quot;&gt;+R$ 600K (50% superior)&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML = 
+        "
+                    &lt;style&gt;
+        .comparative-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: #6B7280;
+        }
+
+        .comparative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .comparative-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparative-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .comparative-card.winner::before {
+            background: linear-gradient(90deg, #10B981, #34D399);
+        }
+
+        .comparative-card.challenger::before {
+            background: linear-gradient(90deg, #6B7280, #9CA3AF);
+        }
+
+        .comparative-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+        }
+
+        .winner .card-icon {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .challenger .card-icon {
+            background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .card-badge {
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .winner .card-badge {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .challenger .card-badge {
+            background: #F3F4F6;
+            color: #6B7280;
+        }
+
+        .main-metric {
+            margin-bottom: 2rem;
+        }
+
+        .metric-label {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .winner .metric-value {
+            color: #10B981;
+        }
+
+        .challenger .metric-value {
+            color: #6B7280;
+        }
+
+        .metric-trend {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .metric-trend.positive {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .metric-trend.negative {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .metric-trend.neutral {
+            background: #F3F4F6;
+            color: #6B7280;
+        }
+
+        .details-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid #F3F4F6;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-size: 0.9375rem;
+            color: #6B7280;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #F3F4F6;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 1.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .winner .progress-fill {
+            background: linear-gradient(90deg, #10B981, #34D399);
+        }
+
+        .challenger .progress-fill {
+            background: linear-gradient(90deg, #6B7280, #9CA3AF);
+        }
+
+        .comparison-footer {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #10B981;
+        }
+    &lt;/style&gt;
+
+    &lt;div class='comparative-container'&gt;
+        &lt;div class='section-header'&gt;
+            &lt;h2 class='section-title'&gt;Comparativo de Performance&lt;/h2&gt;
+            &lt;p class='section-subtitle'&gt;An&aacute;lise lado a lado: Regi&atilde;o Sudeste vs Sul &bull; Q1 2024&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class='comparative-grid'&gt;
+            &lt;!-- Card Vencedor --&gt;
+            &lt;div class='comparative-card winner'&gt;
+                &lt;div class='card-header'&gt;
+                    &lt;div class='card-title-wrapper'&gt;
+                        &lt;div class='card-icon'&gt;🏆&lt;/div&gt;
+                        &lt;h3 class='card-title'&gt;Regi&atilde;o Sudeste&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;span class='card-badge'&gt;L&iacute;der&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class='main-metric'&gt;
+                    &lt;div class='metric-label'&gt;Receita Total&lt;/div&gt;
+                    &lt;div class='metric-value'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+                    &lt;span class='metric-trend positive'&gt;
+                        &lt;span&gt;&uarr;&lt;/span&gt;
+                        &lt;span&gt;+28.5%&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;ul class='details-list'&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;👥&lt;/span&gt;
+                            &lt;span&gt;Novos Clientes&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;"& [InserirSuaMedida] &"&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;💳&lt;/span&gt;
+                            &lt;span&gt;Ticket M&eacute;dio&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;🎯&lt;/span&gt;
+                            &lt;span&gt;Taxa de Convers&atilde;o&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;"& [InserirSuaMedida] &"%&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;⭐&lt;/span&gt;
+                            &lt;span&gt;NPS&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;"& [InserirSuaMedida] &"&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class='progress-bar'&gt;
+                    &lt;div class='progress-fill' style='width: 100%;'&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Card Desafiante --&gt;
+            &lt;div class='comparative-card challenger'&gt;
+                &lt;div class='card-header'&gt;
+                    &lt;div class='card-title-wrapper'&gt;
+                        &lt;div class='card-icon'&gt;📊&lt;/div&gt;
+                        &lt;h3 class='card-title'&gt;Regi&atilde;o Sul&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;span class='card-badge'&gt;"& [InserirSuaMedida] &"&ordm;&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class='main-metric'&gt;
+                    &lt;div class='metric-label'&gt;Receita Total&lt;/div&gt;
+                    &lt;div class='metric-value'&gt;R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+                    &lt;span class='metric-trend positive'&gt;
+                        &lt;span&gt;&uarr;&lt;/span&gt;
+                        &lt;span&gt;+15.2%&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;ul class='details-list'&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;👥&lt;/span&gt;
+                            &lt;span&gt;Novos Clientes&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;"& [InserirSuaMedida] &"&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;💳&lt;/span&gt;
+                            &lt;span&gt;Ticket M&eacute;dio&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;🎯&lt;/span&gt;
+                            &lt;span&gt;Taxa de Convers&atilde;o&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;"& [InserirSuaMedida] &"%&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class='detail-item'&gt;
+                        &lt;span class='detail-label'&gt;
+                            &lt;span&gt;⭐&lt;/span&gt;
+                            &lt;span&gt;NPS&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;span class='detail-value'&gt;"& [InserirSuaMedida] &"&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class='progress-bar'&gt;
+                    &lt;div class='progress-fill' style='width: 67%;'&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class='comparison-footer'&gt;
+            &lt;div class='footer-title'&gt;Diferen&ccedil;a entre as regi&otilde;es&lt;/div&gt;
+            &lt;div class='footer-value'&gt;+R$ "& [InserirSuaMedida] &"&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+
+      <!-- ############# Proximo Card #############-->
+          <!-- BLOCO DO CARD -->
+            <section class="component-block mb-5">
+
+              <!-- PREVIEW E CÓDIGO -->
+              <div class="component-row">
+                <!-- CARD VISUAL -->
+    <style>
+        .highlights-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .highlight-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid transparent;
+        }
+
+        .highlight-card.positive {
+            border-top-color: #10B981;
+        }
+
+        .highlight-card.negative {
+            border-top-color: #EF4444;
+        }
+
+        .highlight-header {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .positive .highlight-icon {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .negative .highlight-icon {
+            background: linear-gradient(135deg, #FEF2F2, #FEE2E2);
+        }
+
+        .highlight-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-subtitle {
+            font-size: 0.8125rem;
+            color: #6B7280;
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .highlight-item:hover {
+            background: #F3F4F6;
+            transform: translateX(4px);
+        }
+
+        .highlight-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .positive .item-badge {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .negative .item-badge {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.375rem;
+        }
+
+        .item-description {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            line-height: 1.5;
+        }
+
+        .item-metric {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.25rem 0.625rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .positive .item-metric {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .negative .item-metric {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .highlight-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #F3F4F6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+        }
+
+        .footer-value {
+            font-size: 0.9375rem;
+            font-weight: 700;
+        }
+
+        .positive .footer-value {
+            color: #10B981;
+        }
+
+        .negative .footer-value {
+            color: #EF4444;
+        }
+    </style>
+
+    <div class="highlights-container">
+        <!-- Pontos Positivos -->
+        <div class="highlight-card positive">
+            <div class="highlight-header">
+                <div class="highlight-icon">✅</div>
+                <div>
+                    <div class="highlight-title">Pontos Positivos</div>
+                    <div class="highlight-subtitle">Destaques do período</div>
+                </div>
+            </div>
+            <ul class="highlight-list">
+                <li class="highlight-item">
+                    <div class="item-badge">1</div>
+                    <div class="item-content">
+                        <div class="item-title">Recorde de vendas mensais</div>
+                        <div class="item-description">
+                            Superamos a meta em 28%, atingindo o melhor resultado dos últimos 12 meses
+                        </div>
+                        <span class="item-metric">↑ +R$ 425K</span>
+                    </div>
+                </li>
+                <li class="highlight-item">
+                    <div class="item-badge">2</div>
+                    <div class="item-content">
+                        <div class="item-title">NPS em alta</div>
+                        <div class="item-description">
+                            Satisfação dos clientes subiu de 72 para 86 pontos, maior índice do ano
+                        </div>
+                        <span class="item-metric">↑ +19.4%</span>
+                    </div>
+                </li>
+                <li class="highlight-item">
+                    <div class="item-badge">3</div>
+                    <div class="item-content">
+                        <div class="item-title">Redução de custos operacionais</div>
+                        <div class="item-description">
+                            Otimização de processos resultou em economia significativa no trimestre
+                        </div>
+                        <span class="item-metric">↓ -15.3%</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="highlight-footer">
+                <span class="footer-label">Impacto total estimado</span>
+                <span class="footer-value">+R$ 1.2M</span>
+            </div>
+        </div>
+
+        <!-- Pontos de Atenção -->
+        <div class="highlight-card negative">
+            <div class="highlight-header">
+                <div class="highlight-icon">⚠️</div>
+                <div>
+                    <div class="highlight-title">Pontos de Atenção</div>
+                    <div class="highlight-subtitle">Requer monitoramento</div>
+                </div>
+            </div>
+            <ul class="highlight-list">
+                <li class="highlight-item">
+                    <div class="item-badge">1</div>
+                    <div class="item-content">
+                        <div class="item-title">Queda na taxa de conversão</div>
+                        <div class="item-description">
+                            Conversão de leads caiu 12% comparado ao mês anterior, necessita análise detalhada
+                        </div>
+                        <span class="item-metric">↓ -12.5%</span>
+                    </div>
+                </li>
+                <li class="highlight-item">
+                    <div class="item-badge">2</div>
+                    <div class="item-content">
+                        <div class="item-title">Aumento no tempo de resposta</div>
+                        <div class="item-description">
+                            Tempo médio de atendimento aumentou de 4h para 7h, afetando satisfação
+                        </div>
+                        <span class="item-metric">↑ +75%</span>
+                    </div>
+                </li>
+                <li class="highlight-item">
+                    <div class="item-badge">3</div>
+                    <div class="item-content">
+                        <div class="item-title">Estoque acima do planejado</div>
+                        <div class="item-description">
+                            Produtos com giro lento acumulando, impactando capital de giro
+                        </div>
+                        <span class="item-metric">↑ +32%</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="highlight-footer">
+                <span class="footer-label">Impacto estimado se não corrigido</span>
+                <span class="footer-value">-R$ 680K</span>
+            </div>
+        </div>
+    </div>
+                <!-- CÓDIGO (INICIALMENTE OCULTO) -->
+                <div class="code-panel bg-dark rounded-4 p-3 d-none">
+                    
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-light toggle-view active" data-type="html">HTML</button>
+                      <button class="btn btn-sm btn-outline-light toggle-view" data-type="powerbi">Power BI</button>
+                    </div>
+                    <button class="copy-btn" title="Copiar código">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ccc" viewBox="0 0 16 16">
+                        <path d="M10 1.5v1H3a1 1 0 0 0-1 1v9h1v-9h7V1.5z"/>
+                        <path d="M5 4.5A1.5 1.5 0 0 0 3.5 6v8A1.5 1.5 0 0 0 5 15.5h7A1.5 1.5 0 0 0 13.5 14V6A1.5 1.5 0 0 0 12 4.5H5zM5 6h7v8H5V6z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <pre class="m-0"><code class="language-html html-code">
+                     &lt;style&gt;
+        .highlights-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .highlight-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid transparent;
+        }
+
+        .highlight-card.positive {
+            border-top-color: #10B981;
+        }
+
+        .highlight-card.negative {
+            border-top-color: #EF4444;
+        }
+
+        .highlight-header {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .positive .highlight-icon {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .negative .highlight-icon {
+            background: linear-gradient(135deg, #FEF2F2, #FEE2E2);
+        }
+
+        .highlight-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-subtitle {
+            font-size: 0.8125rem;
+            color: #6B7280;
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .highlight-item:hover {
+            background: #F3F4F6;
+            transform: translateX(4px);
+        }
+
+        .highlight-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .positive .item-badge {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .negative .item-badge {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.375rem;
+        }
+
+        .item-description {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            line-height: 1.5;
+        }
+
+        .item-metric {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.25rem 0.625rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .positive .item-metric {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .negative .item-metric {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .highlight-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #F3F4F6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+        }
+
+        .footer-value {
+            font-size: 0.9375rem;
+            font-weight: 700;
+        }
+
+        .positive .footer-value {
+            color: #10B981;
+        }
+
+        .negative .footer-value {
+            color: #EF4444;
+        }
+    &lt;/style&gt;
+
+    &lt;div class=&quot;highlights-container&quot;&gt;
+        &lt;!-- Pontos Positivos --&gt;
+        &lt;div class=&quot;highlight-card positive&quot;&gt;
+            &lt;div class=&quot;highlight-header&quot;&gt;
+                &lt;div class=&quot;highlight-icon&quot;&gt;✅&lt;/div&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;highlight-title&quot;&gt;Pontos Positivos&lt;/div&gt;
+                    &lt;div class=&quot;highlight-subtitle&quot;&gt;Destaques do per&iacute;odo&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;highlight-list&quot;&gt;
+                &lt;li class=&quot;highlight-item&quot;&gt;
+                    &lt;div class=&quot;item-badge&quot;&gt;1&lt;/div&gt;
+                    &lt;div class=&quot;item-content&quot;&gt;
+                        &lt;div class=&quot;item-title&quot;&gt;Recorde de vendas mensais&lt;/div&gt;
+                        &lt;div class=&quot;item-description&quot;&gt;
+                            Superamos a meta em 28%, atingindo o melhor resultado dos &uacute;ltimos 12 meses
+                        &lt;/div&gt;
+                        &lt;span class=&quot;item-metric&quot;&gt;&uarr; +R$ 425K&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;highlight-item&quot;&gt;
+                    &lt;div class=&quot;item-badge&quot;&gt;2&lt;/div&gt;
+                    &lt;div class=&quot;item-content&quot;&gt;
+                        &lt;div class=&quot;item-title&quot;&gt;NPS em alta&lt;/div&gt;
+                        &lt;div class=&quot;item-description&quot;&gt;
+                            Satisfa&ccedil;&atilde;o dos clientes subiu de 72 para 86 pontos, maior &iacute;ndice do ano
+                        &lt;/div&gt;
+                        &lt;span class=&quot;item-metric&quot;&gt;&uarr; +19.4%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;highlight-item&quot;&gt;
+                    &lt;div class=&quot;item-badge&quot;&gt;3&lt;/div&gt;
+                    &lt;div class=&quot;item-content&quot;&gt;
+                        &lt;div class=&quot;item-title&quot;&gt;Redu&ccedil;&atilde;o de custos operacionais&lt;/div&gt;
+                        &lt;div class=&quot;item-description&quot;&gt;
+                            Otimiza&ccedil;&atilde;o de processos resultou em economia significativa no trimestre
+                        &lt;/div&gt;
+                        &lt;span class=&quot;item-metric&quot;&gt;&darr; -15.3%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;highlight-footer&quot;&gt;
+                &lt;span class=&quot;footer-label&quot;&gt;Impacto total estimado&lt;/span&gt;
+                &lt;span class=&quot;footer-value&quot;&gt;+R$ 1.2M&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Pontos de Aten&ccedil;&atilde;o --&gt;
+        &lt;div class=&quot;highlight-card negative&quot;&gt;
+            &lt;div class=&quot;highlight-header&quot;&gt;
+                &lt;div class=&quot;highlight-icon&quot;&gt;⚠️&lt;/div&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;highlight-title&quot;&gt;Pontos de Aten&ccedil;&atilde;o&lt;/div&gt;
+                    &lt;div class=&quot;highlight-subtitle&quot;&gt;Requer monitoramento&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;highlight-list&quot;&gt;
+                &lt;li class=&quot;highlight-item&quot;&gt;
+                    &lt;div class=&quot;item-badge&quot;&gt;1&lt;/div&gt;
+                    &lt;div class=&quot;item-content&quot;&gt;
+                        &lt;div class=&quot;item-title&quot;&gt;Queda na taxa de convers&atilde;o&lt;/div&gt;
+                        &lt;div class=&quot;item-description&quot;&gt;
+                            Convers&atilde;o de leads caiu 12% comparado ao m&ecirc;s anterior, necessita an&aacute;lise detalhada
+                        &lt;/div&gt;
+                        &lt;span class=&quot;item-metric&quot;&gt;&darr; -12.5%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;highlight-item&quot;&gt;
+                    &lt;div class=&quot;item-badge&quot;&gt;2&lt;/div&gt;
+                    &lt;div class=&quot;item-content&quot;&gt;
+                        &lt;div class=&quot;item-title&quot;&gt;Aumento no tempo de resposta&lt;/div&gt;
+                        &lt;div class=&quot;item-description&quot;&gt;
+                            Tempo m&eacute;dio de atendimento aumentou de 4h para 7h, afetando satisfa&ccedil;&atilde;o
+                        &lt;/div&gt;
+                        &lt;span class=&quot;item-metric&quot;&gt;&uarr; +75%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;highlight-item&quot;&gt;
+                    &lt;div class=&quot;item-badge&quot;&gt;3&lt;/div&gt;
+                    &lt;div class=&quot;item-content&quot;&gt;
+                        &lt;div class=&quot;item-title&quot;&gt;Estoque acima do planejado&lt;/div&gt;
+                        &lt;div class=&quot;item-description&quot;&gt;
+                            Produtos com giro lento acumulando, impactando capital de giro
+                        &lt;/div&gt;
+                        &lt;span class=&quot;item-metric&quot;&gt;&uarr; +32%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;highlight-footer&quot;&gt;
+                &lt;span class=&quot;footer-label&quot;&gt;Impacto estimado se n&atilde;o corrigido&lt;/span&gt;
+                &lt;span class=&quot;footer-value&quot;&gt;-R$ 680K&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                  </code></pre>
+
+                  <pre class="m-0 d-none"><code class="language-html powerbi-code">
+        Card_HTML = 
+        "
+                     &lt;style&gt;
+        .highlights-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .highlight-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid transparent;
+        }
+
+        .highlight-card.positive {
+            border-top-color: #10B981;
+        }
+
+        .highlight-card.negative {
+            border-top-color: #EF4444;
+        }
+
+        .highlight-header {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .positive .highlight-icon {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .negative .highlight-icon {
+            background: linear-gradient(135deg, #FEF2F2, #FEE2E2);
+        }
+
+        .highlight-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-subtitle {
+            font-size: 0.8125rem;
+            color: #6B7280;
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: #FAFAFA;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .highlight-item:hover {
+            background: #F3F4F6;
+            transform: translateX(4px);
+        }
+
+        .highlight-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .positive .item-badge {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .negative .item-badge {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.375rem;
+        }
+
+        .item-description {
+            font-size: 0.8125rem;
+            color: #6B7280;
+            line-height: 1.5;
+        }
+
+        .item-metric {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.25rem 0.625rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .positive .item-metric {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .negative .item-metric {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .highlight-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #F3F4F6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-label {
+            font-size: 0.8125rem;
+            color: #6B7280;
+        }
+
+        .footer-value {
+            font-size: 0.9375rem;
+            font-weight: 700;
+        }
+
+        .positive .footer-value {
+            color: #10B981;
+        }
+
+        .negative .footer-value {
+            color: #EF4444;
+        }
+    &lt;/style&gt;
+
+    &lt;div class='highlights-container'&gt;
+        &lt;!-- Pontos Positivos --&gt;
+        &lt;div class='highlight-card positive'&gt;
+            &lt;div class='highlight-header'&gt;
+                &lt;div class='highlight-icon'&gt;✅&lt;/div&gt;
+                &lt;div&gt;
+                    &lt;div class='highlight-title'&gt;Pontos Positivos&lt;/div&gt;
+                    &lt;div class='highlight-subtitle'&gt;Destaques do per&iacute;odo&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul class='highlight-list'&gt;
+                &lt;li class='highlight-item'&gt;
+                    &lt;div class='item-badge'&gt;1&lt;/div&gt;
+                    &lt;div class='item-content'&gt;
+                        &lt;div class='item-title'&gt;Recorde de vendas mensais&lt;/div&gt;
+                        &lt;div class='item-description'&gt;
+                            Superamos a meta em "& [InserirSuaMedida] &"%, atingindo o melhor resultado dos &uacute;ltimos 12 meses
+                        &lt;/div&gt;
+                        &lt;span class='item-metric'&gt;&uarr; +R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class='highlight-item'&gt;
+                    &lt;div class='item-badge'&gt;2&lt;/div&gt;
+                    &lt;div class='item-content'&gt;
+                        &lt;div class='item-title'&gt;NPS em alta&lt;/div&gt;
+                        &lt;div class='item-description'&gt;
+                            Satisfa&ccedil;&atilde;o dos clientes subiu de 72 para 86 pontos, maior &iacute;ndice do ano
+                        &lt;/div&gt;
+                        &lt;span class='item-metric'&gt;&uarr; +"& [InserirSuaMedida] &"%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class='highlight-item'&gt;
+                    &lt;div class='item-badge'&gt;3&lt;/div&gt;
+                    &lt;div class='item-content'&gt;
+                        &lt;div class='item-title'&gt;Redu&ccedil;&atilde;o de custos operacionais&lt;/div&gt;
+                        &lt;div class='item-description'&gt;
+                            Otimiza&ccedil;&atilde;o de processos resultou em economia significativa no trimestre
+                        &lt;/div&gt;
+                        &lt;span class='item-metric'&gt;&darr; "& [InserirSuaMedida] &"%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class='highlight-footer'&gt;
+                &lt;span class='footer-label'&gt;Impacto total estimado&lt;/span&gt;
+                &lt;span class='footer-value'&gt;+R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Pontos de Aten&ccedil;&atilde;o --&gt;
+        &lt;div class='highlight-card negative'&gt;
+            &lt;div class='highlight-header'&gt;
+                &lt;div class='highlight-icon'&gt;⚠️&lt;/div&gt;
+                &lt;div&gt;
+                    &lt;div class='highlight-title'&gt;Pontos de Aten&ccedil;&atilde;o&lt;/div&gt;
+                    &lt;div class='highlight-subtitle'&gt;Requer monitoramento&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul class='highlight-list'&gt;
+                &lt;li class='highlight-item'&gt;
+                    &lt;div class='item-badge'&gt;1&lt;/div&gt;
+                    &lt;div class='item-content'&gt;
+                        &lt;div class='item-title'&gt;Queda na taxa de convers&atilde;o&lt;/div&gt;
+                        &lt;div class='item-description'&gt;
+                            Convers&atilde;o de leads caiu "& [InserirSuaMedida] &"% comparado ao m&ecirc;s anterior, necessita an&aacute;lise detalhada
+                        &lt;/div&gt;
+                        &lt;span class='item-metric'&gt;&darr; -"& [InserirSuaMedida] &"%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class='highlight-item'&gt;
+                    &lt;div class='item-badge'&gt;2&lt;/div&gt;
+                    &lt;div class='item-content'&gt;
+                        &lt;div class='item-title'&gt;Aumento no tempo de resposta&lt;/div&gt;
+                        &lt;div class='item-description'&gt;
+                            Tempo m&eacute;dio de atendimento aumentou de 4h para 7h, afetando satisfa&ccedil;&atilde;o
+                        &lt;/div&gt;
+                        &lt;span class='item-metric'&gt;&uarr; "& [InserirSuaMedida] &"%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class='highlight-item'&gt;
+                    &lt;div class='item-badge'&gt;3&lt;/div&gt;
+                    &lt;div class='item-content'&gt;
+                        &lt;div class='item-title'&gt;Estoque acima do planejado&lt;/div&gt;
+                        &lt;div class='item-description'&gt;
+                            Produtos com giro lento acumulando, impactando capital de giro
+                        &lt;/div&gt;
+                        &lt;span class='item-metric'&gt;&uarr; +"& [InserirSuaMedida] &"%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class='highlight-footer'&gt;
+                &lt;span class='footer-label'&gt;Impacto estimado se n&atilde;o corrigido&lt;/span&gt;
+                &lt;span class='footer-value'&gt;-R$ "& [InserirSuaMedida] &"&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        "
+                  </code></pre>
+                </div>
+              </div>
+
+              <!-- RODAPÉ DO CARD -->
+          <div class="component-footer mt-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="creator d-flex align-items-center gap-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+              <a href="https://www.linkedin.com/in/david-deliberto-marques/" target="_blank" class="creator-link">Criado por <strong>Davi Marques</strong></a>
+            </div>
+
+              <!-- BOTÃO ABRIR/FECHAR -->
+              <div class="text-end mt-3">
+                <button class="btn btn-outline-dark btn-sm toggle-code">Abrir código</button>
+              </div>
+            </section>
+
+
+
+
+
+
+          <!-- Fim dos Cards -->
+    </section>
+
+  </main>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+  <script src="/src/js/script.js"></script>
+  <script src="/src/js/componentes.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY77B4ZVWP"></script>
+</body>
+</html>
