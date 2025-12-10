@@ -1,4 +1,4 @@
-# 💎 UI Power Pack para Power BI
+# UI Power Pack para Power BI
 
 Transforme dashboards em **experiências visuais premium**.
 
@@ -19,11 +19,11 @@ Este projeto nasceu da ideia de simplificar o uso de HTML dentro do Power BI, of
 
 ## O que você encontra aqui
 
-✅ **Cards visuais** — indicadores, KPIs e métricas com layouts modernos.  
-✅ **Tooltips e tags** — dicas e labels com microanimações.  
-✅ **Tabelas e blocos responsivos** — componentes com hierarquia e contraste visual.  
-✅ **Documentação clara** — exemplos de uso prático com código pronto para colar.  
-✅ **Comparativos visuais** — antes/depois mostrando o impacto do HTML no Power BI.
+**Cards visuais** — indicadores, KPIs e métricas com layouts modernos.  
+**Tooltips e tags** — dicas e labels com microanimações.  
+**Tabelas e blocos responsivos** — componentes com hierarquia e contraste visual.  
+**Documentação clara** — exemplos de uso prático com código pronto para colar.  
+**Comparativos visuais** — antes/depois mostrando o impacto do HTML no Power BI.
 
 ---
 
