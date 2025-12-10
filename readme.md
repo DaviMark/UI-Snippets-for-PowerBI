@@ -8,7 +8,7 @@ Com ele, você pode aplicar **design moderno, tipografia elegante e interativida
 
 ---
 
-## ✨ Objetivo
+## Objetivo
 
 Painéis tradicionais entregam dados.  
 O **UI Power Pack** entrega **experiência**.
@@ -17,7 +17,7 @@ Este projeto nasceu da ideia de simplificar o uso de HTML dentro do Power BI, of
 
 ---
 
-## 🎨 O que você encontra aqui
+## O que você encontra aqui
 
 ✅ **Cards visuais** — indicadores, KPIs e métricas com layouts modernos.  
 ✅ **Tooltips e tags** — dicas e labels com microanimações.  
@@ -27,7 +27,7 @@ Este projeto nasceu da ideia de simplificar o uso de HTML dentro do Power BI, of
 
 ---
 
-## 🧱 Estrutura do projeto
+## Estrutura do projeto
 
 src/
 ┣ 📂 css/ → estilos globais e específicos
@@ -38,7 +38,7 @@ src/
 
 ---
 
-## ⚙️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **HTML5 / CSS3**  
 - **Bootstrap 5.3**  
@@ -49,10 +49,10 @@ src/
 
 ---
 
-## 💡 Como usar
+## Como usar
 
 1. Acesse o site:  
-   👉 [https://visuals-powerbi.vercel.app](https://visuals-powerbi.vercel.app)
+   [https://visuals-powerbi.vercel.app](https://visuals-powerbi.vercel.app)
 
 2. Escolha o componente desejado.  
 3. Copie o código HTML exibido.  
@@ -61,7 +61,7 @@ src/
 
 ---
 
-## 🧠 Por que usar HTML no Power BI?
+## Por que usar HTML no Power BI?
 
 > Um dashboard não precisa apenas informar — ele pode inspirar.
 
@@ -73,12 +73,12 @@ Usar HTML no Power BI permite:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Davi Marques**  
-💼 Desenvolvedor e Designer de Interfaces  
-🌐 [visuals-powerbi.vercel.app](https://visuals-powerbi.vercel.app)  
-📧 contato: davimarques2001@gmail.com
+Desenvolvedor
+[visuals-powerbi.vercel.app](https://visuals-powerbi.vercel.app)  
+contato: davimarques2001@gmail.com
 
 ---
 
