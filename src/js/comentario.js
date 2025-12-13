@@ -118,9 +118,34 @@ async function carregarFeedbacks() {
 
     if (!dados.length) {
       container.innerHTML = `
-        <div style="font-size:13px; color:#6b7280;">
-          Ainda não há comentários. Seja o primeiro.
+        <div style="
+          text-align: center;
+          padding: 36px 16px;
+          border: 1px dashed #e5e7eb;
+          border-radius: 18px;
+          background: linear-gradient(180deg, #ffffff, #fafafa);
+        ">
+          <div style="
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 6px;
+          ">
+            Seja o primeiro a comentar
+          </div>
+
+          <div style="
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            max-width: 420px;
+            margin: 0 auto;
+          ">
+            Sua opinião pode inspirar outros e ajudar a evoluir a plataforma.
+            Compartilhe sua experiência com a comunidade.
+          </div>
         </div>
+
       `;
       return;
     }
