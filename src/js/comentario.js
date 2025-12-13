@@ -121,7 +121,7 @@ async function carregarFeedbacks() {
         <div style="
           text-align: center;
           padding: 36px 16px;
-          border: 1px dashed #e5e7eb;
+          border: 1px dashed #facc15;
           border-radius: 18px;
           background: linear-gradient(180deg, #ffffff, #fafafa);
         ">
