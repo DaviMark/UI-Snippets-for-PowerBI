@@ -1,4 +1,3 @@
-
 const FEEDBACK_URL = 'https://script.google.com/macros/s/AKfycbzJ47LMSwAJWW9XtYsMswegAGZ613xFrfKQfybAnkDSTlSxTQyhKqNEgiNIRlwQhQLJ/exec';
 
 const notyf = new Notyf({
@@ -6,15 +5,48 @@ const notyf = new Notyf({
   position: { x: 'right', y: 'top' }
 });
 
-// Preenche nome salvo ao carregar
+let ordemFeedback = 'new';
+
+/* =======================
+   INIT
+======================= */
 document.addEventListener('DOMContentLoaded', () => {
   const nomeSalvo = localStorage.getItem('feedback_nome');
-  if (nomeSalvo) {
+  if (nomeSalvo && document.getElementById('feedbackName')) {
     document.getElementById('feedbackName').value = nomeSalvo;
   }
+
+  bindOrdenacao();
+  carregarFeedbacks();
 });
 
-document.getElementById('sendFeedback').addEventListener('click', async () => {
+/* =======================
+   FORMATAR DATA (ROBUSTO)
+======================= */
+function formatarDataExibicao(valor) {
+  if (!valor) return '';
+
+  // Já está no formato dd/mm/yyyy
+  if (typeof valor === 'string' && /^\d{2}\/\d{2}\/\d{4}$/.test(valor)) {
+    return valor;
+  }
+
+  // ISO ou Date
+  const data = new Date(valor);
+  if (isNaN(data.getTime())) return String(valor);
+
+  const dia = String(data.getDate()).padStart(2, '0');
+  const mes = String(data.getMonth() + 1).padStart(2, '0');
+  const ano = data.getFullYear();
+
+  return `${dia}/${mes}/${ano}`;
+}
+
+/* =======================
+   ENVIO DE FEEDBACK
+======================= */
+document.getElementById('sendFeedback')?.addEventListener('click', async () => {
+  const btn = document.getElementById('sendFeedback');
   const nomeInput = document.getElementById('feedbackName');
   const comentarioInput = document.getElementById('feedbackMessage');
 
@@ -26,13 +58,15 @@ document.getElementById('sendFeedback').addEventListener('click', async () => {
     return;
   }
 
-  // Salva nome no localStorage
+  btn.disabled = true;
+  btn.innerText = 'Enviando...';
+
   localStorage.setItem('feedback_nome', nome);
 
   const payload = new URLSearchParams({
-    nome: nome,
-    comentario: comentario,
-    data: new Date().toLocaleString()
+    nome,
+    comentario,
+    data: formatarDataExibicao(new Date())
   });
 
   try {
@@ -43,35 +77,53 @@ document.getElementById('sendFeedback').addEventListener('click', async () => {
 
     comentarioInput.value = '';
 
-    const modal = bootstrap.Modal.getInstance(
-      document.getElementById('feedbackModal')
-    );
-    modal.hide();
+    const modalEl = document.getElementById('feedbackModal');
+    if (modalEl) {
+      bootstrap.Modal.getInstance(modalEl)?.hide();
+    }
 
     notyf.success('Feedback enviado com sucesso. Obrigado por contribuir');
 
-    // Recarrega os feedbacks após o envio
     carregarFeedbacks();
+
   } catch (err) {
     console.error(err);
     notyf.error('Erro ao enviar feedback');
+  } finally {
+    btn.disabled = false;
+    btn.innerText = 'Enviar';
   }
 });
 
-let ordemFeedback = 'new'; // padrão de ordenação
-
-// Função para carregar e ordenar feedbacks
+/* =======================
+   CARREGAR FEEDBACKS
+======================= */
 async function carregarFeedbacks() {
+  const loading = document.getElementById('feedbackLoading');
+  const container = document.getElementById('feedbackList');
+  if (!container) return;
+
   try {
+    if (loading) loading.style.display = 'flex';
+    container.innerHTML = '';
+
     const res = await fetch(FEEDBACK_URL);
     let dados = await res.json();
 
     if (ordemFeedback === 'old') {
-      dados = dados.slice().reverse(); // Inverte a ordem para mostrar os mais antigos primeiro
+      dados = dados.slice().reverse();
     }
 
-    const container = document.getElementById('feedbackList');
-    container.innerHTML = ''; // Limpa os feedbacks atuais
+    if (loading) loading.style.display = 'none';
+
+    if (!dados.length) {
+      container.innerHTML = `
+        <div style="font-size:13px; color:#6b7280;">
+          Ainda não há comentários. Seja o primeiro.
+        </div>
+      `;
+      return;
+    }
 
     dados.forEach(item => {
       const card = document.createElement('div');
@@ -83,9 +135,12 @@ async function carregarFeedbacks() {
           </div>
 
           <div class="comment-content">
+            <span class="comment-date">
+              ${formatarDataExibicao(item.data)}
+            </span>
+
             <div class="comment-header">
               <span class="comment-name">${item.nome}</span>
-              <span class="comment-date">${item.data}</span>
             </div>
 
             <div class="comment-text">
@@ -97,25 +152,26 @@ async function carregarFeedbacks() {
 
       container.appendChild(card);
     });
+
   } catch (err) {
+    if (loading) loading.style.display = 'none';
     console.error('Erro ao carregar feedbacks', err);
   }
 }
 
-// Alteração de ordenação ao clicar nos botões
-document.querySelectorAll('.feedback-order-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document
-      .querySelectorAll('.feedback-order-btn')
-      .forEach(b => b.classList.remove('is-active'));
+/* =======================
+   ORDENACAO
+======================= */
+function bindOrdenacao() {
+  document.querySelectorAll('.feedback-order-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document
+        .querySelectorAll('.feedback-order-btn')
+        .forEach(b => b.classList.remove('is-active'));
 
-    btn.classList.add('is-active');
-    ordemFeedback = btn.dataset.order; // Atualiza o estado de ordenação
-
-    carregarFeedbacks(); // Carrega feedbacks na nova ordem
+      btn.classList.add('is-active');
+      ordemFeedback = btn.dataset.order;
+      carregarFeedbacks();
+    });
   });
-});
-
-// Carrega os feedbacks ao inicializar a página
-carregarFeedbacks();
-
+}
