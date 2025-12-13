@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Power Pack — Visuais Premium</title>
+  <link href="/src/imgs/Logo_PowerPack.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="/src/css/componentes.css">
+  <link rel="stylesheet" href="/templates/css/templates.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+  <link rel="stylesheet" href="/templates/css/capa.css">
+  <script src="/templates/js/capa.js"></script>
+  
+</head>
+<body>
+  <style>
+.card-preview {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* Desktop */
+.preview-iframe {
+    width: 660px !important;
+    height: 420px !important;
+    border: none !important;
+    border-radius: 22px !important;
+    transform: scale(0.8) !important;
+    transform-origin: center center !important;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .template-card {
+        width: 100% !important;
+    }
+
+    .preview-iframe {
+        width: 660px !important;
+        height: 420px !important;
+        transform: scale(0.7) !important;
+        transform-origin: center center !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .template-card {
+        width: 70% !important;
+    }
+    .preview-iframe {
+        max-width: 660px !important;
+        height: 380px !important;
+        transform: scale(0.65) !important;
+        transform-origin: center center !important;
+        margin-left: 6% !important;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .template-card {
+        width: 80% !important;
+    }
+    .preview-iframe {
+        max-width: 660px !important;
+        height: 340px !important;
+        transform: scale(0.6) !important;
+        transform-origin: center left !important;
+        margin-left: 8% !important;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 400px) {
+  .template-card {
+        width: 100% !important;
+    }
+    .preview-iframe {
+        max-width: 660px !important;
+        height: 340px !important;
+        transform: scale(0.6) !important;
+        transform-origin: center left !important;
+        margin-left: 6% !important;
+    }
+}
+
+
+
+  </style>
+
+    <!-- NAVBAR -->
+  <nav class="navbar fixed-top shadow-sm bg-white px-4 py-2 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      <img src="/src/imgs/Logo.png" alt="Logo" class="navbar-logo">
+      <h1>UI Power Pack</h1>
+    </div>
+  </nav>
+
+  <div class="wrapper d-flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="p-4 shadow-sm">
+      <ul class="nav flex-column" id="sidebarMenu">
+        <li class="nav-item mb-2">
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsMenu" aria-expanded="false">
+            Componentes
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsMenu">
+            <li><a href="/src/pages/visuais_premium.html" class="nav-link active">Visuais Premium</a></li>
+            <li><a href="/src/pages/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="/src/pages/storytelling.html" class="nav-link">Storytelling</a></li>
+            <li><a href="/src/pages/doc.html" class="nav-link">Documentação</a></li>
+            <li><a href="/src/pages/label.html" class="nav-link">Labels/Tags</a></li>
+            <li><a href="/src/pages/tooltips.html" class="nav-link">Tooltips</a></li>
+            <li><a href="/src/pages/vs_JSON.html" class="nav-link">Gráficos JSON</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsTemp" aria-expanded="false">
+            Templates
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsTemp">
+            <li><a href="/templates/template.html" class="nav-link">Layout</a></li>
+            <li><a href="/templates/capa.html" class="nav-link">Capas</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <button class="nav-link d-flex justify-content-between align-items-center toggle-submenu" data-bs-toggle="collapse" data-bs-target="#componentsDoc" aria-expanded="false">
+            Como usar
+            <span class="caret">▾</span>
+          </button>
+          <ul class="collapse ps-3" id="componentsDoc">
+            <li><a href="/src/pages/como_usar.html" class="nav-link">Visuais HTML</a></li>
+            <li><a href="/src/pages/como_usar_JSON.html" class="nav-link">Visuais JSON</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a href="/src/pages/colaborar.html" class="nav-link">Colaborar</a>
+        </li>
+      </ul>
+
+      <footer class="small text-muted pt-4 mt-auto border-top">
+        Feito por <strong>Davi Marques</strong>
+      </footer>
+    </aside>
+
+  <main id="content" class="flex-grow-1 p-5 shifted">
+    <section class="intro mt-5 ">
+        <p class="text-uppercase small text-muted mb-2">Componentes</p>
+          <h1 class="fw-bold mb-3 display-6">Visuais HTML Premium para Power BI</h1>
+          <p class="lead text-secondary mb-4" style="max-width:100%;">
+            Crie dashboards mais elegantes e profissionais com componentes HTML prontos. 
+          Copie, personalize e use no Power BI para transformar seus relatórios em experiências visuais modernas e interativas.
+          </p>
+          <p class="small text-muted mt-2">
+            Esses visuais são mais complexos tanto na construção quanto na implementação dentro do dashboard. 
+            Por esse motivo, disponibilizamos o arquivo <strong>.PBI</strong> compactado, além de uma 
+            <strong>videoaula curta</strong> logo abaixo, explicando passo a passo a estrutura e o uso correto.
+          </p>
+
+        <div class="container my-5">
+
+        <!-- Seção de Filtros e Pesquisa -->
+        <div class="filter-section mb-5">
+            <!-- Filtros de Categoria -->
+            <div class="category-filters d-flex flex-wrap gap-3 mb-4">
+                <button class="btn filter-btn active" data-filter="todos">Todos</button>
+                <button class="btn filter-btn" data-filter="Kanban">Kanban</button>
+                <button class="btn filter-btn" data-filter="Swinlane">Swinlane</button>
+                <button class="btn filter-btn" data-filter="Heatmap">Heatmap</button>
+            </div>
+
+            <!-- Input de Pesquisa -->
+            <div class="search-input-container shadow-sm p-2 rounded-3">
+                <i class="bi bi-search me-2 text-muted"></i>
+
+                <div class="search-wrapper" style="position: relative;">
+                <input type="text" id="searchInput" class="form-control border-0" placeholder="Buscar templates por título ou tag...">
+                <button
+                  id="clearSearch"
+                  type="button"
+                  style="
+                    position: absolute;
+                    right: -200% !important;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: none;
+                    border: none;
+                    font-size: 12px;
+                    color: #6b7280;
+                    cursor: pointer;
+                    display: none;
+                  ">
+                  APAGAR
+                </button>
+              </div>
+
+                
+            </div>
+        </div>
+
+        <!-- Contador de Templates -->
+        <h2 class="fs-5 mb-4"><span id="templateCount">0</span> Templates Encontrados</h2>
+
+        <!-- Grid de Cards de Templates -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="templateGrid">
+            
+            <!-- Visuais 1 -->
+                <div style="width: 45%;" class="col template-card" data-category="Kanban" data-tags="Kanban-projetos-backlog-em andamento-concluido-detalhes" data-html="/src/componentes/visuais_premium/Kanban1.png">
+                    <div class="dashboard-card">
+                        <span class="card-number">#01</span>
+                        <div class="card-preview">
+                      <img style="max-width: 100%;" src="/src/componentes/visuais_premium/Kanban1.png" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Kanban</h3>
+                            <p class="card-subtitle">Kanban HTML com Status (Backlog, Em Andamento e Concluido), com uma contagem de quantos cards tem sobre cada Status. Cards com detalhes em destaque de Prioridade, Titulo e Descrição da demanda, Responsavel, Data de inicio e Fim.</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+
+                                <a style="  text-decoration: none;" href="/src/arquivos/visuais_premium/Kanban HTML.zip">
+                                  <button class="btn-copy">
+                                      <i class="bi bi-copy"></i>
+                                      <span>Baixar Arquivo</span>
+                                  </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visuais 2 -->
+                <div style="width: 45%;" class="col template-card" data-category="Swinlane" data-tags="Swinlane-setores-cards-progresso-detalhes" data-html="/src/componentes/visuais_premium/Swinlane1.png">
+                    <div class="dashboard-card">
+                        <span class="card-number">#02</span>
+                        <div class="card-preview">
+                      <img style="max-width: 100%;" src="/src/componentes/visuais_premium/Swinlane1.png" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Swinlane</h3>
+                            <p class="card-subtitle">Swinlane HTML separado por Setores com uma contagem de total de tarefas ativas, com cards detalhando o Titulo da tarefa, Responsavel, Prioridade e progresso junto com a barra.</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+
+                                <a style="  text-decoration: none;" href="/src/arquivos/visuais_premium/Swimlane HTML.zip">
+                                  <button class="btn-copy">
+                                      <i class="bi bi-copy"></i>
+                                      <span>Baixar Arquivo</span>
+                                  </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visuais 3 -->
+                <div style="width: 45%;" class="col template-card" data-category="Heatmap" data-tags="Heatmap-dias-semanas-entregas-calendario-detalhes" data-html="/src/componentes/visuais_premium/Heatmap.png">
+                    <div class="dashboard-card">
+                        <span class="card-number">#03</span>
+                        <div class="card-preview">
+                      <img style="max-width: 100%;" src="/src/componentes/visuais_premium/Heatmap.png" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Heatmap de Entrega</h3>
+                            <p class="card-subtitle">Heatmap HTML - Um Calendário para acompanhar quantidade de entregas por dia, Mês e semana. Quanto mais a bolinha estiver pintada, maior é a quantidade de entregas feitas.</p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+
+                                <a style="  text-decoration: none;" href="/src/arquivos/visuais_premium/Heatmap.zip">
+                                  <button class="btn-copy">
+                                      <i class="bi bi-copy"></i>
+                                      <span>Baixar Arquivo</span>
+                                  </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+
+          <!-- Fim dos Cards -->
+        </div>
+    </div>
+
+    </section>
+
+  </main>
+  <!-- Scroll Top -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Voltar ao topo">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+
+  <script src="/src/js/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+  
+  <script src="/src/js/componentes.js"></script>
+  <script src="/templates/js/templates.js"></script>
+
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY77B4ZVWP"></script> -->
+</body>
+</html>

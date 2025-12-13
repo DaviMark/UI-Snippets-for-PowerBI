@@ -1,0 +1,179 @@
+ <style>
+
+        .percentage-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            min-width: 220px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .percentage-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .percentage-card.positive {
+            border-top-color: #10B981;
+        }
+
+        .percentage-card.negative {
+            border-top-color: #EF4444;
+        }
+
+        .percentage-card.neutral {
+            border-top-color: #94A3B8;
+        }
+
+        .percentage-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .positive .percentage-icon {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .negative .percentage-icon {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .neutral .percentage-icon {
+            background: #F1F5F9;
+            color: #64748B;
+        }
+
+        .percentage-label {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .percentage-value {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .positive .percentage-value { color: #10B981; }
+        .negative .percentage-value { color: #EF4444; }
+        .neutral .percentage-value { color: #64748B; }
+
+        .percentage-description {
+            font-size: 0.875rem;
+            color: #9CA3AF;
+        }
+
+        .percentage-details {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #F3F4F6;
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            font-size: 0.6875rem;
+            color: #9CA3AF;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-value {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #111827;
+        }
+    </style>
+    <!-- Variação Positiva -->
+    <div class='percentage-card positive'>
+        <div class='percentage-icon'>📈</div>
+        <div class='percentage-label'>Crescimento</div>
+        <div class='percentage-value'>+28.5%</div>
+        <div class='percentage-description'>Performance acima da meta</div>
+        <div class='percentage-details'>
+            <div class='detail-item'>
+                <div class='detail-label'>Anterior</div>
+                <div class='detail-value'>65.2%</div>
+            </div>
+            <div class='detail-item'>
+                <div class='detail-label'>Atual</div>
+                <div class='detail-value'>83.8%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variação Negativa -->
+    <div class='percentage-card negative'>
+        <div class='percentage-icon'>📉</div>
+        <div class='percentage-label'>Redução</div>
+        <div class='percentage-value'>-12.3%</div>
+        <div class='percentage-description'>Abaixo do esperado</div>
+        <div class='percentage-details'>
+            <div class='detail-item'>
+                <div class='detail-label'>Anterior</div>
+                <div class='detail-value'>94.6%</div>
+            </div>
+            <div class='detail-item'>
+                <div class='detail-label'>Atual</div>
+                <div class='detail-value'>83.0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variação Neutra -->
+    <div class='percentage-card neutral'>
+        <div class='percentage-icon'>➡️</div>
+        <div class='percentage-label'>Estável</div>
+        <div class='percentage-value'>+2.1%</div>
+        <div class='percentage-description'>Dentro da meta</div>
+        <div class='percentage-details'>
+            <div class='detail-item'>
+                <div class='detail-label'>Anterior</div>
+                <div class='detail-value'>78.4%</div>
+            </div>
+            <div class='detail-item'>
+                <div class='detail-label'>Atual</div>
+                <div class='detail-value'>80.0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variação Grande Positiva -->
+    <div class='percentage-card positive'>
+        <div class='percentage-icon'>🚀</div>
+        <div class='percentage-label'>Conversão</div>
+        <div class='percentage-value'>+45.7%</div>
+        <div class='percentage-description'>Resultado excepcional</div>
+        <div class='percentage-details'>
+            <div class='detail-item'>
+                <div class='detail-label'>Anterior</div>
+                <div class='detail-value'>32.5%</div>
+            </div>
+            <div class='detail-item'>
+                <div class='detail-label'>Atual</div>
+                <div class='detail-value'>47.4%</div>
+            </div>
+        </div>
+    </div>

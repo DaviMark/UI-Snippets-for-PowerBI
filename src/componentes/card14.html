@@ -1,0 +1,35 @@
+<div style='background: #1e293b; border-radius: 16px; padding: 28px; color: white; font-family: Segoe UI, sans-serif; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); width: 280px; text-align: center;'>
+                    <div style='font-size: 14px; color: #94a3b8; margin-bottom: 20px;'>CONCLUSÃO DE TAREFAS</div>
+                    <div style='position: relative; width: 140px; height: 140px; margin: 0 auto 20px;'>
+                      <svg width='140' height='140' style='transform: rotate(-90deg);'>
+                        <circle cx='70' cy='70' r='60' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='12'/>
+                        <circle id='progress-circle' cx='70' cy='70' r='60' fill='none' stroke='url(#gradient)' stroke-width='12' stroke-dasharray='377' stroke-dashoffset='377' stroke-linecap='round'/>
+                        <defs>
+                          <linearGradient id='gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+                            <stop offset='0%' style='stop-color:#3b82f6;stop-opacity:1' />
+                            <stop offset='100%' style='stop-color:#8b5cf6;stop-opacity:1' />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <!-- Valor de progresso: Alterar para 80, 90, etc. -->
+                      <div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700;' id='progress-text'>80%</div> 
+                    </div>
+                    <div style='font-size: 14px; color: #94a3b8;'>36 de 45 tarefas concluídas</div>
+                    <div style='margin-top: 16px; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-size: 13px; color: #3b82f6;'>🎯 Faltam apenas 9 tarefas!</div>
+                  </div>
+
+                  <style>
+                    /* Animação do círculo de progresso */
+                    @keyframes grow {
+                       0% {
+                        stroke-dashoffset: 377; /* Começa com o círculo vazio (0%) */
+                      }
+                      100% {
+                        stroke-dashoffset: 75.4; /* Para 80% (377 * 0.80 = 75.4) */
+                      }
+                    }
+                    /* Aplicando a animação ao círculo */
+                    #progress-circle {
+                      animation: grow 3s ease-out forwards; /* 3s para a animação */
+                    }
+                  </style>

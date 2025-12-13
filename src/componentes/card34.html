@@ -1,0 +1,326 @@
+<style>
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .kpi-box {
+            background: white;
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4F46E5, #6366F1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .kpi-box:hover::before {
+            transform: scaleX(1);
+        }
+
+        .kpi-box:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .kpi-box-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .kpi-icon-wrapper {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .kpi-box.primary .kpi-icon-wrapper {
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+        }
+
+        .kpi-box.success .kpi-icon-wrapper {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .kpi-box.warning .kpi-icon-wrapper {
+            background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+        }
+
+        .kpi-box.danger .kpi-icon-wrapper {
+            background: linear-gradient(135deg, #FEF2F2, #FEE2E2);
+        }
+
+        .kpi-trend {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.625rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .kpi-trend.up {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .kpi-trend.down {
+            background: #FEF2F2;
+            color: #EF4444;
+        }
+
+        .kpi-label {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .kpi-main-value {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-secondary-text {
+            font-size: 0.8125rem;
+            color: #9CA3AF;
+            margin-bottom: 1.25rem;
+        }
+
+        .kpi-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid #F3F4F6;
+        }
+
+        .footer-stat {
+            text-align: center;
+        }
+
+        .footer-label {
+            font-size: 0.6875rem;
+            color: #9CA3AF;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .mini-chart {
+            width: 100%;
+            height: 40px;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .mini-chart-bar {
+            position: absolute;
+            bottom: 0;
+            width: 8px;
+            background: linear-gradient(180deg, #4F46E5, #6366F1);
+            border-radius: 2px 2px 0 0;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+
+        .mini-chart-bar:hover {
+            opacity: 1;
+        }
+
+        .kpi-box.success .mini-chart-bar {
+            background: linear-gradient(180deg, #10B981, #34D399);
+        }
+
+        .kpi-box.warning .mini-chart-bar {
+            background: linear-gradient(180deg, #F59E0B, #FBBF24);
+        }
+
+        .kpi-box.danger .mini-chart-bar {
+            background: linear-gradient(180deg, #EF4444, #F87171);
+        }
+    </style>
+    <div class='kpi-grid'>
+        <!-- KPI 1: Receita -->
+        <div class='kpi-box primary'>
+            <div class='kpi-box-header'>
+                <div class='kpi-icon-wrapper'>💰</div>
+                <div class='kpi-trend up'>
+                    <span>↑</span>
+                    <span>15.3%</span>
+                </div>
+            </div>
+            <div class='kpi-label'>Receita Total</div>
+            <div class='kpi-main-value'>R$ 2.8M</div>
+            <div class='kpi-secondary-text'>vs. R$ 2.4M no período anterior</div>
+            <div class='kpi-footer'>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Meta</div>
+                    <div class='footer-value'>R$ 2.5M</div>
+                </div>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Atingido</div>
+                    <div class='footer-value'>112%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI 2: Clientes Ativos -->
+        <div class='kpi-box success'>
+            <div class='kpi-box-header'>
+                <div class='kpi-icon-wrapper'>👥</div>
+                <div class='kpi-trend up'>
+                    <span>↑</span>
+                    <span>22.8%</span>
+                </div>
+            </div>
+            <div class='kpi-label'>Clientes Ativos</div>
+            <div class='kpi-main-value'>4,247</div>
+            <div class='kpi-secondary-text'>+792 novos clientes este mês</div>
+            <div class='mini-chart'>
+                <div class='mini-chart-bar' style='left: 5%; height: 45%;'></div>
+                <div class='mini-chart-bar' style='left: 15%; height: 60%;'></div>
+                <div class='mini-chart-bar' style='left: 25%; height: 55%;'></div>
+                <div class='mini-chart-bar' style='left: 35%; height: 70%;'></div>
+                <div class='mini-chart-bar' style='left: 45%; height: 65%;'></div>
+                <div class='mini-chart-bar' style='left: 55%; height: 80%;'></div>
+                <div class='mini-chart-bar' style='left: 65%; height: 75%;'></div>
+                <div class='mini-chart-bar' style='left: 75%; height: 90%;'></div>
+                <div class='mini-chart-bar' style='left: 85%; height: 85%;'></div>
+                <div class='mini-chart-bar' style='left: 95%; height: 100%;'></div>
+            </div>
+        </div>
+
+        <!-- KPI 3: Taxa de Conversão -->
+        <div class='kpi-box warning'>
+            <div class='kpi-box-header'>
+                <div class='kpi-icon-wrapper'>🎯</div>
+                <div class='kpi-trend down'>
+                    <span>↓</span>
+                    <span>8.2%</span>
+                </div>
+            </div>
+            <div class='kpi-label'>Taxa de Conversão</div>
+            <div class='kpi-main-value'>18.4%</div>
+            <div class='kpi-secondary-text'>Requer atenção e otimização</div>
+            <div class='kpi-footer'>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Meta</div>
+                    <div class='footer-value'>22%</div>
+                </div>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Gap</div>
+                    <div class='footer-value'>-3.6pp</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI 4: NPS -->
+        <div class='kpi-box success'>
+            <div class='kpi-box-header'>
+                <div class='kpi-icon-wrapper'>⭐</div>
+                <div class='kpi-trend up'>
+                    <span>↑</span>
+                    <span>12.5%</span>
+                </div>
+            </div>
+            <div class='kpi-label'>Net Promoter Score</div>
+            <div class='kpi-main-value'>+72</div>
+            <div class='kpi-secondary-text'>Classificação: Excelente</div>
+            <div class='kpi-footer'>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Promotores</div>
+                    <div class='footer-value'>68%</div>
+                </div>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Detratores</div>
+                    <div class='footer-value'>12%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI 5: Ticket Médio -->
+        <div class='kpi-box primary'>
+            <div class='kpi-box-header'>
+                <div class='kpi-icon-wrapper'>💳</div>
+                <div class='kpi-trend up'>
+                    <span>↑</span>
+                    <span>6.8%</span>
+                </div>
+            </div>
+            <div class='kpi-label'>Ticket Médio</div>
+            <div class='kpi-main-value'>R$ 658</div>
+            <div class='kpi-secondary-text'>vs. R$ 616 no período anterior</div>
+            <div class='mini-chart'>
+                <div class='mini-chart-bar' style='left: 5%; height: 60%;'></div>
+                <div class='mini-chart-bar' style='left: 15%; height: 55%;'></div>
+                <div class='mini-chart-bar' style='left: 25%; height: 65%;'></div>
+                <div class='mini-chart-bar' style='left: 35%; height: 70%;'></div>
+                <div class='mini-chart-bar' style='left: 45%; height: 68%;'></div>
+                <div class='mini-chart-bar' style='left: 55%; height: 75%;'></div>
+                <div class='mini-chart-bar' style='left: 65%; height: 80%;'></div>
+                <div class='mini-chart-bar' style='left: 75%; height: 85%;'></div>
+                <div class='mini-chart-bar' style='left: 85%; height: 95%;'></div>
+                <div class='mini-chart-bar' style='left: 95%; height: 100%;'></div>
+            </div>
+        </div>
+
+        <!-- KPI 6: Churn Rate -->
+        <div class='kpi-box danger'>
+            <div class='kpi-box-header'>
+                <div class='kpi-icon-wrapper'>📉</div>
+                <div class='kpi-trend down'>
+                    <span>↓</span>
+                    <span>18.5%</span>
+                </div>
+            </div>
+            <div class='kpi-label'>Taxa de Churn</div>
+            <div class='kpi-main-value'>5.2%</div>
+            <div class='kpi-secondary-text'>Acima do limite aceitável</div>
+            <div class='kpi-footer'>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Meta</div>
+                    <div class='footer-value'>≤ 3%</div>
+                </div>
+                <div class='footer-stat'>
+                    <div class='footer-label'>Clientes</div>
+                    <div class='footer-value'>-221</div>
+                </div>
+            </div>
+        </div>
+    </div>

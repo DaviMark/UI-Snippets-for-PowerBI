@@ -1,0 +1,115 @@
+<style>
+  .comparison-block {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-family: 'Inter', Segoe UI, system-ui, sans-serif;
+  }
+  
+  .comparison-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1f2937;
+  }
+  
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .comparison-item {
+    background: rgba(243, 244, 246, 0.5);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .comparison-label {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 12px;
+  }
+  
+  .comparison-values {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  .comparison-value {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .comparison-value-label {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-bottom: 4px;
+  }
+  
+  .comparison-value-number {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .comparison-arrow {
+    color: #9ca3af;
+  }
+  
+  .comparison-change {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .comparison-change.positive {
+    color: #10b981;
+  }
+  
+  .comparison-change.negative {
+    color: #dc2626;
+  }
+</style>
+
+<div class='comparison-block'>
+  <h3 class='comparison-title'>Comparativo de Performance</h3>
+  <div class='comparison-grid'>
+    <div class='comparison-item'>
+      <p class='comparison-label'>Receita Mensal</p>
+      <div class='comparison-values'>
+        <div class='comparison-value'>
+          <div class='comparison-value-label'>Anterior</div>
+          <div class='comparison-value-number'>R$ 245K</div>
+        </div>
+        <div class='comparison-arrow'>→</div>
+        <div class='comparison-value'>
+          <div class='comparison-value-label'>Atual</div>
+          <div class='comparison-value-number'>R$ 276K</div>
+        </div>
+      </div>
+      <div class='comparison-change positive'>+12,7%</div>
+    </div>
+    
+    <div class='comparison-item'>
+      <p class='comparison-label'>Ticket Médio</p>
+      <div class='comparison-values'>
+        <div class='comparison-value'>
+          <div class='comparison-value-label'>Anterior</div>
+          <div class='comparison-value-number'>R$ 156</div>
+        </div>
+        <div class='comparison-arrow'>→</div>
+        <div class='comparison-value'>
+          <div class='comparison-value-label'>Atual</div>
+          <div class='comparison-value-number'>R$ 142</div>
+        </div>
+      </div>
+      <div class='comparison-change negative'>-9,0%</div>
+    </div>
+  </div>
+</div>

@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const category = card.getAttribute('data-category');
             const tags = card.getAttribute('data-tags').toLowerCase();
             const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const subtitle = card.querySelector('.card-subtitle').textContent.toLowerCase();
             
             // 1. Filtragem por Categoria
             const categoryMatch = currentFilter === 'todos' || category === currentFilter;
 
             // 2. Filtragem por Pesquisa (Título ou Tags)
-            const searchMatch = searchTerm === '' || title.includes(searchTerm) || tags.includes(searchTerm);
+            const searchMatch = searchTerm === '' || title.includes(searchTerm) || tags.includes(searchTerm) || subtitle.includes(searchTerm);
 
             // Se ambos os filtros corresponderem, o card é exibido
             if (categoryMatch && searchMatch) {
@@ -51,6 +52,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         updateCount();
+
+        const searchInput = document.getElementById('searchInput');
+        const clearSearchBtn = document.getElementById('clearSearch');
+
+        searchInput.addEventListener('input', () => {
+        currentSearchTerm = searchInput.value;
+        filterTemplates();
+
+        // Mostra ou esconde o botão APAGAR
+        clearSearchBtn.style.display = searchInput.value ? 'block' : 'none';
+        });
+
+        clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchTerm = '';
+        filterTemplates();
+        clearSearchBtn.style.display = 'none';
+        searchInput.focus();
+        });
+
     }
 
     // Event Listeners para os botões de filtro

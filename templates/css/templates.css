@@ -8,7 +8,7 @@
     border: 1px solid #e9ecef;
     border-radius: 0.5rem; /* Arredondamento suave */
     padding: 0.5rem 1rem;
-    max-width: 600px; /* Limita a largura para um visual mais limpo */
+    max-width: 70%; /* Limita a largura para um visual mais limpo */
 }
 
 .search-input-container i {
@@ -25,6 +25,7 @@
 
 #searchInput::placeholder {
     color: #adb5bd;
+    max-width: 1000%; /* Limita a largura para um visual mais limpo */
 }
 
 /* Estilo dos Botões de Filtro (Baseado em pasted_file_JUToDj_image.png) */
@@ -58,6 +59,11 @@
     background-color: #ffc107; /* Cor amarela para destaque, como na imagem */
     border-radius: 2px;
 }
+
+#clearSearch:hover {
+  color: #ff0000;
+}
+
 
 /* Estilo dos Cards de Template (Baseado em pasted_file_GJlNrh_image.png) */
 .template-card .card {
