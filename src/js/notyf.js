@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
             line-height: 1.5;
             opacity: 0.95;
           ">
-            1. Novos visuais Premium como Kanban entre outros<br>
-            2. Capas animadas em HTML + CSS para páginas iniciais<br>
-            3. Storytelling aprimorado com seções dinâmicas e elementos de narrativa visual
+            1. Visuais Customizados, apenas importar e usar como um componente padrão.
+            2. Novos visuais Premium como Kanban entre outros<br>
+            3. Capas animadas em HTML + CSS para páginas iniciais<br>
+            4. Storytelling aprimorado com seções dinâmicas e elementos de narrativa visual
           </div>
         </div>
       `
