@@ -131,8 +131,8 @@
             <span class="caret">▾</span>
           </button>
           <ul class="collapse ps-3" id="componentsMenu">
-            <li><a href="/src/pages/visuais_customizados.html" class="nav-link">Visuais Customizados</a></li>
-            <li><a href="/src/pages/visuais_premium.html" class="nav-link active">Visuais Premium</a></li>
+            <li><a href="/src/pages/visuais_customizados.html" class="nav-link active">Visuais Customizados</a></li>
+            <li><a href="/src/pages/visuais_premium.html" class="nav-link">Visuais Premium</a></li>
             <li><a href="/src/pages/cards.html" class="nav-link">Cards</a></li>
             <li><a href="/src/pages/storytelling.html" class="nav-link">Storytelling</a></li>
             <li><a href="/src/pages/doc.html" class="nav-link">Documentação</a></li>
@@ -195,9 +195,8 @@
             <!-- Filtros de Categoria -->
             <div class="category-filters d-flex flex-wrap gap-3 mb-4">
                 <button class="btn filter-btn active" data-filter="todos">Todos</button>
-                <button class="btn filter-btn" data-filter="Kanban">Kanban</button>
-                <button class="btn filter-btn" data-filter="Swinlane">Swinlane</button>
-                <button class="btn filter-btn" data-filter="Heatmap">Heatmap</button>
+                <button class="btn filter-btn" data-filter="Visuais">Visuais</button>
+                <button class="btn filter-btn" data-filter="Filtro">Filtros</button>
             </div>
 
             <!-- Input de Pesquisa -->
@@ -236,22 +235,22 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="templateGrid">
             
             <!-- Visuais 1 -->
-                <div style="width: 45%;" class="col template-card" data-category="Kanban" data-tags="Kanban-projetos-backlog-em andamento-concluido-detalhes" data-html="/src/componentes/visuais_premium/Kanban1.png">
+                <div style="width: 45%;" class="col template-card" data-category="Visuais" data-tags="Heatmap-data-quantidade-calendario-detalhes" data-html="/src/arquivos_pbiviz/imagens/heatmap.png">
                     <div class="dashboard-card">
                         <span class="card-number">#01</span>
                         <div class="card-preview">
-                      <img style="max-width: 100%;" src="/src/componentes/visuais_premium/Kanban1.png" alt="">
+                      <img style="max-width: 100%;" src="/src/arquivos_pbiviz/imagens/heatmap.png" alt="">
                         </div>
                         <div class="card-info">
-                            <h3 class="card-title">Kanban</h3>
-                            <p class="card-subtitle">Kanban HTML com Status (Backlog, Em Andamento e Concluido), com uma contagem de quantos cards tem sobre cada Status. Cards com detalhes em destaque de Prioridade, Titulo e Descrição da demanda, Responsavel, Data de inicio e Fim.</p>
+                            <h3 class="card-title">Heatmap</h3>
+                            <p class="card-subtitle">Componentes para visualização quantitativa de (Entregas, demandas e outros valores de quantidade) sobre a data.</p>
                             <div class="card-buttons">
                                 <button class="btn-view">
                                     <i class="bi bi-eye"></i>
                                     <span>Visualizar</span>
                                 </button>
 
-                                <a style="  text-decoration: none;" href="/src/arquivos/visuais_premium/Kanban HTML.zip">
+                                <a style="  text-decoration: none;" href="/src/arquivos_pbiviz/zip/CustomHeatmap.zip">
                                   <button class="btn-copy">
                                       <i class="bi bi-copy"></i>
                                       <span>Baixar Arquivo</span>
@@ -264,22 +263,22 @@
                 </div>
 
                 <!-- Visuais 2 -->
-                <div style="width: 45%;" class="col template-card" data-category="Swinlane" data-tags="Swinlane-setores-cards-progresso-detalhes" data-html="/src/componentes/visuais_premium/Swinlane1.png">
+                <div style="width: 45%;" class="col template-card" data-category="Filtro" data-tags="Filtro-filtrar-campos-detalhes" data-html="/src/arquivos_pbiviz/imagens/filtro_padrao.png">
                     <div class="dashboard-card">
                         <span class="card-number">#02</span>
                         <div class="card-preview">
-                      <img style="max-width: 100%;" src="/src/componentes/visuais_premium/Swinlane1.png" alt="">
+                      <img style="max-width: 100%;" src="/src/arquivos_pbiviz/imagens/filtro_padrao.png" alt="">
                         </div>
                         <div class="card-info">
-                            <h3 class="card-title">Swinlane</h3>
-                            <p class="card-subtitle">Swinlane HTML separado por Setores com uma contagem de total de tarefas ativas, com cards detalhando o Titulo da tarefa, Responsavel, Prioridade e progresso junto com a barra.</p>
+                            <h3 class="card-title">Filtro Padrão</h3>
+                            <p class="card-subtitle">Filtro padrão com botão de abrir e reconher, podendo inserir até 5 campos para ser filtrados, e com input de pesquisa.</p>
                             <div class="card-buttons">
                                 <button class="btn-view">
                                     <i class="bi bi-eye"></i>
                                     <span>Visualizar</span>
                                 </button>
 
-                                <a style="  text-decoration: none;" href="/src/arquivos/visuais_premium/Swimlane HTML.zip">
+                                <a style="  text-decoration: none;" href="/src/arquivos_pbiviz/zip/CustomFiltroPadrao.zip">
                                   <button class="btn-copy">
                                       <i class="bi bi-copy"></i>
                                       <span>Baixar Arquivo</span>
@@ -292,22 +291,54 @@
                 </div>
 
                 <!-- Visuais 3 -->
-                <div style="width: 45%;" class="col template-card" data-category="Heatmap" data-tags="Heatmap-dias-semanas-entregas-calendario-detalhes" data-html="/src/componentes/visuais_premium/Heatmap.png">
+                <div style="width: 45%;" class="col template-card" data-category="Filtro" data-tags="filtros-data-semanas-mes-calendario-detalhes" data-html="/src/arquivos_pbiviz/imagens/filtro_data.png">
                     <div class="dashboard-card">
                         <span class="card-number">#03</span>
                         <div class="card-preview">
-                      <img style="max-width: 100%;" src="/src/componentes/visuais_premium/Heatmap.png" alt="">
+                      <img style="max-width: 100%;" src="/src/arquivos_pbiviz/imagens/filtro_data.png" alt="">
                         </div>
                         <div class="card-info">
-                            <h3 class="card-title">Heatmap de Entrega</h3>
-                            <p class="card-subtitle">Heatmap HTML - Um Calendário para acompanhar quantidade de entregas por dia, Mês e semana. Quanto mais a bolinha estiver pintada, maior é a quantidade de entregas feitas.</p>
+                            <h3 class="card-title">Filtro de Data</h3>
+                              <p class="card-subtitle">
+                                Filtro específico para data, onde basta inserir o campo de data para filtrar em diferentes visões.
+                              </p>
                             <div class="card-buttons">
                                 <button class="btn-view">
                                     <i class="bi bi-eye"></i>
                                     <span>Visualizar</span>
                                 </button>
 
-                                <a style="  text-decoration: none;" href="/src/arquivos/visuais_premium/Heatmap.zip">
+                                <a style="  text-decoration: none;" href="/src/arquivos_pbiviz/zip/CustomFiltroData.zip">
+                                  <button class="btn-copy">
+                                      <i class="bi bi-copy"></i>
+                                      <span>Baixar Arquivo</span>
+                                  </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visuais 4 -->
+                <div style="width: 45%;" class="col template-card" data-category="Visuais" data-tags="Kanban-status-demanda-profissional-gestao" data-html="/src/arquivos_pbiviz/imagens/kanban.png">
+                    <div class="dashboard-card">
+                        <span class="card-number">#04</span>
+                        <div class="card-preview">
+                      <img style="max-width: 100%;" src="/src/arquivos_pbiviz/imagens/kanban.png" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Kanban</h3>
+                              <p class="card-subtitle">
+                                Visual customizado para criação de um Kanban, podendo inserir Status, profissional, prioridade, data de inicio e fim.
+                              </p>
+                            <div class="card-buttons">
+                                <button class="btn-view">
+                                    <i class="bi bi-eye"></i>
+                                    <span>Visualizar</span>
+                                </button>
+
+                                <a style="  text-decoration: none;" href="/src/arquivos_pbiviz/zip/CustomKanban.zip">
                                   <button class="btn-copy">
                                       <i class="bi bi-copy"></i>
                                       <span>Baixar Arquivo</span>
@@ -346,6 +377,6 @@
   <script src="/src/js/componentes.js"></script>
   <script src="/templates/js/templates.js"></script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY77B4ZVWP"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY77B4ZVWP"></script> -->
 </body>
 </html>
